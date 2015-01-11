@@ -45,6 +45,10 @@ class Player:
         s.close()
 
 if __name__ == '__main__':
+    #1st arg, 2nd arg, 3rd arg
+    #Hands, board cards, dead cards
+    #Hands: colon is a delimiter, x is wild card
+    #Output is a list of tuples: [('AhAs', 0.7329499999999994), ('xx', 0.1386499999999999), ('xx', 0.12839999999999996)]    
     r = pbots_calc.calc("AhAs:xx", "", "", 1000000)
     print r
     sys.exit(0)

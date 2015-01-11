@@ -1,6 +1,7 @@
 import argparse
 import socket
 import sys
+import pbots_calc
 
 """
 Simple example pokerbot, written in python.
@@ -25,7 +26,7 @@ class Player:
             # Here is where you should implement code to parse the packets from
             # the engine and act on it. We are just printing it instead.
             print data
-
+            
             # When appropriate, reply to the engine with a legal action.
             # The engine will ignore all spurious responses.
             # The engine will also check/fold for you if you return an
@@ -44,6 +45,9 @@ class Player:
         s.close()
 
 if __name__ == '__main__':
+    r = pbots_calc.calc("AhAs:xx", "", "", 1000000)
+    print r
+    sys.exit(0)
     parser = argparse.ArgumentParser(description='A Pokerbot.', add_help=False, prog='pokerbot')
     parser.add_argument('-h', dest='host', type=str, default='localhost', help='Host to connect to, defaults to localhost')
     parser.add_argument('port', metavar='PORT', type=int, help='Port on host to connect to')

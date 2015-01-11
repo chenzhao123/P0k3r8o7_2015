@@ -1,142 +1,142 @@
 class Parser(object):
 
-	def __init__(self):
-		self.parser_dict = {}
+    def __init__(self):
+        self.parser_dict = {}
 
-	def parse(self, string):
-		
-		self.parser_dict = {}
-		packet_type, space, info = string.partition(' ')
+    def parse(self, string):
 
-		if packet_type == "NEWGAME":
-			self.parse_new_game(info)
-		elif packet_type == "KEYVALUE":
-			self.parse_key_value(info)
-		elif packet_type == "REQUESTKEYVALUES":
-			self.parse_request_key_value(info)
-		elif packet_type == "NEWHAND":
-			self.parse_new_hand(info)
-		elif packet_type == "GETACTION":
-			self.parse_get_action(info)
-		elif packet_type == "HANDOVER":
-			self.parse_hand_over(info)
-		else:
-			raise ValueError
+        self.parser_dict = {}
+        packet_type, space, info = string.partition(' ')
 
-		return self.parser_dict
+        if packet_type == "NEWGAME":
+            self.parse_new_game(info)
+        elif packet_type == "KEYVALUE":
+            self.parse_key_value(info)
+        elif packet_type == "REQUESTKEYVALUES":
+            self.parse_request_key_value(info)
+        elif packet_type == "NEWHAND":
+            self.parse_new_hand(info)
+        elif packet_type == "GETACTION":
+            self.parse_get_action(info)
+        elif packet_type == "HANDOVER":
+            self.parse_hand_over(info)
+        else:
+            raise ValueError
 
-	def parse_new_game(self, string):
+        return self.parser_dict
 
-		#NEWGAME yourName opp1Name opp2Name stackSize bb numHands timeBank
-		yourName, opp1Name, opp2Name, stackSize, bb, numHands, timeBank = string.split(' ')
+    def parse_new_game(self, string):
 
-		self.parser_dict['yourName'] = yourName
-		self.parser_dict['opp1Name'] = opp1Name
-		self.parser_dict['opp2Name'] = opp2Name
-		self.parser_dict['stackSize'] = float(stackSize)
-		self.parser_dict['bb'] = float(bb)
-		self.parser_dict['numHands'] = int(numHands)
-		self.parser_dict['timeBank'] = float(timeBank)
+        #NEWGAME yourName opp1Name opp2Name stackSize bb numHands timeBank
+        yourName, opp1Name, opp2Name, stackSize, bb, numHands, timeBank = string.split(' ')
 
-	def parse_new_hand(self, string):
+        self.parser_dict['yourName'] = yourName
+        self.parser_dict['opp1Name'] = opp1Name
+        self.parser_dict['opp2Name'] = opp2Name
+        self.parser_dict['stackSize'] = float(stackSize)
+        self.parser_dict['bb'] = float(bb)
+        self.parser_dict['numHands'] = int(numHands)
+        self.parser_dict['timeBank'] = float(timeBank)
 
-		#handId seat holeCard1 holeCard2 [stackSizes] [playerNames] numActivePlayers [activePlayers] timeBank
-		handId, seat, holeCard1, holeCard2, stackSize1, stackSize2, stackSize3, \
-		playerName1, playerName2, playerName3, numActivePlayers, \
-		activePlayer1, activePlayer2, activePlayer3, timeBank = string.split(' ')
-		stackSizes = [float(stackSize1), float(stackSize2), float(stackSize3)]
-		playerNames = [playerName1, playerName2, playerName3]
-		activePlayers = [self.str2bool(activePlayer1), self.str2bool(activePlayer2), self.str2bool(activePlayer3)]
+    def parse_new_hand(self, string):
 
-		self.parser_dict['handId'] = int(handId)
-		self.parser_dict['seat'] = int(seat)
-		self.parser_dict['holeCard1'] = holeCard1
-		self.parser_dict['holeCard2'] = holeCard2
-		self.parser_dict['stackSizes'] = stackSizes
-		self.parser_dict['playerNames'] = playerNames
-		self.parser_dict['numActivePlayers'] = int(numActivePlayers)
-		self.parser_dict['activePlayers'] = activePlayers
-		self.parser_dict['timeBank'] = float(timeBank)
+        #handId seat holeCard1 holeCard2 [stackSizes] [playerNames] numActivePlayers [activePlayers] timeBank
+        handId, seat, holeCard1, holeCard2, stackSize1, stackSize2, stackSize3, \
+        playerName1, playerName2, playerName3, numActivePlayers, \
+        activePlayer1, activePlayer2, activePlayer3, timeBank = string.split(' ')
+        stackSizes = [float(stackSize1), float(stackSize2), float(stackSize3)]
+        playerNames = [playerName1, playerName2, playerName3]
+        activePlayers = [self.str2bool(activePlayer1), self.str2bool(activePlayer2), self.str2bool(activePlayer3)]
+
+        self.parser_dict['handId'] = int(handId)
+        self.parser_dict['seat'] = int(seat)
+        self.parser_dict['holeCard1'] = holeCard1
+        self.parser_dict['holeCard2'] = holeCard2
+        self.parser_dict['stackSizes'] = stackSizes
+        self.parser_dict['playerNames'] = playerNames
+        self.parser_dict['numActivePlayers'] = int(numActivePlayers)
+        self.parser_dict['activePlayers'] = activePlayers
+        self.parser_dict['timeBank'] = float(timeBank)
 
 
-	def parse_key_value(self, string):
+    def parse_key_value(self, string):
 
-		#KEYVALUE key value
-		key, space, value = string.partition(' ')
+        #KEYVALUE key value
+        key, space, value = string.partition(' ')
 
-		self.parser_dict['key'] = key
-		self.parser_dict['value'] = value
+        self.parser_dict['key'] = key
+        self.parser_dict['value'] = value
 
-	def parse_request_key_value(self, string):
-		
-		#REQUESTKEYVALUES bytesLeft
-		bytesLeft = string
+    def parse_request_key_value(self, string):
 
-		self.parser_dict['bytesLeft'] = bytesLeft
+        #REQUESTKEYVALUES bytesLeft
+        bytesLeft = string
 
-	def parse_get_action(self, string):
+        self.parser_dict['bytesLeft'] = bytesLeft
 
-		#GETACTION potSize numBoardCards [boardCards] [stackSizes] numActivePlayers 
-		#[activePlayers] numLastActions [lastActions] numLegalActions [legalActions] timebank
-		string = string.split(' ')
-		potSize = string.pop(0)
-		
-		numBoardCards = int(string.pop(0))
-		boardCards = string[:numBoardCards]
-		string = string[numBoardCards:]	
+    def parse_get_action(self, string):
 
-		stackSizes = string[:3]
-		string = string[3:]
+        #GETACTION potSize numBoardCards [boardCards] [stackSizes] numActivePlayers
+        #[activePlayers] numLastActions [lastActions] numLegalActions [legalActions] timebank
+        string = string.split(' ')
+        potSize = string.pop(0)
 
-		numActivePlayers = int(string.pop(0))	
-		activePlayers = string[:3]
-		string = string[3:]
+        numBoardCards = int(string.pop(0))
+        boardCards = string[:numBoardCards]
+        string = string[numBoardCards:]
 
-		numLastActions = int(string.pop(0))
-		lastActions = string[:numLastActions]
-		string = string[numLastActions:]
+        stackSizes = string[:3]
+        string = string[3:]
 
-		numLegalActions = int(string.pop(0))
-		legalActions = string[:numLegalActions]
-		string = string[numLegalActions:]
+        numActivePlayers = int(string.pop(0))
+        activePlayers = string[:3]
+        string = string[3:]
 
-		timebank = string.pop(0)
+        numLastActions = int(string.pop(0))
+        lastActions = string[:numLastActions]
+        string = string[numLastActions:]
 
-		self.parser_dict['potSize'] = float(potSize)
-		self.parser_dict['numBoardCards'] = numBoardCards
-		self.parser_dict['boardCards'] = boardCards
-		self.parser_dict['stackSizes'] = [float(i) for i in stackSizes]
-		self.parser_dict['numActivePlayers'] = numActivePlayers
-		self.parser_dict['activePlayers'] = [self.str2bool(i) for i in activePlayers]
-		self.parser_dict['numLastActions'] = numLastActions
-		self.parser_dict['lastActions'] = lastActions
-		self.parser_dict['numLegalActions'] = numLegalActions
-		self.parser_dict['legalActions'] = legalActions
-		self.parser_dict['timebank'] = float(timebank)
+        numLegalActions = int(string.pop(0))
+        legalActions = string[:numLegalActions]
+        string = string[numLegalActions:]
 
-	def parse_hand_over(self, string):
+        timebank = string.pop(0)
 
-		#HANDOVER [stackSizes] numBoardCards [boardCards] numLastActions [lastActions] timeBank
-		string = string.split(' ')
-		stackSizes = string[:3]
-		string = string[3:]
+        self.parser_dict['potSize'] = float(potSize)
+        self.parser_dict['numBoardCards'] = numBoardCards
+        self.parser_dict['boardCards'] = boardCards
+        self.parser_dict['stackSizes'] = [float(i) for i in stackSizes]
+        self.parser_dict['numActivePlayers'] = numActivePlayers
+        self.parser_dict['activePlayers'] = [self.str2bool(i) for i in activePlayers]
+        self.parser_dict['numLastActions'] = numLastActions
+        self.parser_dict['lastActions'] = lastActions
+        self.parser_dict['numLegalActions'] = numLegalActions
+        self.parser_dict['legalActions'] = legalActions
+        self.parser_dict['timebank'] = float(timebank)
 
-		numBoardCards = int(string.pop(0))
-		boardCards = string[:numBoardCards]
-		string = string[numBoardCards:]
+    def parse_hand_over(self, string):
 
-		numLastActions = int(string.pop(0))
-		lastActions = string[:numLastActions]
-		string = string[numLastActions:]
+        #HANDOVER [stackSizes] numBoardCards [boardCards] numLastActions [lastActions] timeBank
+        string = string.split(' ')
+        stackSizes = string[:3]
+        string = string[3:]
 
-		timeBank = string.pop(0)
+        numBoardCards = int(string.pop(0))
+        boardCards = string[:numBoardCards]
+        string = string[numBoardCards:]
 
-		self.parser_dict['stackSizes'] = [float(i) for i in stackSizes]
-		self.parser_dict['numBoardCards'] = numBoardCards
-		self.parser_dict['boardCards'] = boardCards
-		self.parser_dict['numLastActions'] = numLastActions
-		self.parser_dict['lastActions'] = lastActions
-		self.parser_dict['timeBank'] = float(timeBank)
+        numLastActions = int(string.pop(0))
+        lastActions = string[:numLastActions]
+        string = string[numLastActions:]
 
-	def str2bool(self, v):
-  		return v.lower() in ("yes", "true", "t", "1")
+        timeBank = string.pop(0)
+
+        self.parser_dict['stackSizes'] = [float(i) for i in stackSizes]
+        self.parser_dict['numBoardCards'] = numBoardCards
+        self.parser_dict['boardCards'] = boardCards
+        self.parser_dict['numLastActions'] = numLastActions
+        self.parser_dict['lastActions'] = lastActions
+        self.parser_dict['timeBank'] = float(timeBank)
+
+    def str2bool(self, v):
+        return v.lower() in ("yes", "true", "t", "1")

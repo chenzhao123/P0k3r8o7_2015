@@ -83,13 +83,14 @@ class Parser(object):
 		
 		numBoardCards = int(string.pop(0))
 		boardCards = string[:numBoardCards]
-		string = string[numBoardCards:]		
-		stackSizes = string[:numBoardCards]
-		string = string[numBoardCards:]
-		
+		string = string[numBoardCards:]	
+
+		stackSizes = string[:3]
+		string = string[3:]
+
 		numActivePlayers = int(string.pop(0))	
-		activePlayers = string[:numActivePlayers]
-		string = string[numActivePlayers:]
+		activePlayers = string[:3]
+		string = string[3:]
 
 		numLastActions = int(string.pop(0))
 		lastActions = string[:numLastActions]
@@ -99,14 +100,14 @@ class Parser(object):
 		legalActions = string[:numLegalActions]
 		string = string[numLegalActions:]
 
-		timeBank = string.pop(0)
+		timebank = string.pop(0)
 
 		self.parser_dict['potSize'] = float(potSize)
 		self.parser_dict['numBoardCards'] = numBoardCards
 		self.parser_dict['boardCards'] = boardCards
 		self.parser_dict['stackSizes'] = [float(i) for i in stackSizes]
 		self.parser_dict['numActivePlayers'] = numActivePlayers
-		self.parser_dict['activePlayers'] = [str2bool(i) for i in activePlayers]
+		self.parser_dict['activePlayers'] = [self.str2bool(i) for i in activePlayers]
 		self.parser_dict['numLastActions'] = numLastActions
 		self.parser_dict['lastActions'] = lastActions
 		self.parser_dict['numLegalActions'] = numLegalActions
@@ -137,5 +138,5 @@ class Parser(object):
 		self.parser_dict['lastActions'] = lastActions
 		self.parser_dict['timeBank'] = float(timeBank)
 
-	def str2bool(v):
+	def str2bool(self, v):
   		return v.lower() in ("yes", "true", "t", "1")

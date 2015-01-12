@@ -77,7 +77,7 @@ class Parser(object):
     def parse_get_action(self, string):
 
         #GETACTION potSize numBoardCards [boardCards] [stackSizes] numActivePlayers
-        #[activePlayers] numLastActions [lastActions] numLegalActions [legalActions] timebank
+        #[activePlayers] numLastActions [lastActions] numLegalActions [legalActions] timeBank
         string = string.split(' ')
         potSize = string.pop(0)
 
@@ -100,7 +100,7 @@ class Parser(object):
         legalActions = string[:numLegalActions]
         string = string[numLegalActions:]
 
-        timebank = string.pop(0)
+        timeBank = string.pop(0)
 
         self.parser_dict['potSize'] = float(potSize)
         self.parser_dict['numBoardCards'] = numBoardCards
@@ -112,7 +112,7 @@ class Parser(object):
         self.parser_dict['lastActions'] = lastActions
         self.parser_dict['numLegalActions'] = numLegalActions
         self.parser_dict['legalActions'] = legalActions
-        self.parser_dict['timebank'] = float(timebank)
+        self.parser_dict['timeBank'] = float(timeBank)
 
     def parse_hand_over(self, string):
 

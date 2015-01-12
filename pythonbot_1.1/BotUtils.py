@@ -1,8 +1,9 @@
 class Card(object):
+    rankMap = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     def __init__(self, *args):
         if len(args) == 1:
-            self.suit = args[0][0]
-            self.rank = int(args[0][1])
+            self.rank = args[0][0]
+            self.suit = args[0][1]
         elif len(args) == 2:
             self.suit = args[0]
             self.rank = args[1]
@@ -13,16 +14,28 @@ class Card(object):
         self.rank
 
     def __lt__(self, other):
-        return self.rank < other.rank
+        if (self.rank.isdigit() or other.rank.isdigit()):
+            return self.rank < other.rank
+        else:
+            return Card.rankMap[self.rank] < Card.rankMap[other.rank]
 
     def __gt__(self, other):
-        return self.rank > other.rank
+        if (self.rank.isdigit() or other.rank.isdigit()):
+            return self.rank > other.rank
+        else:
+            return Card.rankMap[self.rank] > Card.rankMap[other.rank]
 
     def __le__(self, other):
-        return self.rank <= other.rank
+        if (self.rank.isdigit() or other.rank.isdigit()):
+            return self.rank <= other.rank
+        else:
+            return Card.rankMap[self.rank] <= Card.rankMap[other.rank]
 
     def __ge__(self, other):
-        return self.rank >= other.rank
+        if (self.rank.isdigit() or other.rank.isdigit()):
+            return self.rank >= other.rank
+        else:
+            return Card.rankMap[self.rank] >= Card.rankMap[other.rank]
 
     def same_suit(self, other):
         return self.suit == other.suit
@@ -31,17 +44,18 @@ class Card(object):
         return self.rank == other.rank
     
     def __eq__(self, other):
-        return self.same_suit(other) && self.same_rank(other)    
+        return self.same_suit(other) and self.same_rank(other)    
 
     def __str__(self):
-        return self.suit + str(self.rank)
+        return self.rank + self.suit
+    
 
 class LegalAction(object):
     def __init__(self, string):
         tokens = string.split(":")
         self.name = tokens[0]
         if (len(tokens) > 1):
-            self.fields = token[1:]
+            self.fields = tokens[1:]
         else:
             self.fields = None
 

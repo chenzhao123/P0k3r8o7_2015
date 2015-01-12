@@ -19,16 +19,17 @@ class Player:
         self.opp2 = ""
         self.stack = 0.0
         self.bb = 0.0
+        self.seat = 0
         self.numHands = 0
         self.timeBank = 0.0
         self.keyvalues = {}
         self.card1 = None
         self.card2 = None
         self.handId = 0
-        self.opp1_stack = 0
-        self.opp1_active = True
-        self.opp1_stack = 0
-        self.opp2_active = True
+        self.opp1Stack = 0
+        self.opp1Active = True
+        self.opp1Stack = 0
+        self.opp2Active = True
         self.active = True
         self.potSize = 0.0
         self.preflop = False
@@ -42,14 +43,18 @@ class Player:
         self.stats = {}
         self.newkeyvalues = {}
         self.equity = 0.0 
-        self.opp1_equity = 0.0
-        self.opp2_equity = 0.0
+        self.opp1Equity = 0.0
+        self.opp2Equity = 0.0
+        self.ai = Qlearn(["FOLD", "CHECK", "CALL", "BET10", "BET20", "BET30", 
+                          "BET40", "BET50", "BET60", "BET70", "BET80", "BET90"],
+                          epsilon=0.1, alpha=0.2, gamma=1.0)
  
     def run(self, input_socket):
         # Get a file-object for reading packets from the socket.
         # Using this ensures that you get exactly one packet per read.
         f_in = input_socket.makefile()
         packet_parser = Parser.Parser()
+
         while True:
             # Block until the engine sends us a packet.
             data = f_in.readline().strip()
@@ -98,8 +103,8 @@ class Player:
         self.opp1 = parser_dict['opp1Name']
         self.opp2 = parser_dict['opp2Name']
         self.stack = parser_dict['stackSize']
-        self.opp1_stack = self.stack
-        self.opp2_stack = self.stack
+        self.opp1Stack = self.stack
+        self.opp2Stack = self.stack
         self.bb = parser_dict['bb']
         self.numHands = parser_dict['numHands']
         self.timeBank = parser_dict['timeBank']
@@ -109,19 +114,20 @@ class Player:
           self.keyvalues[key] = parser_dict[key]    
 
     def newhand(self, parser_dict):
-        self.card1 = Card(parser_dict['holecard1'])
-        self.card2 = Card(parser_dict['holecard2'])
+        self.card1 = Card(parser_dict['holeCard1'])
+        self.card2 = Card(parser_dict['holeCard2'])
         self.handId = parser_dict['handId']
-        int p_index = 0
+        self.seat = parser_dict['seat']
+        p_index = 0
         for player_name in parser_dict['playerNames']:
             if player_name == self.opp1:
-                self.opp1_stack = parser_dict['stackSizes'][p_index]
-                self.opp1_active = parser_dict['activePlayers'][p_index]
-                self.opp1_index = p_index
+                self.opp1Stack = parser_dict['stackSizes'][p_index]
+                self.opp1Active = parser_dict['activePlayers'][p_index]
+                self.opp1Index = p_index
             elif player_name == self.opp2:
-                self.opp2_stack = parser_dict['stackSizes'][p_index]
-                self.opp2_active = parser_dict['activePlayers'][p_index]
-                self.opp2_index = p_index
+                self.opp2Stack = parser_dict['stackSizes'][p_index]
+                self.opp2Active = parser_dict['activePlayers'][p_index]
+                self.opp2Index = p_index
             elif player_name == self.name:
                 self.stack = parser_dict['stackSizes'][p_index]
                 self.active = parser_dict['activePlayers'][p_index]
@@ -136,11 +142,11 @@ class Player:
         self.turn = (numBoardCards == 4)
         self.river = (numBoardCards == 5) 
         self.active = parser_dict['activePlayers'][self.index]
-        self.opp1_active = parser_dict['activePlayers'][self.opp1_index]
-        self.opp2_active = parser_Dict['activePlayers'][self.opp2_index]
+        self.opp1Active = parser_dict['activePlayers'][self.opp1Index]
+        self.opp2Active = parser_dict['activePlayers'][self.opp2Index]
         self.stack = parser_dict['stackSizes'][self.index]
-        self.opp1_stack = parser_dict['stackSizes'][self.opp1_index]
-        self.opp2_stack = parser_dict['stackSizes'][self.opp2_index]
+        self.opp1Stack = parser_dict['stackSizes'][self.opp1Index]
+        self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
         
         if self.flop:
             self.boardCards = [Card(card) for card in parser_dict['boardCards']]
@@ -148,7 +154,7 @@ class Player:
             self.boardCards.append(Card(parser_dict['boardCards'][-1]))
         
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
-        for action in parser_dict['legalActioins']:
+        for action in parser_dict['legalActions']:
             legalAction = LegalAction(action)
             self.legalActions[legalAction.name] = legalAction.fields
         self.timeBank = parser_dict['timeBank']
@@ -157,8 +163,8 @@ class Player:
 
     def handover(self, parser_dict):
         self.stack = parser_dict['stackSizes'][self.index]
-        self.opp1_stack = parser_dict['stackSizes'][self.opp1_index]
-        self.opp2_stack = parser_dict['stackSizes'][self.opp2_index]
+        self.opp1Stack = parser_dict['stackSizes'][self.opp1Index]
+        self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         self.timeBank = parser_dict['timeBank']
         self.getstats()
@@ -170,13 +176,30 @@ class Player:
         self.newkeyvalues[self.opp1] = self.stats[self.opp1]
 
     def getResponse(self):
-        mycards = str(self.card1) + str(self.card2)
-        boardcards = "".join(str(card) for card in self.boardcards)
-        deadcards = ""
-        opp1cards = "xx"
-        opp2cards = "xx"
-        self.equity = pbots_calc.calc(mycards + ":" + opp1cards + ":" + opp2cards, boardcards, deadcards, 10000)
+        myCards = str(self.card1) + str(self.card2)
+        boardCards = "".join(str(card) for card in self.boardCards)
+        deadCards = ""
+        opp1Cards = "xx"
+        opp2Cards = "xx"
+        holeCardsInput = myCards + ":" + opp1Cards + ":" + opp2Cards
+        eqResults = pbots_calc.calc(holeCardsInput, boardCards, deadCards, 10000)
         #Example of how to make actions and check if they are valid
+        print "equities:", eqResults, type(eqResults)
+        if eqResults == None:
+            print "pbots_calc input:", holeCardsInput
+            print self.card1
+            print self.card2
+            print "b", boardCards
+            print "d", deadCards
+        self.equity = eqResults.ev[0]
+        self.opp1Equity = eqResults.ev[1]
+        self.opp2Equity = eqResults.ev[2]
+
+        state = self.createState(self.seat, boardCards, self.equity, self.lastActions)
+        
+        #TODO HERE
+
+        '''
         if (self.equity > 0):
             if ("BET" in self.legalActions):
                 minbet = "BET:" + self.legalActions["BET"][0] #minBet
@@ -194,21 +217,42 @@ class Player:
         else:
             print "SOMETHING WRONG!"
             return "CHECK\n"
+        '''
+
+    def createState(self, seat, boardCards, equity, lastActions):
+        #State is a tuple of (position, street, equity, #total checks, #total folds, 
+        #                     total amount bet, total amount called, total amount raised) <-discretized by 10s up to 100
+        position = seat
+        street = len(boardCards)/2
+        equity = equity
+        num_checks = sum([1 for elt in lastActions if "check" in elt.lower()])
+        num_folds = sum([1 for elt in lastActions if "fold" in elt.lower()])
+        total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "call" in elt.lower()])
+        #Maybe consider combining bet and raise
+        total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "bet" in elt.lower()])
+        total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "raise" in elt.lower()])
+        discretized_call = total_call/10
+        discretized_aggression = (total_bet + total_raise)/10
+
+        return (position, street, equity, num_checks, num_folds, discretized_call, discretized_aggression)
+
     def resetTurn(self):
         self.legalActions = {} 
 
     def getstats(self):
         #Any stats we would need here about opponents. Use lastActions and others
         #Example to store stats about an opponent
-        self.stats[self.opp1] = self.opp1_stack
+        self.stats[self.opp1] = self.opp1Stack
 
     def resetHand(self):
         self.lastActions = []
+        self.seat = 0
         self.card1 = None
         self.card2 = None
         self.equity = 0.0
-        self.opp1_equity = 0.0
-        self.opp2_equity = 0.0
+        self.opp1Equity = 0.0
+        self.opp2Equity = 0.0
+        self.boardCards = []
 
 if __name__ == '__main__':
 

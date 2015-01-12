@@ -18,6 +18,7 @@ class Player:
         self.opp1 = ""
         self.opp2 = ""
         self.stack = 0.0
+        self.startingStack = 0.0
         self.bb = 0.0
         self.seat = 0
         self.numHands = 0
@@ -103,6 +104,7 @@ class Player:
         self.opp1 = parser_dict['opp1Name']
         self.opp2 = parser_dict['opp2Name']
         self.stack = parser_dict['stackSize']
+        self.startingStack = self.stack
         self.opp1Stack = self.stack
         self.opp2Stack = self.stack
         self.bb = parser_dict['bb']
@@ -152,7 +154,8 @@ class Player:
             self.boardCards = [Card(card) for card in parser_dict['boardCards']]
         if self.turn or self.river:
             self.boardCards.append(Card(parser_dict['boardCards'][-1]))
-        
+        #What is PerformedAction/What is happening here
+        #TODO
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         for action in parser_dict['legalActions']:
             legalAction = LegalAction(action)
@@ -167,6 +170,10 @@ class Player:
         self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         self.timeBank = parser_dict['timeBank']
+
+        deltaStack = self.stack - self.startingStack
+        self.ai.learnAll(deltaStack)
+
         self.getstats()
         self.resetHand()
 
@@ -196,7 +203,10 @@ class Player:
         self.opp2Equity = eqResults.ev[2]
 
         state = self.createState(self.seat, boardCards, self.equity, self.lastActions)
-        
+        action = self.ai.chooseAction(state)
+        validAction = self.creatValidAction(self.legalActions, action)
+        return validAction
+
         #TODO HERE
 
         '''

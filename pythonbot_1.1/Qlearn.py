@@ -9,6 +9,7 @@ class QLearn:
         self.alpha = alpha
         self.gamma = gamma
         self.actions = actions
+        self.toBeProcessed = []
 
     def getQ(self, state, action):
         return self.q.get((state, action), 0.0)
@@ -39,6 +40,7 @@ class QLearn:
             i = q.index(maxQ)
 
         action = self.actions[i]
+        self.toBeProcessed.append((state, action)) 
 
         if return_q: # if they want it, give it!
             return action, q
@@ -47,6 +49,16 @@ class QLearn:
     def learn(self, state1, action1, reward, state2):
         maxqnew = max([self.getQ(state2, a) for a in self.actions])
         self.learnQ(state1, action1, reward, reward + self.gamma*maxqnew)
+
+    def learnAll(self, reward):
+
+        for i in xrange(len(self.toBeProcessed))-1:
+            state1 = self.toBeProcessed[i][0]
+            action1 = self.toBeProcessed[i][1]
+            state2 = self.toBeProcessed[i+1][0]
+            self.learn(state1, action1, reward, state2)
+
+        self.toBeProcessed = []
 
     def printQ(self):
         keys = self.q.keys()

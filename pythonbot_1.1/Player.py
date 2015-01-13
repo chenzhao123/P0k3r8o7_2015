@@ -4,6 +4,7 @@ import sys
 import pbots_calc
 import Parser
 from BotUtils import *
+import re
 
 """
 Simple example pokerbot, written in python.
@@ -46,8 +47,8 @@ class Player:
         self.equity = 0.0 
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
-        self.ai = Qlearn(["FOLD", "CHECK", "CALL", "BET10", "BET20", "BET30", 
-                          "BET40", "BET50", "BET60", "BET70", "BET80", "BET90"],
+        self.ai = Qlearn(["FOLD", "CHECK", "BET10", "BET20", "BET30", "BET40", 
+                          "BET50", "BET60", "BET70", "BET80", "BET90"],
                           epsilon=0.1, alpha=0.2, gamma=1.0)
  
     def run(self, input_socket):
@@ -248,10 +249,22 @@ class Player:
 
         return (position, street, equity, num_checks, num_folds, discretized_call, discretized_aggression)
     def createValidAction(self, action):
-        #QLearn's possible actions ["FOLD", "CHECK", "CALL", "BET10", "BET20", "BET30", 
-        #                           "BET40", "BET50", "BET60", "BET70", "BET80", "BET90"]
-        
-        pass
+        #QLearn's possible actions ["FOLD", "CHECK", BET10", "BET20", "BET30", "BET40", 
+        #                           "BET50", "BET60", "BET70", "BET80", "BET90"]
+        #Format of legal actions to engine:
+        #
+        if action in ['FOLD', 'CHECK']:
+            return action
+
+        bet_amt = int(re.sub("[^0-9]", "",elt))
+
+        minbet = float(self.legalActions["BET"][0]) #minBet
+        maxbet = float(self.legActions["BET"][1]) #maxBet
+
+        minraise = float(self.legalActions["RAISE"][0]) #minRaise
+        maxraise = float(self.legalActions["RAISE"][1]) #maxRaise
+
+        call = float(self.legalActions["CALL"][0]) #call
 
     def resetTurn(self):
         self.legalActions = {} 

@@ -194,14 +194,6 @@ class Player:
         opp2Cards = "xx"
         holeCardsInput = myCards + ":" + opp1Cards + ":" + opp2Cards
         eqResults = pbots_calc.calc(holeCardsInput, boardCards, deadCards, 10000)
-        #Example of how to make actions and check if they are valid
-        print "equities:", eqResults, type(eqResults)
-        if eqResults == None:
-            print "pbots_calc input:", holeCardsInput
-            print self.card1
-            print self.card2
-            print "b", boardCards
-            print "d", deadCards
         self.equity = eqResults.ev[0]
         self.opp1Equity = eqResults.ev[1]
         self.opp2Equity = eqResults.ev[2]

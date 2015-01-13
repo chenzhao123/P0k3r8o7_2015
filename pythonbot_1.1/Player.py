@@ -5,6 +5,7 @@ import pbots_calc
 import Parser
 from BotUtils import *
 import re
+import random
 
 """
 Simple example pokerbot, written in python.
@@ -257,14 +258,71 @@ class Player:
             return action
 
         bet_amt = int(re.sub("[^0-9]", "",elt))
+        #dists keeps track of how close each valid action is to the amt qlearn decides to bet
+        #The first value is distance from a fold/check
+        dict_dists = {}
+        dict_dists[bet_amt] = ["CHECK"]
+        min_dist = bet_amt
 
-        minbet = float(self.legalActions["BET"][0]) #minBet
-        maxbet = float(self.legActions["BET"][1]) #maxBet
+        if "BET" in self.legalActions:
+            minbet = int(self.legalActions["BET"][0]) #minBet
+            maxbet = int(self.legActions["BET"][1]) #maxBet
+            if minbet < bet_amt and bet_amt < maxbet:
+                return "BET:" + bet_amt
+            else:
+                min_bet_diff = abs(minbet-bet_amt)
+                max_bet_diff = abs(maxbet-bet_amt)
+                min_dist = min(min_dist, min_bet_diff, max_bet_diff)
+                if min_bet_diff in dict_dists:
+                    dict_dists[min_bet_diff].append("BET:" + str(minbet))
+                else:
+                    dict_dists[min_bet_diff] = ["BET:" + str(minbet)]
+                if max_bet_diff in dict_dists:
+                    dict_dists[max_bet_diff].append("BET:" + str(maxbet))
+                else:
+                    dict_dists[max_bet_diff] = ["BET:" + str(maxbet)]
 
-        minraise = float(self.legalActions["RAISE"][0]) #minRaise
-        maxraise = float(self.legalActions["RAISE"][1]) #maxRaise
 
-        call = float(self.legalActions["CALL"][0]) #call
+        if "RAISE" in self.legalActions:
+            minraise = int(self.legalActions["RAISE"][0]) #minRaise
+            maxraise = int(self.legalActions["RAISE"][1]) #maxRaise
+            if minraise < bet_amt and bet_amt < maxraise:
+                return "RAISE:" + bet_amt
+            else:
+                min_raise_diff = abs(minraise-bet_amt)
+                max_raise_diff = abs(maxraise-bet_amt)
+                min_dist = min(min_dist, min_raise_diff, max_raise_diff)
+                if min_raise_diff in dict_dists:
+                    dict_dists[min_raise_diff].append("RAISE:" + str(minraise))
+                else:
+                    dict_dists[min_raise_diff] = ["RAISE:" + str(minraise)]
+                if max_raise_diff in dict_dists:
+                    dict_dists[max_raise_diff].append("RAISE:" + str(maxraise))
+                else:
+                    dict_dists[max_raise_diff] = ["RAISE:" + str(maxraise)]
+
+
+        if "CALL" in self.legalActions:
+            call = int(self.legalActions["CALL"][0])
+            if abs(call - bet_amt) < 1:
+                return "CALL:" + call 
+            else:
+                call_diff = abs(call - bet_amt)
+                min_dist = min(min_dist, call_diff)
+                if call_diff in dict_dists:
+                    dict_dists[call_diff].append("CALL:" + str(call))
+                else:
+                    dict_dists[call_diff] = ["CALL:" + str(call)]
+
+        if len(dict_dists[min_dist]) == 1:
+            validAction = dict_dists[min_dist][0]
+        else:
+            validAction = random.choice(dict_dists[min_dist])
+
+        if validAction == "CHECK" and "CHECK" not in self.legalActions:
+            return "FOLD"
+        else:
+            return validAction
 
     def resetTurn(self):
         self.legalActions = {} 

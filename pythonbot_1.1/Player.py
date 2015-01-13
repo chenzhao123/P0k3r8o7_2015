@@ -161,8 +161,10 @@ class Player:
             legalAction = LegalAction(action)
             self.legalActions[legalAction.name] = legalAction.fields
         self.timeBank = parser_dict['timeBank']
+        response = self.getResponse()  
         self.resetTurn()
-        return self.getResponse()       
+
+        return response
 
     def handover(self, parser_dict):
         self.stack = parser_dict['stackSizes'][self.index]
@@ -204,7 +206,7 @@ class Player:
 
         state = self.createState(self.seat, boardCards, self.equity, self.lastActions)
         action = self.ai.chooseAction(state)
-        validAction = self.creatValidAction(self.legalActions, action)
+        validAction = self.creatValidAction(action)
         return validAction
 
         #TODO HERE
@@ -234,17 +236,22 @@ class Player:
         #                     total amount bet, total amount called, total amount raised) <-discretized by 10s up to 100
         position = seat
         street = len(boardCards)/2
-        equity = equity
+        discretized_equity = int((100*equity)/20)
         num_checks = sum([1 for elt in lastActions if "check" in elt.lower()])
         num_folds = sum([1 for elt in lastActions if "fold" in elt.lower()])
         total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "call" in elt.lower()])
         #Maybe consider combining bet and raise
         total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "bet" in elt.lower()])
         total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "raise" in elt.lower()])
-        discretized_call = total_call/10
-        discretized_aggression = (total_bet + total_raise)/10
+        discretized_call = int(total_call/10)
+        discretized_aggression = int((total_bet + total_raise)/10)
 
         return (position, street, equity, num_checks, num_folds, discretized_call, discretized_aggression)
+    def createValidAction(self, action):
+        #QLearn's possible actions ["FOLD", "CHECK", "CALL", "BET10", "BET20", "BET30", 
+        #                           "BET40", "BET50", "BET60", "BET70", "BET80", "BET90"]
+        
+        pass
 
     def resetTurn(self):
         self.legalActions = {} 

@@ -30,10 +30,10 @@ class PrevAction:
         self.opp2RaiseAmt = ra2
         self.opp2RaiseNum = rn2
 
-        # total states here: 480^2 ~~ 2300
+        # total states here: 480^2 ~~ 230000
         
     def __eq__(self, other):
-        if (type(other) is type(self):
+        if type(other) is type(self):
             return self.__dict__ == other.__dict__
        return False 
 
@@ -42,8 +42,8 @@ class QState:
         self.position = pos  # (3)
         self.equity = eq  # discretize (20)
         self.street = st  # (4)
-        self.prevAction = act # (2300)
-        # total states: 3*20*4*2300 
+        self.prevAction = act # (230000)
+        # total states: 3*20*4*230000 
         
     def setPosition(pos): self.position = pos
     def setEquity(eq): self.equity = eq

@@ -6,6 +6,8 @@ import Parser
 from BotUtils import *
 import re
 import random
+from QLearn import *
+import time
 
 """
 Simple example pokerbot, written in python.
@@ -42,13 +44,13 @@ class Player:
         self.boardCards = []
         self.lastActions = []
         self.legalActions = {} 
-        self.bytesleft = 0
+        self.bytesLeft = 0
         self.stats = {}
         self.newkeyvalues = {}
         self.equity = 0.0 
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
-        self.ai = Qlearn(["FOLD", "CHECK", "BET10", "BET20", "BET30", "BET40", 
+        self.ai = QLearn(["FOLD", "CHECK", "BET10", "BET20", "BET30", "BET40", 
                           "BET50", "BET60", "BET70", "BET80", "BET90"],
                           epsilon=0.1, alpha=0.2, gamma=1.0)
  
@@ -57,9 +59,10 @@ class Player:
         # Using this ensures that you get exactly one packet per read.
         f_in = input_socket.makefile()
         packet_parser = Parser.Parser()
-
+        #print "hi"
         while True:
             # Block until the engine sends us a packet.
+            #print "before data", time.asctime()
             data = f_in.readline().strip()
             # If data is None, connection has closed.
             if not data:
@@ -68,7 +71,7 @@ class Player:
 
             # Here is where you should implement code to parse the packets from
             # the engine and act on it. We are just printing it instead.
-            print data
+            print data, time.asctime()
             packet_parser.parse(data)
             # When appropriate, reply to the engine with a legal action.
             # The engine will ignore all spurious responses.
@@ -87,17 +90,20 @@ class Player:
                 # Currently CHECK on every move. You'll want to change this.
                 #s.send("CHECK\n")
                 resp = self.getaction(packet_parser.parser_dict)
-                s.send(resp)
+                #print 'sending response', resp, time.asctime()
+                s.send(resp+"\n")
+                #print 'sent response', resp, time.asctime()
             elif packet_type == "HANDOVER":
                 self.handover(packet_parser.parser_dict)    
-            elif word == "REQUESTKEYVALUES":
+            elif packet_type == "REQUESTKEYVALUES":
                 # At the end, the engine will allow your bot save key/value pairs.
                 # Send FINISH to indicate you're done.
                 #s.send("FINISH\n")
                 self.requestkeyvalues(packet_parser.parser_dict)
                 for key in self.newkeyvalues:
-                    s.send("PUT " + key + " " + self.newkeyvalues[key] + "\n")
+                    s.send("PUT " + str(key) + " " + str(self.newkeyvalues[key]) + "\n")
                 s.send("FINISH\n")
+            #print "end while", time.asctime()
         # Clean up the socket.
         s.close()
 
@@ -118,6 +124,7 @@ class Player:
           self.keyvalues[key] = parser_dict[key]    
 
     def newhand(self, parser_dict):
+        #print "new hand starts", time.asctime()
         self.card1 = Card(parser_dict['holeCard1'])
         self.card2 = Card(parser_dict['holeCard2'])
         self.handId = parser_dict['handId']
@@ -139,8 +146,10 @@ class Player:
             p_index += 1
         
     def getaction(self, parser_dict):
+        #print "get action starts", time.asctime()
         self.potSize = parser_dict['potSize']
         numBoardCards = parser_dict['numBoardCards']
+        lastStreet = len(self.boardCards)
         self.preflop = (numBoardCards == 0) 
         self.flop = (numBoardCards == 3) 
         self.turn = (numBoardCards == 4)
@@ -156,8 +165,11 @@ class Player:
             self.boardCards = [Card(card) for card in parser_dict['boardCards']]
         if self.turn or self.river:
             self.boardCards.append(Card(parser_dict['boardCards'][-1]))
-        #What is PerformedAction/What is happening here
-        #TODO
+        
+        #Resetting lastActions 
+        if (lastStreet != len(self.boardCards)):
+            self.lastActions = []
+
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         for action in parser_dict['legalActions']:
             legalAction = LegalAction(action)
@@ -165,10 +177,11 @@ class Player:
         self.timeBank = parser_dict['timeBank']
         response = self.getResponse()  
         self.resetTurn()
-
+        #print "get action ends", time.asctime()
         return response
 
     def handover(self, parser_dict):
+        #print "handover starts", time.asctime()
         self.stack = parser_dict['stackSizes'][self.index]
         self.opp1Stack = parser_dict['stackSizes'][self.opp1Index]
         self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
@@ -180,13 +193,15 @@ class Player:
 
         self.getstats()
         self.resetHand()
+        #print "handover ends", time.asctime()
 
     def requestkeyvalues(self, parser_dict):
-        self.bytesleft = int(parser_dict['bytesleft'])
+        self.bytesLeft = int(parser_dict['bytesLeft'])
         #Example to store new key values
         self.newkeyvalues[self.opp1] = self.stats[self.opp1]
 
     def getResponse(self):
+        #print "get response starts", time.asctime()
         myCards = str(self.card1) + str(self.card2)
         boardCards = "".join(str(card) for card in self.boardCards)
         deadCards = ""
@@ -197,10 +212,13 @@ class Player:
         self.equity = eqResults.ev[0]
         self.opp1Equity = eqResults.ev[1]
         self.opp2Equity = eqResults.ev[2]
-
+  
         state = self.createState(self.seat, boardCards, self.equity, self.lastActions)
+        #print "choose action starts", time.asctime()
         action = self.ai.chooseAction(state)
+        #print "choose action ends", time.asctime()
         validAction = self.createValidAction(action)
+        #print "create action ends", time.asctime()
         return validAction
 
         #TODO HERE
@@ -228,15 +246,18 @@ class Player:
     def createState(self, seat, boardCards, equity, lastActions):
         #State is a tuple of (position, street, equity, #total checks, #total folds, 
         #                     total amount bet, total amount called, total amount raised) <-discretized by 10s up to 100
-        position = seat #3
-        street = len(boardCards)/2 #4
-        discretized_equity = int((100*equity)/20) #20
-        num_checks = sum([1 for elt in lastActions if "check" in elt.lower()]) #2
-        num_folds = sum([1 for elt in lastActions if "fold" in elt.lower()]) 
-        total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "call" in elt.lower()])
+        position = seat
+        street = len(boardCards)/2
+        discretized_equity = int((100*equity)/20)
+        num_checks = sum([1 for elt in lastActions if "CHECK" == elt.name])
+        num_folds = sum([1 for elt in lastActions if "FOLD" == elt.name])
+        total_call = sum([int(elt.fields[0]) for elt in lastActions if "CALL" == elt.name])
+        total_bet = sum([int(elt.fields[0]) for elt in lastActions if "BET" == elt.name])
+        total_raise = sum([int(elt.fields[0]) for elt in lastActions if "RAISE" == elt.name])
+        #total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "call" in elt.name.lower()])
         #Maybe consider combining bet and raise
-        total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "bet" in elt.lower()])
-        total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "raise" in elt.lower()])
+        #total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "bet" in elt.lower()])
+        #total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "raise" in elt.lower()])
         discretized_call = int(total_call/10)
         discretized_aggression = int((total_bet + total_raise)/10)
 
@@ -256,12 +277,12 @@ class Player:
         dict_dists = {}
         dict_dists[bet_amt] = ["CHECK"]
         min_dist = bet_amt
-
+ 
         if "BET" in self.legalActions:
             minbet = int(self.legalActions["BET"][0]) #minBet
-            maxbet = int(self.legActions["BET"][1]) #maxBet
+            maxbet = int(self.legalActions["BET"][1]) #maxBet
             if minbet < bet_amt and bet_amt < maxbet:
-                return "BET:" + bet_amt
+                return "BET:" + str(bet_amt)
             else:
                 min_bet_diff = abs(minbet-bet_amt)
                 max_bet_diff = abs(maxbet-bet_amt)
@@ -279,7 +300,7 @@ class Player:
             minraise = int(self.legalActions["RAISE"][0]) #minRaise
             maxraise = int(self.legalActions["RAISE"][1]) #maxRaise
             if minraise < bet_amt and bet_amt < maxraise:
-                return "RAISE:" + bet_amt
+                return "RAISE:" + str(bet_amt)
             else:
                 min_raise_diff = abs(minraise-bet_amt)
                 max_raise_diff = abs(maxraise-bet_amt)
@@ -297,7 +318,7 @@ class Player:
         if "CALL" in self.legalActions:
             call = int(self.legalActions["CALL"][0])
             if abs(call - bet_amt) < 1:
-                return "CALL:" + call 
+                return "CALL:" + str(call) 
             else:
                 call_diff = abs(call - bet_amt)
                 min_dist = min(min_dist, call_diff)

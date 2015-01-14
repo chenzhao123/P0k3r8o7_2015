@@ -200,7 +200,7 @@ class Player:
 
         state = self.createState(self.seat, boardCards, self.equity, self.lastActions)
         action = self.ai.chooseAction(state)
-        validAction = self.creatValidAction(action)
+        validAction = self.createValidAction(action)
         return validAction
 
         #TODO HERE
@@ -228,19 +228,20 @@ class Player:
     def createState(self, seat, boardCards, equity, lastActions):
         #State is a tuple of (position, street, equity, #total checks, #total folds, 
         #                     total amount bet, total amount called, total amount raised) <-discretized by 10s up to 100
-        position = seat
-        street = len(boardCards)/2
-        discretized_equity = int((100*equity)/20)
-        num_checks = sum([1 for elt in lastActions if "check" in elt.lower()])
-        num_folds = sum([1 for elt in lastActions if "fold" in elt.lower()])
-        total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "call" in elt.lower()])
+        position = seat #3
+        street = len(boardCards)/2 #4
+        discretized_equity = int((100*equity)/20) #20
+        num_checks = sum([1 for elt in lastActions if "check" in elt.lower()]) #2
+        num_folds = sum([1 for elt in lastActions if "fold" in elt.lower()]) 
+        total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "call" in elt.lower()])
         #Maybe consider combining bet and raise
-        total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "bet" in elt.lower()])
-        total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in list if "raise" in elt.lower()])
+        total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "bet" in elt.lower()])
+        total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "raise" in elt.lower()])
         discretized_call = int(total_call/10)
         discretized_aggression = int((total_bet + total_raise)/10)
 
         return (position, street, equity, num_checks, num_folds, discretized_call, discretized_aggression)
+
     def createValidAction(self, action):
         #QLearn's possible actions ["FOLD", "CHECK", BET10", "BET20", "BET30", "BET40", 
         #                           "BET50", "BET60", "BET70", "BET80", "BET90"]
@@ -249,7 +250,7 @@ class Player:
         if action in ['FOLD', 'CHECK']:
             return action
 
-        bet_amt = int(re.sub("[^0-9]", "",elt))
+        bet_amt = int(re.sub("[^0-9]", "",action))
         #dists keeps track of how close each valid action is to the amt qlearn decides to bet
         #The first value is distance from a fold/check
         dict_dists = {}
@@ -273,7 +274,6 @@ class Player:
                     dict_dists[max_bet_diff].append("BET:" + str(maxbet))
                 else:
                     dict_dists[max_bet_diff] = ["BET:" + str(maxbet)]
-
 
         if "RAISE" in self.legalActions:
             minraise = int(self.legalActions["RAISE"][0]) #minRaise

@@ -57,12 +57,12 @@ class QLearn:
     def learnAll(self, reward):
         print "processing toBeProcessed with ", self.toBeProcessed
 
-        for i in xrange(len(self.toBeProcessed)-1,-1,-1):
+        for i in xrange(len(self.toBeProcessed)-2,-1,-1):
             state1 = self.toBeProcessed[i][0]
             action1 = self.toBeProcessed[i][1]
             state2 = self.toBeProcessed[i+1][0]
             self.learn(state1, action1, reward, state2)
-
+            print self.getQ(state1, action1)
         self.toBeProcessed = []
 
     def printQ(self):

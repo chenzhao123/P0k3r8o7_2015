@@ -6,7 +6,7 @@ import Parser
 from BotUtils import *
 import re
 import random
-from QLearn import *
+from Qlearn import *
 import time
 
 """
@@ -144,7 +144,8 @@ class Player:
                 self.active = parser_dict['activePlayers'][p_index]
                 self.index = p_index
             p_index += 1
-        
+        self.startingStack = self.stack       
+ 
     def getaction(self, parser_dict):
         #print "get action starts", time.asctime()
         self.potSize = parser_dict['potSize']

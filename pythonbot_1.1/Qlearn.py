@@ -23,13 +23,16 @@ class QLearn:
             self.q[(state, action)] = oldv + self.alpha * (value - oldv)
 
     def chooseAction(self, state, return_q=False):
+        print "(action, value) values for (state, a) is ", [(a, self.getQ(state, a)) for a in self.actions]
         q = [self.getQ(state, a) for a in self.actions]
         maxQ = max(q)
 
         if random.random() < self.epsilon:
             #action = random.choice(self.actions)
-            minQ = min(q); mag = max(abs(minQ), abs(maxQ))
-            q = [q[i] + random.random() * mag - .5 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
+            #minQ = min(q); mag = max(abs(minQ), abs(maxQ))
+            minQ = min(q); mag = abs(maxQ-minQ)
+            #q = [q[i] + random.random() * mag - .5 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
+            q = [q[i] + random.random() * 3 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
             maxQ = max(q)
 
         count = q.count(maxQ)
@@ -48,11 +51,13 @@ class QLearn:
 
     def learn(self, state1, action1, reward, state2):
         maxqnew = max([self.getQ(state2, a) for a in self.actions])
+        print "learning... maxqnew is ", maxqnew
         self.learnQ(state1, action1, reward, reward + self.gamma*maxqnew)
 
     def learnAll(self, reward):
+        print "processing toBeProcessed with ", self.toBeProcessed
 
-        for i in xrange(len(self.toBeProcessed))-1:
+        for i in xrange(len(self.toBeProcessed)-1,-1,-1):
             state1 = self.toBeProcessed[i][0]
             action1 = self.toBeProcessed[i][1]
             state2 = self.toBeProcessed[i+1][0]

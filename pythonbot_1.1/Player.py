@@ -7,6 +7,7 @@ from BotUtils import *
 import re
 import random
 from Qlearn import *
+from QStates import *
 import time
 
 """
@@ -43,17 +44,21 @@ class Player:
         self.river = False
         self.boardCards = []
         self.lastActions = []
-        self.legalActions = {} 
+        self.legalActions = {}
         self.bytesLeft = 0
         self.stats = {}
         self.newkeyvalues = {}
-        self.equity = 0.0 
+        self.equity = 0.0
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
-        self.ai = QLearn(["FOLD", "CHECK", "BET10", "BET20", "BET30", "BET40", 
+        self.qfile = "QFile.txt"
+        self.ai = QLearn(["FOLD", "CHECK", "BET10", "BET20", "BET30", "BET40",
                           "BET50", "BET60", "BET70", "BET80", "BET90"],
-                          epsilon=0.1, alpha=0.2, gamma=1.0)
- 
+                          epsilon=0.3, alpha=0.2, gamma=1.0)
+        self.ai.loadQ(self.qfile)
+        self.numHandsPlayed = 0
+        self.numChipsGained = 0
+
     def run(self, input_socket):
         # Get a file-object for reading packets from the socket.
         # Using this ensures that you get exactly one packet per read.
@@ -94,11 +99,13 @@ class Player:
                 s.send(resp+"\n")
                 #print 'sent response', resp, time.asctime()
             elif packet_type == "HANDOVER":
-                self.handover(packet_parser.parser_dict)    
+                self.handover(packet_parser.parser_dict)
             elif packet_type == "REQUESTKEYVALUES":
                 # At the end, the engine will allow your bot save key/value pairs.
                 # Send FINISH to indicate you're done.
                 #s.send("FINISH\n")
+                print "dumping q values to", self.qfile
+                self.ai.dumpQ(self.qfile)
                 self.requestkeyvalues(packet_parser.parser_dict)
                 for key in self.newkeyvalues:
                     s.send("PUT " + str(key) + " " + str(self.newkeyvalues[key]) + "\n")
@@ -121,7 +128,7 @@ class Player:
 
     def keyvalue(self, parser_dict):
         for key in parser_dict:
-          self.keyvalues[key] = parser_dict[key]    
+          self.keyvalues[key] = parser_dict[key]
 
     def newhand(self, parser_dict):
         #print "new hand starts", time.asctime()
@@ -144,30 +151,30 @@ class Player:
                 self.active = parser_dict['activePlayers'][p_index]
                 self.index = p_index
             p_index += 1
-        self.startingStack = self.stack       
- 
+        self.startingStack = self.stack
+
     def getaction(self, parser_dict):
         #print "get action starts", time.asctime()
         self.potSize = parser_dict['potSize']
         numBoardCards = parser_dict['numBoardCards']
         lastStreet = len(self.boardCards)
-        self.preflop = (numBoardCards == 0) 
-        self.flop = (numBoardCards == 3) 
+        self.preflop = (numBoardCards == 0)
+        self.flop = (numBoardCards == 3)
         self.turn = (numBoardCards == 4)
-        self.river = (numBoardCards == 5) 
+        self.river = (numBoardCards == 5)
         self.active = parser_dict['activePlayers'][self.index]
         self.opp1Active = parser_dict['activePlayers'][self.opp1Index]
         self.opp2Active = parser_dict['activePlayers'][self.opp2Index]
         self.stack = parser_dict['stackSizes'][self.index]
         self.opp1Stack = parser_dict['stackSizes'][self.opp1Index]
         self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
-        
+
         if self.flop:
             self.boardCards = [Card(card) for card in parser_dict['boardCards']]
         if self.turn or self.river:
             self.boardCards.append(Card(parser_dict['boardCards'][-1]))
-        
-        #Resetting lastActions 
+
+        #Resetting lastActions
         if (lastStreet != len(self.boardCards)):
             self.lastActions = []
 
@@ -176,7 +183,7 @@ class Player:
             legalAction = LegalAction(action)
             self.legalActions[legalAction.name] = legalAction.fields
         self.timeBank = parser_dict['timeBank']
-        response = self.getResponse()  
+        response = self.getResponse()
         self.resetTurn()
         #print "get action ends", time.asctime()
         return response
@@ -191,6 +198,12 @@ class Player:
 
         deltaStack = self.stack - self.startingStack
         self.ai.learnAll(deltaStack)
+
+        self.numHandsPlayed += 1
+        self.numChipsGained += deltaStack
+        if not self.numHandsPlayed % 1000:
+            print "Average winning per hand:", self.numChipsGained / 1000.0
+            self.numHandsPlayed = 0
 
         self.getstats()
         self.resetHand()
@@ -213,8 +226,8 @@ class Player:
         self.equity = eqResults.ev[0]
         self.opp1Equity = eqResults.ev[1]
         self.opp2Equity = eqResults.ev[2]
-  
-        state = self.createState(self.seat, boardCards, self.equity, self.lastActions)
+
+        state = self.createQState()
         #print "choose action starts", time.asctime()
         action = self.ai.chooseAction(state)
         #print "choose action ends", time.asctime()
@@ -244,28 +257,39 @@ class Player:
             return "CHECK\n"
         '''
 
-    def createState(self, seat, boardCards, equity, lastActions):
-        #State is a tuple of (position, street, equity, #total checks, #total folds, 
-        #                     total amount bet, total amount called, total amount raised) <-discretized by 10s up to 100
-        position = seat
-        street = len(boardCards)/2
-        discretized_equity = int((100*equity)/20)
-        num_checks = sum([1 for elt in lastActions if "CHECK" == elt.name])
-        num_folds = sum([1 for elt in lastActions if "FOLD" == elt.name])
-        total_call = sum([int(elt.fields[0]) for elt in lastActions if "CALL" == elt.name])
-        total_bet = sum([int(elt.fields[0]) for elt in lastActions if "BET" == elt.name])
-        total_raise = sum([int(elt.fields[0]) for elt in lastActions if "RAISE" == elt.name])
-        #total_call = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "call" in elt.name.lower()])
-        #Maybe consider combining bet and raise
-        #total_bet = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "bet" in elt.lower()])
-        #total_raise = sum([float(re.sub("[^0-9]", "",elt)) for elt in lastActions if "raise" in elt.lower()])
-        discretized_call = int(total_call/10)
-        discretized_aggression = int((total_bet + total_raise)/10)
+    def createQState(self):
+        seat = int(self.seat)
+        street = len(self.boardCards)
+        if (seat == 1 and street > 0): #Dealer and flop, turn, river
+            position = 1
+        elif (seat == 3 and street == 0): #BB and pre-flop
+            position = 1
+        else:
+            position = 0
+        numPlayers = 3 if (bool(self.opp1Active) and bool(self.opp2Active)) else 2
+        equity = discretizeEq(self.equity, numPlayers)
 
-        return (position, street, equity, num_checks, num_folds, discretized_call, discretized_aggression)
+        numCheckCall1 = sum([1 for elt in self.lastActions if (("CHECK" == elt.name or "CALL" == elt.name) and self.opp1 == elt.actor)])
+        didFold1 = sum([1 for elt in self.lastActions if ("FOLD" == elt.name and self.opp1 == elt.actor)])
+        totalAmt1 = sum([int(elt.fields[0]) for elt in self.lastActions if (("CALL" == elt.name or "BET" == elt.name or "RAISE" == elt.name) and self.opp1 == elt.actor)])
+        numBetRaise1 = sum([1 for elt in self.lastActions if (("BET" == elt.name or "RAISE" == elt.name) and self.opp1 == elt.actor)])
+
+        numCheckCall2 = sum([1 for elt in self.lastActions if (("CHECK" == elt.name or "CALL" == elt.name) and self.opp2 == elt.actor)])
+        totalAmt2 = sum([int(elt.fields[0]) for elt in self.lastActions if (("CALL" == elt.name or "BET" == elt.name or "RAISE" == elt.name) and self.opp2 == elt.actor)])
+        didFold2 = sum([1 for elt in self.lastActions if ("FOLD" == elt.name and self.opp2 == elt.actor)])
+        numBetRaise2 = sum([1 for elt in self.lastActions if (("BET" == elt.name or "RAISE" == elt.name) and self.opp2 == elt.actor)])
+
+        dAmt1 = discretizeAmt(totalAmt1)
+        dAmt2 = discretizeAmt(totalAmt2)
+        numCheckCall1 = min(3, numCheckCall1)
+        numCheckCall2 = min(3, numCheckCall2)
+        numBetRaise1 = min(3, numBetRaise1)
+        numBetRaise2 = min(3, numBetRaise2)
+        prevAct = PrevAction(numCheckCall1, dAmt1, numBetRaise1, didFold1, numCheckCall2, dAmt2, numBetRaise2, didFold2)
+        return QState(position, equity, street, prevAct)
 
     def createValidAction(self, action):
-        #QLearn's possible actions ["FOLD", "CHECK", BET10", "BET20", "BET30", "BET40", 
+        #QLearn's possible actions ["FOLD", "CHECK", BET10", "BET20", "BET30", "BET40",
         #                           "BET50", "BET60", "BET70", "BET80", "BET90"]
         #Format of legal actions to engine:
         #
@@ -278,7 +302,7 @@ class Player:
         dict_dists = {}
         dict_dists[bet_amt] = ["CHECK"]
         min_dist = bet_amt
- 
+
         if "BET" in self.legalActions:
             minbet = int(self.legalActions["BET"][0]) #minBet
             maxbet = int(self.legalActions["BET"][1]) #maxBet
@@ -319,7 +343,7 @@ class Player:
         if "CALL" in self.legalActions:
             call = int(self.legalActions["CALL"][0])
             if abs(call - bet_amt) < 1:
-                return "CALL:" + str(call) 
+                return "CALL:" + str(call)
             else:
                 call_diff = abs(call - bet_amt)
                 min_dist = min(min_dist, call_diff)
@@ -339,7 +363,7 @@ class Player:
             return validAction
 
     def resetTurn(self):
-        self.legalActions = {} 
+        self.legalActions = {}
 
     def getstats(self):
         #Any stats we would need here about opponents. Use lastActions and others
@@ -361,7 +385,7 @@ if __name__ == '__main__':
     #1st arg, 2nd arg, 3rd arg
     #Hands, board cards, dead cards
     #Hands: colon is a delimiter, x is wild card
-    #Output is a list of tuples: [('AhAs', 0.7329499999999994), ('xx', 0.1386499999999999), ('xx', 0.12839999999999996)]    
+    #Output is a list of tuples: [('AhAs', 0.7329499999999994), ('xx', 0.1386499999999999), ('xx', 0.12839999999999996)]
     #r = pbots_calc.calc("AhAs:xx", "", "", 1000000)
     #print r
     #sys.exit(0)

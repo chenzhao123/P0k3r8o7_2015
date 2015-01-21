@@ -32,6 +32,7 @@ class Player:
         self.card1 = None
         self.card2 = None
         self.handId = 0
+        self.activePlayers = []
         self.opp1Stack = 0
         self.opp1Active = True
         self.opp1Stack = 0
@@ -52,8 +53,7 @@ class Player:
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
         self.qfile = "QFile.txt"
-        self.ai = QLearn(["FOLD", "CHECK", "BET10", "BET20", "BET30", "BET40",
-                          "BET50", "BET60", "BET70", "BET80", "BET90"],
+        self.ai = QLearn(["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS1.5", "ODDS2.0", "ODDS3.0", "ODDS4.0"],
                           epsilon=0.3, alpha=0.2, gamma=1.0)
         self.ai.loadQ(self.qfile)
         self.numHandsPlayed = 0
@@ -137,6 +137,7 @@ class Player:
         self.handId = parser_dict['handId']
         self.seat = parser_dict['seat']
         p_index = 0
+        self.activePlayers = parser_dict['activePlayers']
         for player_name in parser_dict['playerNames']:
             if player_name == self.opp1:
                 self.opp1Stack = parser_dict['stackSizes'][p_index]
@@ -162,6 +163,7 @@ class Player:
         self.flop = (numBoardCards == 3)
         self.turn = (numBoardCards == 4)
         self.river = (numBoardCards == 5)
+        self.activePlayers = parser_dict['activePlayers']
         self.active = parser_dict['activePlayers'][self.index]
         self.opp1Active = parser_dict['activePlayers'][self.opp1Index]
         self.opp2Active = parser_dict['activePlayers'][self.opp2Index]
@@ -298,14 +300,60 @@ class Player:
         return QState(position, equity, street, prevAct)
 
     def createValidAction(self, action):
-        #QLearn's possible actions ["FOLD", "CHECK", BET10", "BET20", "BET30", "BET40",
-        #                           "BET50", "BET60", "BET70", "BET80", "BET90"]
+        #QLearn's possible actions ["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS1.5", "ODDS2.0", "ODDS3.0", "ODDS4.0"]
         #Format of legal actions to engine:
         #
-        if action in ['FOLD', 'CHECK']:
-            return action
+        #self.lastActions is a list of PerformedActions 
 
+        if action == "FOLD":
+            return action
+        if action == "CHECK":
+            if action in self.legalActions:
+                return "CHECK"
+            else:
+                return "FOLD"
+        if action == "CALL":
+            if action in self.legalActions:
+                return "CALL"
+            else:
+                return "CHECK"
+
+        goal_odds = float(re.sub("[^0-9]", "",action))/10
+        opp1_last_bet = 0
+        opp2_last_bet = 0
+        opp3_last_bet = 0
+        for PerformedAction in self.lastActions:
+            if PerformedAction.actor == "1" and PerformedAction.name in ["BET", "RAISE"]:
+                opp1_last_bet = PerformedAction.fields[0]
+            if PerformedAction.actor == "2" and PerformedAction.name in ["BET", "RAISE"]:
+                opp2_last_bet = PerformedAction.fields[0]
+            if PerformedAction.actor == "3" and PerformedAction.name in ["BET", "RAISE"]:
+                opp3_last_bet = PerformedAction.fields[0]
+        last_bets = [opp1_last_bet, opp2_last_bet, opp3_last_bet]
+        last_player_seat = (self.seat - 1) % 3
+        next_player_seat = (self.seat + 1) % 3
+        if last_player_seat == 0:
+            last_player_seat = 1
+        if next_player_seat == 0:
+            next_player_seat = 1
+
+        last_player_bet = last_bets[last_player_seat - 1]
+        next_player_bet = last_bets[next_player_seat - 1]
+
+        final_bet_metric = 0
+
+        if self.activePlayers[last_player_seat - 1]:
+            final_bet_metric = last_player_bet
+        else:
+            final_bet_metric = next_player_bet
+
+        bet_amt = self.potSize/goal_odds + final_bet_metric
+
+
+        #TODO, convert odds to bet amt.
+        '''
         bet_amt = int(re.sub("[^0-9]", "",action))
+        '''
         #dists keeps track of how close each valid action is to the amt qlearn decides to bet
         #The first value is distance from a fold/check
         dict_dists = {}
@@ -370,6 +418,7 @@ class Player:
             return "FOLD"
         else:
             return validAction
+    
 
     def resetTurn(self):
         self.legalActions = {}

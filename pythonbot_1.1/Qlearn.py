@@ -2,6 +2,7 @@ from QStates import *
 import random
 import pickle
 import time
+import math
 
 class QLearn:
     def __init__(self, actions, epsilon=0.3, alpha=0.2, gamma=1.0):
@@ -24,18 +25,21 @@ class QLearn:
         else:
             self.q[(state, action)] = oldv + self.alpha * (value - oldv)
 
-    def chooseAction(self, state, return_q=False):
+    def chooseAction(self, state, equity, potSize, bet_metric, return_q=False):
         print "(action, value) values for (state, a) is ", [(a, self.getQ(state, a)) for a in self.actions]
         q = [self.getQ(state, a) for a in self.actions]
         maxQ = max(q)
 
         if random.random() < self.epsilon:
+            '''
             #action = random.choice(self.actions)
             #minQ = min(q); mag = max(abs(minQ), abs(maxQ))
             minQ = min(q); mag = abs(maxQ-minQ)
             #q = [q[i] + random.random() * mag - .5 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
             q = [q[i] + random.random() * 3 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
             maxQ = max(q)
+            '''
+            return pickRandomPokerAction(equity, potSize, bet_metric)
 
         count = q.count(maxQ)
         if count > 1:
@@ -108,6 +112,35 @@ class QLearn:
         with open(filename, 'w') as f:
             pickle.dump(self.q, f)
         print "done writing file", time.asctime()
+
+    def pickRandomPokerAction(self, equity, potSize, bet_metric):
+        actions = ["FOLD", "CHECK", "CALL", "ODD4.0", "ODD3.0", "ODD2.0", "ODD1.5", "ODD1.0"]
+        if abs(bet_metric) < 1 or potSize < 2:
+            odds = 50
+        else:
+            odds = potSize/bet_metric
+        aggro = 0.7*math.sqrt(equity) + 0.3*math.log10(odds)
+        if aggro > 1:
+            aggro = 1
+        aggro = aggro * 7
+        distances = [elt - aggro for elt in range(8)]
+        upperbound = max(distances) * 1.2
+        probabilities = [upperbound - elt for elt in distances]
+        probabilities[1] = probabilities[1] * 1.5
+        probabilities[2] = probabilities[2] * 1.5
+        sum_prob = sum(probabilities)
+        scaled_probs = [float(elt)/float(sum_prob) for elt in probabilities]
+
+        rand = random.uniform(0,1)
+        counter = 0
+        while rand > 0:
+            rand = rand - scaled_probs[counter]
+            counter += 1
+
+        return actions[counter - 1]
+
+
+
 
 import math
 def ff(f,n):

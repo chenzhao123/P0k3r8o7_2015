@@ -240,7 +240,7 @@ class Player:
 
         state = self.createQState()
         #print "choose action starts", time.asctime()
-        action = self.ai.chooseAction(state)
+        action = self.ai.chooseAction(state, self.equity, self.potSize, self.analyzePotOdds())
         #print "choose action ends", time.asctime()
         validAction = self.createValidAction(action)
         #print "create action ends", time.asctime()
@@ -306,6 +306,8 @@ class Player:
         #self.lastActions is a list of PerformedActions 
 
         if action == "FOLD":
+            if "CHECK" in self.legalActions:
+                return "CHECK"
             return action
         if action == "CHECK":
             if action in self.legalActions:
@@ -319,33 +321,8 @@ class Player:
                 return "CHECK"
 
         goal_odds = float(re.sub("[^0-9]", "",action))/10
-        opp1_last_bet = 0
-        opp2_last_bet = 0
-        opp3_last_bet = 0
-        for PerformedAction in self.lastActions:
-            if PerformedAction.actor == "1" and PerformedAction.name in ["BET", "RAISE"]:
-                opp1_last_bet = PerformedAction.fields[0]
-            if PerformedAction.actor == "2" and PerformedAction.name in ["BET", "RAISE"]:
-                opp2_last_bet = PerformedAction.fields[0]
-            if PerformedAction.actor == "3" and PerformedAction.name in ["BET", "RAISE"]:
-                opp3_last_bet = PerformedAction.fields[0]
-        last_bets = [opp1_last_bet, opp2_last_bet, opp3_last_bet]
-        last_player_seat = (self.seat - 1) % 3
-        next_player_seat = (self.seat + 1) % 3
-        if last_player_seat == 0:
-            last_player_seat = 1
-        if next_player_seat == 0:
-            next_player_seat = 1
-
-        last_player_bet = last_bets[last_player_seat - 1]
-        next_player_bet = last_bets[next_player_seat - 1]
-
-        final_bet_metric = 0
-
-        if self.activePlayers[last_player_seat - 1]:
-            final_bet_metric = last_player_bet
-        else:
-            final_bet_metric = next_player_bet
+        
+        bet_metric = self.analyzePotOdds()
 
         bet_amt = self.potSize/goal_odds + final_bet_metric
 
@@ -419,6 +396,37 @@ class Player:
         else:
             return validAction
     
+    def analyzePotOdds(self):
+
+        opp1_last_bet = 0
+        opp2_last_bet = 0
+        opp3_last_bet = 0
+        for PerformedAction in self.lastActions:
+            if PerformedAction.actor == "1" and PerformedAction.name in ["BET", "RAISE"]:
+                opp1_last_bet = PerformedAction.fields[0]
+            if PerformedAction.actor == "2" and PerformedAction.name in ["BET", "RAISE"]:
+                opp2_last_bet = PerformedAction.fields[0]
+            if PerformedAction.actor == "3" and PerformedAction.name in ["BET", "RAISE"]:
+                opp3_last_bet = PerformedAction.fields[0]
+        last_bets = [opp1_last_bet, opp2_last_bet, opp3_last_bet]
+        last_player_seat = (self.seat - 1) % 3
+        next_player_seat = (self.seat + 1) % 3
+        if last_player_seat == 0:
+            last_player_seat = 1
+        if next_player_seat == 0:
+            next_player_seat = 1
+
+        last_player_bet = last_bets[last_player_seat - 1]
+        next_player_bet = last_bets[next_player_seat - 1]
+
+        final_bet_metric = 0
+
+        if self.activePlayers[last_player_seat - 1]:
+            final_bet_metric = last_player_bet
+        else:
+            final_bet_metric = next_player_bet
+
+        return final_bet_metric
 
     def resetTurn(self):
         self.legalActions = {}

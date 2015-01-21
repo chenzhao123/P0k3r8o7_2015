@@ -195,9 +195,18 @@ class Player:
         self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         self.timeBank = parser_dict['timeBank']
+        numBoardCards = parser_dict['numBoardCards']
 
-        deltaStack = self.stack - self.startingStack
-        self.ai.learnAll(deltaStack)
+        diffStack = self.stack - self.startingStack
+        if numBoardCards == 0:
+            reward = diffStack
+        elif numBoardCards == 3:
+            reward = diffStack/2
+        elif numBoardCards == 4:
+            reward = diffStack/4
+        else:
+            reward = diffStack/8
+        self.ai.learnAll(reward)
 
         self.numHandsPlayed += 1
         self.numChipsGained += deltaStack

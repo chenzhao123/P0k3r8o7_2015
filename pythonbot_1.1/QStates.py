@@ -1,9 +1,3 @@
-from enum import Enum
-
-class QAction(Enum):
-    fold = "FOLD"
-    check = "CHECK"
-
 QActions = ["FOLD",
             "CHECK",
             "BET10",

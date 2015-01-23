@@ -39,7 +39,7 @@ class QLearn:
             q = [q[i] + random.random() * 3 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
             maxQ = max(q)
             '''
-            return pickRandomPokerAction(equity, potSize, bet_metric)
+            return self.pickRandomPokerAction(equity, potSize, bet_metric)
 
         count = q.count(maxQ)
         if count > 1:

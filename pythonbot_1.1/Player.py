@@ -211,7 +211,7 @@ class Player:
         self.ai.learnAll(reward)
 
         self.numHandsPlayed += 1
-        self.numChipsGained += deltaStack
+        self.numChipsGained += diffStack
         if not self.numHandsPlayed % 1000:
             print "Average winning per hand:", self.numChipsGained / 1000.0
             self.numHandsPlayed = 0
@@ -316,7 +316,7 @@ class Player:
                 return "FOLD"
         if action == "CALL":
             if action in self.legalActions:
-                return "CALL"
+                return "CALL:" + self.legalActions["CALL"][0]
             else:
                 return "CHECK"
 
@@ -324,7 +324,7 @@ class Player:
         
         bet_metric = self.analyzePotOdds()
 
-        bet_amt = self.potSize/goal_odds + final_bet_metric
+        bet_amt = self.potSize/goal_odds + bet_metric
 
 
         #TODO, convert odds to bet amt.

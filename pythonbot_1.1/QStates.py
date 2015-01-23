@@ -1,14 +1,10 @@
-QActions = ["FOLD",
-            "CHECK",
-            "BET10",
-            "BET20",
-            "BET30",
-            "BET40",
-            "BET50",
-            "BET60",
-            "BET70",
-            "BET80",
-            "BET90"]
+QActions = ["FOLD", 
+            "CHECK", 
+            "CALL", 
+            "ODDS1.0", 
+            "ODDS1.5", 
+            "ODDS2.0", 
+            "ODDS3.0"]
 
 class PrevAction:
     """ Create previous action stats """

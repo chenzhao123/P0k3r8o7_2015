@@ -53,7 +53,7 @@ class Player:
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
         self.qfile = "QFile.txt"
-        self.ai = QLearn(["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS1.5", "ODDS2.0", "ODDS3.0", "ODDS4.0"],
+        self.ai = QLearn(["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS1.5", "ODDS2.0", "ODDS3.0"],
                           epsilon=0.3, alpha=0.2, gamma=1.0)
         self.ai.loadQ(self.qfile)
         self.numHandsPlayed = 0
@@ -411,22 +411,27 @@ class Player:
         last_bets = [opp1_last_bet, opp2_last_bet, opp3_last_bet]
         last_player_seat = (self.seat - 1) % 3
         next_player_seat = (self.seat + 1) % 3
+        player_seat = self.seat
+
         if last_player_seat == 0:
-            last_player_seat = 1
+            last_player_seat = 3
         if next_player_seat == 0:
-            next_player_seat = 1
+            next_player_seat = 3
+        if next_player_seat == 0:
+            player_seat = 3
 
         last_player_bet = last_bets[last_player_seat - 1]
         next_player_bet = last_bets[next_player_seat - 1]
+        player_bet = last_bets[player_seat - 1]
 
         final_bet_metric = 0
 
         if self.activePlayers[last_player_seat - 1]:
-            final_bet_metric = last_player_bet
+            final_bet_metric = player_bet
         else:
-            final_bet_metric = next_player_bet
+            final_bet_metric = player_bet
 
-        return final_bet_metric
+        return final_bet_metric - 
 
     def resetTurn(self):
         self.legalActions = {}

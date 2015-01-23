@@ -278,7 +278,7 @@ class Player:
         else:
             position = 0
         numPlayers = 3 if (bool(self.opp1Active) and bool(self.opp2Active)) else 2
-        equity = discretizeEq(self.equity, numPlayers)
+        equity = discretizeEq(self.equity, numPlayers, street)
 
         numCheckCall1 = sum([1 for elt in self.lastActions if (("CHECK" == elt.name or "CALL" == elt.name) and self.opp1 == elt.actor)])
         didFold1 = sum([1 for elt in self.lastActions if ("FOLD" == elt.name and self.opp1 == elt.actor)])
@@ -303,7 +303,7 @@ class Player:
         #QLearn's possible actions ["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS1.5", "ODDS2.0", "ODDS3.0", "ODDS4.0"]
         #Format of legal actions to engine:
         #
-        #self.lastActions is a list of PerformedActions 
+        #self.lastActions is a list of PerformedActions
 
         if action == "FOLD":
             if "CHECK" in self.legalActions:
@@ -321,7 +321,7 @@ class Player:
                 return "CHECK"
 
         goal_odds = float(re.sub("[^0-9]", "",action))/10
-        
+
         bet_metric = self.analyzePotOdds()
 
         bet_amt = self.potSize/goal_odds + bet_metric
@@ -395,7 +395,7 @@ class Player:
             return "FOLD"
         else:
             return validAction
-    
+
     def analyzePotOdds(self):
 
         opp1_last_bet = 0

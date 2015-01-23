@@ -1,9 +1,9 @@
-QActions = ["FOLD", 
-            "CHECK", 
-            "CALL", 
-            "ODDS1.0", 
-            "ODDS1.5", 
-            "ODDS2.0", 
+QActions = ["FOLD",
+            "CHECK",
+            "CALL",
+            "ODDS1.0",
+            "ODDS1.5",
+            "ODDS2.0",
             "ODDS3.0"]
 
 class PrevAction:
@@ -12,24 +12,16 @@ class PrevAction:
                        ch2, ra2, rn2, fd2):
         self.opp1Fold = fd1 # folded or not
         self.opp1CheckCallNum = ch1 # checked or not this street, boolean (2)
-        self.opp1Amt = ra1 # total call/bet/raise amount this street, discretized (10?)
-        self.opp1BetRaiseNum = rn1 # number of times bet/raised this street (~4), <= 3
-        # bets and raises are combined here, but we can split it up if we want
+        self.opp1Amt = ra1 # total call/bet/raise amount this street, discretized (6)
+        self.opp1Aggr = int(rn1 >= ch1)
 
-        self.opp2Fold  = fd2
+        self.opp2Fold= fd2
         self.opp2CheckCallNum = ch2
         self.opp2Amt  = ra2
-        self.opp2BetRaiseNum = rn2
+        self.opp2Aggr = int(rn2 >= ch2)
 
     def __hash__(self):
-        return int(1e7 * self.opp1Fold + \
-                1e6 * self.opp1CheckCallNum + \
-                1e5 * self.opp1Amt + \
-                1e4 * self.opp1BetRaiseNum + \
-                1e3 * self.opp2Fold + \
-                1e2 * self.opp2CheckCallNum + \
-                1e1 * self.opp2Amt + \
-                1e0 * self.opp2BetRaiseNum)
+        return int(1e5 * self.opp1CheckCallNum + 1e4 * self.opp1Amt + 1e3 * self.opp1Aggr + 1e2 * self.opp2CheckCallNum + 1e1 * self.opp2Amt + 1e0 * self.opp2Aggr)
 
     def __eq__(self, other):
         if type(other) is type(self):
@@ -38,7 +30,8 @@ class PrevAction:
 
 class QState:
     def __init__(self, pos, eq, st, act):
-        self.position = pos  # (2, 1 if last or 0 if not last)
+        self.numOppFold = int(act.opp1Fold) + int(act.opp2Fold)
+        self.position = pos  # dealer or not dealer
         self.equity = eq  # index
         self.street = st  # (4)
         self.prevAction = act #
@@ -52,7 +45,8 @@ class QState:
         return not self.__eq__(other)
 
     def __hash__(self):
-        return int(1e3 * self.prevAction.__hash__() + \
+        return int(1e4 * self.prevAction.__hash__() + \
+                1e3 * self.numOppFold + \
                 1e2 * self.position + \
                 1e1 * self.equity + \
                 1e0 * self.street)
@@ -60,15 +54,22 @@ class QState:
 
 def discretizeAmt(amount):
     """return index of discretized amount, starting at 0"""
-    interval = [2, 6, 12, 24, 48, 96]
+    interval = [6, 12, 24, 48, 96]
     return sum(i < amount for i in interval)
 
-def discretizeEq(equity, numPlayers):
+def discretizeEq(equity, numPlayers, street):
     """return index of discretized equity, starting at 0"""
+    interval2 = [0.4, 0.55, 0.7]
+    interval3 = [0.3, 0.375, 0.45]
+
     if (numPlayers == 2):
-        interval = [0.2, 0.325, 0.45, 0.575, 0.7]
+        interval = [interval2[0]+0.01*street,
+                    interval2[1]+0.02*street,
+                    interval2[2]+0.03*street]
     else:
-        interval = [0.16, 0.27, 0.38, 0.49, 0.6]
+        interval = [interval3[0]+0.02*street,
+                    interval3[1]+0.04*street,
+                    interval3[2]+0.06*street]
     return sum(i < equity for i in interval)
 
 class QStateActionPair():

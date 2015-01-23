@@ -427,11 +427,11 @@ class Player:
         final_bet_metric = 0
 
         if self.activePlayers[last_player_seat - 1]:
-            final_bet_metric = player_bet
+            final_bet_metric = last_player_bet
         else:
-            final_bet_metric = player_bet
+            final_bet_metric = next_player_bet
 
-        return final_bet_metric - 
+        return final_bet_metric - player_bet
 
     def resetTurn(self):
         self.legalActions = {}

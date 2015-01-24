@@ -1,0 +1,846 @@
+6.176 MIT Pokerbots - FOLDERBOT vs P2 vs P3 (stack=200, bb=2)
+Hand #1, FOLDERBOT (200), P2 (200), P3 (200)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [3c Ad]
+Dealt to P2 [6d 8h]
+Dealt to P3 [Ah 4d]
+FOLDERBOT folds
+P2 folds
+P3 wins the pot (3)
+
+Hand #2, P3 (201), FOLDERBOT (200), P2 (199)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [2d Th]
+Dealt to FOLDERBOT [5h 5c]
+Dealt to P2 [Jd 5s]
+P3 raises to 4
+FOLDERBOT folds
+P2 calls 4
+*** FLOP *** (9) [5d Jh 4c]
+P2 checks
+P3 bets 4
+P2 folds
+P3 wins the pot (13)
+
+Hand #3, P2 (195), P3 (206), FOLDERBOT (199)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [4d Ac]
+Dealt to P3 [4h Jc]
+Dealt to FOLDERBOT [3d As]
+P2 calls 2
+P3 folds
+FOLDERBOT checks
+*** FLOP *** (5) [Qc 5s 2c]
+FOLDERBOT checks
+P2 checks
+*** TURN *** (5) [Qc 5s 2c] [4s]
+FOLDERBOT checks
+P2 checks
+*** RIVER *** (5) [Qc 5s 2c 4s] [3h]
+FOLDERBOT bets 2
+P2 calls 2
+P2 shows [4d Ac]
+FOLDERBOT shows [3d As]
+P2 ties for the pot (5)
+FOLDERBOT ties for the pot (4)
+
+Hand #4, FOLDERBOT (199), P2 (196), P3 (205)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [7d Jd]
+Dealt to P2 [Tc Ah]
+Dealt to P3 [3s Kd]
+FOLDERBOT calls 2
+P2 folds
+P3 checks
+*** FLOP *** (5) [5h 7c 3h]
+P3 checks
+FOLDERBOT checks
+*** TURN *** (5) [5h 7c 3h] [9h]
+P3 bets 4
+FOLDERBOT folds
+P3 wins the pot (9)
+
+Hand #5, P3 (208), FOLDERBOT (197), P2 (195)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [As Jh]
+Dealt to FOLDERBOT [7d Ts]
+Dealt to P2 [Ah 9h]
+P3 folds
+FOLDERBOT calls 2
+P2 raises to 4
+FOLDERBOT folds
+P2 wins the pot (6)
+
+Hand #6, P2 (197), P3 (208), FOLDERBOT (195)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Kd 9h]
+Dealt to P3 [Jd 4s]
+Dealt to FOLDERBOT [2h 8h]
+P2 raises to 5
+P3 calls 5
+FOLDERBOT folds
+*** FLOP *** (12) [Kh Ac 8s]
+P3 checks
+P2 checks
+*** TURN *** (12) [Kh Ac 8s] [8c]
+P3 bets 7
+P2 folds
+P3 wins the pot (19)
+
+Hand #7, FOLDERBOT (193), P2 (192), P3 (215)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [8d 8s]
+Dealt to P2 [Ts 6d]
+Dealt to P3 [Kh 3c]
+FOLDERBOT folds
+P2 folds
+P3 wins the pot (3)
+
+Hand #8, P3 (216), FOLDERBOT (193), P2 (191)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Td Qd]
+Dealt to FOLDERBOT [2c 8s]
+Dealt to P2 [Ad 7c]
+P3 folds
+FOLDERBOT calls 2
+P2 raises to 4
+FOLDERBOT folds
+P2 wins the pot (6)
+
+Hand #9, P2 (193), P3 (216), FOLDERBOT (191)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Jd Jh]
+Dealt to P3 [Qd 9h]
+Dealt to FOLDERBOT [Qs 6s]
+P2 calls 2
+P3 calls 2
+FOLDERBOT checks
+*** FLOP *** (6) [Ts 2h 4s]
+P3 checks
+FOLDERBOT checks
+P2 checks
+*** TURN *** (6) [Ts 2h 4s] [Kd]
+P3 bets 4
+FOLDERBOT raises to 9
+P2 raises to 17
+P3 calls 17
+FOLDERBOT raises to 40
+P2 calls 40
+P3 folds
+*** RIVER *** (103) [Ts 2h 4s Kd] [Ah]
+FOLDERBOT checks
+P2 checks
+P2 shows [Jd Jh]
+FOLDERBOT shows [Qs 6s]
+P2 wins the pot (103)
+
+Hand #10, FOLDERBOT (149), P2 (254), P3 (197)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [5d 4d]
+Dealt to P2 [2c Qc]
+Dealt to P3 [Kh 5h]
+FOLDERBOT calls 2
+P2 calls 2
+P3 checks
+*** FLOP *** (6) [4s 6c Kd]
+P2 checks
+P3 bets 5
+FOLDERBOT calls 5
+P2 raises to 17
+P3 folds
+FOLDERBOT calls 17
+*** TURN *** (45) [4s 6c Kd] [As]
+P2 bets 31
+FOLDERBOT calls 31
+*** RIVER *** (107) [4s 6c Kd As] [9h]
+P2 bets 30
+FOLDERBOT folds
+P2 wins the pot (137)
+
+Hand #11, P3 (190), FOLDERBOT (99), P2 (311)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Qs 3h]
+Dealt to FOLDERBOT [8c 2s]
+Dealt to P2 [7h 7c]
+P3 calls 2
+FOLDERBOT folds
+P2 raises to 5
+P3 folds
+P2 wins the pot (8)
+
+Hand #12, P2 (314), P3 (188), FOLDERBOT (98)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [8h Qs]
+Dealt to P3 [5d Kd]
+Dealt to FOLDERBOT [As 7s]
+P2 folds
+P3 raises to 4
+FOLDERBOT calls 4
+*** FLOP *** (8) [8c 3h Ad]
+P3 checks
+FOLDERBOT bets 8
+P3 folds
+FOLDERBOT wins the pot (16)
+
+Hand #13, FOLDERBOT (102), P2 (314), P3 (184)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [Ts 9s]
+Dealt to P2 [As Js]
+Dealt to P3 [4h 8h]
+FOLDERBOT calls 2
+P2 folds
+P3 raises to 5
+FOLDERBOT folds
+P3 wins the pot (8)
+
+Hand #14, P3 (187), FOLDERBOT (100), P2 (313)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Qh 6h]
+Dealt to FOLDERBOT [Qs 9h]
+Dealt to P2 [Tc Ad]
+P3 folds
+FOLDERBOT folds
+P2 wins the pot (3)
+
+Hand #15, P2 (314), P3 (187), FOLDERBOT (99)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Ks Kh]
+Dealt to P3 [9c 8s]
+Dealt to FOLDERBOT [Ad 2c]
+P2 folds
+P3 calls 2
+FOLDERBOT checks
+*** FLOP *** (4) [Ah 7d 9d]
+P3 bets 2
+FOLDERBOT raises to 8
+P3 raises to 15
+FOLDERBOT calls 15
+*** TURN *** (34) [Ah 7d 9d] [Ac]
+P3 bets 27
+FOLDERBOT raises to 57
+P3 folds
+FOLDERBOT wins the pot (118)
+
+Hand #16, FOLDERBOT (143), P2 (314), P3 (143)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [8h 6d]
+Dealt to P2 [Kd 9d]
+Dealt to P3 [Qc Ac]
+FOLDERBOT calls 2
+P2 raises to 6
+P3 folds
+FOLDERBOT calls 6
+*** FLOP *** (14) [Js Qh Jh]
+P2 bets 8
+FOLDERBOT calls 8
+*** TURN *** (30) [Js Qh Jh] [4s]
+P2 checks
+FOLDERBOT checks
+*** RIVER *** (30) [Js Qh Jh 4s] [4c]
+P2 bets 24
+FOLDERBOT calls 24
+FOLDERBOT shows [8h 6d]
+P2 shows [Kd 9d]
+P2 wins the pot (78)
+
+Hand #17, P3 (141), FOLDERBOT (105), P2 (354)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [9s 8s]
+Dealt to FOLDERBOT [8d Td]
+Dealt to P2 [7c 2d]
+P3 folds
+FOLDERBOT calls 2
+P2 raises to 5
+FOLDERBOT calls 5
+*** FLOP *** (10) [6d 6c Th]
+FOLDERBOT checks
+P2 bets 7
+FOLDERBOT calls 7
+*** TURN *** (24) [6d 6c Th] [6h]
+FOLDERBOT checks
+P2 bets 22
+FOLDERBOT calls 22
+*** RIVER *** (68) [6d 6c Th 6h] [6s]
+FOLDERBOT checks
+P2 checks
+FOLDERBOT shows [8d Td]
+P2 shows [7c 2d]
+FOLDERBOT ties for the pot (34)
+P2 ties for the pot (34)
+
+Hand #18, P2 (354), P3 (141), FOLDERBOT (105)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Jh Ad]
+Dealt to P3 [Tc Qc]
+Dealt to FOLDERBOT [3h 5h]
+P2 calls 2
+P3 raises to 5
+FOLDERBOT calls 5
+P2 folds
+*** FLOP *** (12) [2h 7s 4s]
+P3 checks
+FOLDERBOT bets 6
+P3 raises to 14
+FOLDERBOT folds
+P3 wins the pot (32)
+
+Hand #19, FOLDERBOT (94), P2 (352), P3 (154)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [7c 9s]
+Dealt to P2 [8d Jc]
+Dealt to P3 [Ad Ah]
+FOLDERBOT calls 2
+P2 folds
+P3 checks
+*** FLOP *** (5) [Jh Kd Qc]
+P3 checks
+FOLDERBOT checks
+*** TURN *** (5) [Jh Kd Qc] [8c]
+P3 checks
+FOLDERBOT bets 2
+P3 folds
+FOLDERBOT wins the pot (7)
+
+Hand #20, P3 (152), FOLDERBOT (97), P2 (351)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Kc Td]
+Dealt to FOLDERBOT [Ad 6c]
+Dealt to P2 [Qc 6h]
+P3 raises to 4
+FOLDERBOT calls 4
+P2 raises to 11
+P3 folds
+FOLDERBOT calls 11
+*** FLOP *** (26) [2c 8c Jh]
+FOLDERBOT checks
+P2 checks
+*** TURN *** (26) [2c 8c Jh] [3h]
+FOLDERBOT checks
+P2 bets 21
+FOLDERBOT folds
+P2 wins the pot (47)
+
+Hand #21, P2 (366), P3 (148), FOLDERBOT (86)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [5c 2d]
+Dealt to P3 [Jh 9d]
+Dealt to FOLDERBOT [5h 9c]
+P2 calls 2
+P3 folds
+FOLDERBOT checks
+*** FLOP *** (5) [Ts Kd 9h]
+FOLDERBOT checks
+P2 checks
+*** TURN *** (5) [Ts Kd 9h] [Kh]
+FOLDERBOT checks
+P2 bets 4
+FOLDERBOT calls 4
+*** RIVER *** (13) [Ts Kd 9h Kh] [6h]
+FOLDERBOT checks
+P2 checks
+P2 shows [5c 2d]
+FOLDERBOT shows [5h 9c]
+FOLDERBOT wins the pot (13)
+
+Hand #22, FOLDERBOT (93), P2 (360), P3 (147)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [4d Qc]
+Dealt to P2 [Ah 3d]
+Dealt to P3 [Jh 6h]
+FOLDERBOT folds
+P2 folds
+P3 wins the pot (3)
+
+Hand #23, P3 (148), FOLDERBOT (93), P2 (359)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Ad Ac]
+Dealt to FOLDERBOT [3d 7d]
+Dealt to P2 [5s 7h]
+P3 raises to 4
+FOLDERBOT folds
+P2 raises to 7
+P3 calls 7
+*** FLOP *** (15) [As Qc Jh]
+P2 checks
+P3 bets 7
+P2 calls 7
+*** TURN *** (29) [As Qc Jh] [Tc]
+P2 bets 18
+P3 raises to 77
+P2 folds
+P3 wins the pot (124)
+
+Hand #24, P2 (327), P3 (181), FOLDERBOT (92)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Tc 9d]
+Dealt to P3 [4s 8s]
+Dealt to FOLDERBOT [As 4h]
+P2 raises to 4
+P3 calls 4
+FOLDERBOT calls 4
+*** FLOP *** (12) [Th 9s 6c]
+P3 checks
+FOLDERBOT bets 6
+P2 folds
+P3 raises to 26
+FOLDERBOT folds
+P3 wins the pot (44)
+
+Hand #25, FOLDERBOT (82), P2 (323), P3 (195)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [6d Kc]
+Dealt to P2 [7s Qs]
+Dealt to P3 [As 4h]
+FOLDERBOT calls 2
+P2 folds
+P3 raises to 5
+FOLDERBOT raises to 8
+P3 calls 8
+*** FLOP *** (17) [9d Tc 9c]
+P3 bets 9
+FOLDERBOT folds
+P3 wins the pot (26)
+
+Hand #26, P3 (204), FOLDERBOT (74), P2 (322)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [6d 5c]
+Dealt to FOLDERBOT [7h 2h]
+Dealt to P2 [3d 8d]
+P3 raises to 4
+FOLDERBOT folds
+P2 raises to 10
+P3 calls 10
+*** FLOP *** (21) [Qs Jc 8h]
+P2 checks
+P3 bets 5
+P2 raises to 25
+P3 raises to 46
+P2 raises to 74
+P3 folds
+P2 wins the pot (141)
+
+Hand #27, P2 (379), P3 (148), FOLDERBOT (73)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [As 7d]
+Dealt to P3 [Td Jh]
+Dealt to FOLDERBOT [Js Qd]
+P2 raises to 6
+P3 calls 6
+FOLDERBOT raises to 14
+P2 calls 14
+P3 calls 14
+*** FLOP *** (42) [Qh 7s 7c]
+P3 checks
+FOLDERBOT checks
+P2 bets 34
+P3 calls 34
+FOLDERBOT calls 34
+*** TURN *** (144) [Qh 7s 7c] [Ac]
+P3 checks
+FOLDERBOT checks
+P2 checks
+*** RIVER *** (144) [Qh 7s 7c Ac] [Kh]
+P3 checks
+FOLDERBOT bets 25
+P2 raises to 76
+P3 calls 76
+P2 shows [As 7d]
+P3 shows [Td Jh]
+FOLDERBOT shows [Js Qd]
+P2 wins the pot (219)
+P2 wins the pot (102)
+
+Hand #28, P3 (24), P2 (576), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to FOLDERBOT [3c 5d]
+Dealt to P2 [6s 9s]
+Dealt to P3 [9h Ac]
+P3 calls 2
+P2 checks
+*** FLOP *** (4) [5c 6h Ad]
+P2 bets 2
+P3 calls 2
+*** TURN *** (8) [5c 6h Ad] [Ah]
+P2 checks
+P3 bets 4
+P2 raises to 8
+P3 calls 8
+*** RIVER *** (24) [5c 6h Ad Ah] [8d]
+P2 checks
+P3 bets 9
+P2 raises to 12
+P3 calls 12
+P2 shows [6s 9s]
+P3 shows [9h Ac]
+P3 wins the pot (48)
+
+Hand #29, P2 (552), P3 (48), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [Kd Qs]
+Dealt to FOLDERBOT [Ts 6d]
+Dealt to P2 [4h 3s]
+P2 raises to 5
+P3 folds
+P2 wins the pot (7)
+
+Hand #30, P3 (46), P2 (554), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P2 [6s Ks]
+Dealt to P3 [Kh 8s]
+Dealt to FOLDERBOT [3c 6h]
+P3 raises to 5
+P2 calls 5
+*** FLOP *** (10) [7s 3s 4h]
+P2 bets 2
+P3 folds
+P2 wins the pot (12)
+
+Hand #31, P2 (559), P3 (41), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [Jd Ah]
+Dealt to P2 [Tc Ac]
+Dealt to P3 [Kc 8d]
+P2 folds
+P3 wins the pot (3)
+
+Hand #32, P3 (42), P2 (558), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Qs 5h]
+Dealt to FOLDERBOT [Kh 9c]
+Dealt to P2 [3c 3h]
+P3 folds
+P2 wins the pot (3)
+
+Hand #33, P2 (559), P3 (41), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P2 [8d Kd]
+Dealt to P3 [5s 9h]
+Dealt to FOLDERBOT [6h Qc]
+P2 folds
+P3 wins the pot (3)
+
+Hand #34, P3 (42), P2 (558), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to FOLDERBOT [4d 6h]
+Dealt to P2 [Jh 3h]
+Dealt to P3 [Jd Ad]
+P3 folds
+P2 wins the pot (3)
+
+Hand #35, P2 (559), P3 (41), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [Ac 7c]
+Dealt to FOLDERBOT [Tc Ah]
+Dealt to P2 [8c Qh]
+P2 raises to 4
+P3 calls 4
+*** FLOP *** (8) [9c 9d 5h]
+P3 bets 2
+P2 folds
+P3 wins the pot (10)
+
+Hand #36, P3 (45), P2 (555), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P2 [Qs 2h]
+Dealt to P3 [Qc 3d]
+Dealt to FOLDERBOT [Qd Kh]
+P3 raises to 5
+P2 raises to 9
+P3 folds
+P2 wins the pot (14)
+
+Hand #37, P2 (560), P3 (40), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [2s Td]
+Dealt to P2 [9c 9d]
+Dealt to P3 [4h 5h]
+P2 calls 2
+P3 checks
+*** FLOP *** (4) [Kd 5d 7h]
+P3 bets 3
+P2 folds
+P3 wins the pot (7)
+
+Hand #38, P3 (42), P2 (558), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [5d Ad]
+Dealt to FOLDERBOT [4s Js]
+Dealt to P2 [8d 7s]
+P3 folds
+P2 wins the pot (3)
+
+Hand #39, P2 (559), P3 (41), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P2 [Qd 2h]
+Dealt to P3 [2c Th]
+Dealt to FOLDERBOT [4c Ac]
+P2 folds
+P3 wins the pot (3)
+
+Hand #40, P3 (42), P2 (558), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to FOLDERBOT [4s 5h]
+Dealt to P2 [6c 7h]
+Dealt to P3 [4h 3d]
+P3 calls 2
+P2 checks
+*** FLOP *** (4) [As 2c 6d]
+P2 checks
+P3 bets 2
+P2 raises to 4
+P3 calls 4
+*** TURN *** (12) [As 2c 6d] [Ah]
+P2 checks
+P3 checks
+*** RIVER *** (12) [As 2c 6d Ah] [3s]
+P2 checks
+P3 bets 11
+P2 folds
+P3 wins the pot (23)
+
+Hand #41, P2 (552), P3 (48), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [7s 7d]
+Dealt to FOLDERBOT [Ah Qd]
+Dealt to P2 [Kh 2s]
+P2 folds
+P3 wins the pot (3)
+
+Hand #42, P3 (49), P2 (551), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P2 [2s 7d]
+Dealt to P3 [Kc 6s]
+Dealt to FOLDERBOT [Ac 6d]
+P3 folds
+P2 wins the pot (3)
+
+Hand #43, P2 (552), P3 (48), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [Ah 6s]
+Dealt to P2 [8d 5h]
+Dealt to P3 [4h Jh]
+P2 folds
+P3 wins the pot (3)
+
+Hand #44, P3 (49), P2 (551), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [As Tc]
+Dealt to FOLDERBOT [9c 7c]
+Dealt to P2 [5h Jd]
+P3 raises to 5
+P2 calls 5
+*** FLOP *** (10) [3d 5d 7d]
+P2 checks
+P3 checks
+*** TURN *** (10) [3d 5d 7d] [4h]
+P2 checks
+P3 checks
+*** RIVER *** (10) [3d 5d 7d 4h] [2c]
+P2 checks
+P3 bets 3
+P2 raises to 7
+P3 raises to 14
+P2 raises to 40
+P3 folds
+P2 wins the pot (64)
+
+Hand #45, P2 (570), P3 (30), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P2 [Ad 7c]
+Dealt to P3 [Ah 4h]
+Dealt to FOLDERBOT [Jd 9d]
+P2 raises to 4
+P3 calls 4
+*** FLOP *** (8) [8c Th 9h]
+P3 checks
+P2 bets 3
+P3 folds
+P2 wins the pot (11)
+
+Hand #46, P3 (26), P2 (574), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to FOLDERBOT [7c 6s]
+Dealt to P2 [Ad 8c]
+Dealt to P3 [Jd 7s]
+P3 calls 2
+P2 checks
+*** FLOP *** (4) [2s 4d Kh]
+P2 bets 2
+P3 raises to 9
+P2 folds
+P3 wins the pot (15)
+
+Hand #47, P2 (570), P3 (30), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [6c 6h]
+Dealt to FOLDERBOT [9h 5c]
+Dealt to P2 [6d Ks]
+P2 folds
+P3 wins the pot (3)
+
+Hand #48, P3 (31), P2 (569), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P2 [Kh 9h]
+Dealt to P3 [Kd Th]
+Dealt to FOLDERBOT [As 9s]
+P3 folds
+P2 wins the pot (3)
+
+Hand #49, P2 (570), P3 (30), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [7d 2s]
+Dealt to P2 [4s 9c]
+Dealt to P3 [5c Kd]
+P2 calls 2
+P3 raises to 5
+P2 folds
+P3 wins the pot (7)
+
+Hand #50, P3 (32), P2 (568), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Kd Td]
+Dealt to FOLDERBOT [Qc 4c]
+Dealt to P2 [2c Qs]
+P3 folds
+P2 wins the pot (3)
+
+Hand #51, P2 (569), P3 (31), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P2 [As Qc]
+Dealt to P3 [4h Js]
+Dealt to FOLDERBOT [Jd 9d]
+P2 calls 2
+P3 raises to 4
+P2 folds
+P3 wins the pot (6)
+
+Hand #52, P3 (33), P2 (567), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to FOLDERBOT [Jc 6d]
+Dealt to P2 [3h 5d]
+Dealt to P3 [Qd Qc]
+P3 folds
+P2 wins the pot (3)
+
+Hand #53, P2 (568), P3 (32), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [2h 6s]
+Dealt to FOLDERBOT [5d 5c]
+Dealt to P2 [9s 7c]
+P2 folds
+P3 wins the pot (3)
+
+Hand #54, P3 (33), P2 (567), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P2 [4d 2h]
+Dealt to P3 [9d Kd]
+Dealt to FOLDERBOT [Ks 9s]
+P3 folds
+P2 wins the pot (3)
+
+Hand #55, P2 (568), P3 (32), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [Ac 4d]
+Dealt to P2 [8d Ks]
+Dealt to P3 [Jh 2s]
+P2 calls 2
+P3 raises to 5
+P2 folds
+P3 wins the pot (7)
+
+Hand #56, P3 (34), P2 (566), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [2h 6s]
+Dealt to FOLDERBOT [Jd 3d]
+Dealt to P2 [3c Th]
+P3 calls 2
+P2 checks
+*** FLOP *** (4) [Ac Qh 6c]
+P2 bets 2
+P3 folds
+P2 wins the pot (6)
+
+Hand #57, P2 (568), P3 (32), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P2 [9d Ad]
+Dealt to P3 [2c Td]
+Dealt to FOLDERBOT [Jd 6d]
+P2 folds
+P3 wins the pot (3)
+
+Hand #58, P3 (33), P2 (567), FOLDERBOT (0)
+P3 posts the blind of 1
+P2 posts the blind of 2
+Dealt to FOLDERBOT [8s 9s]
+Dealt to P2 [8d 5s]
+Dealt to P3 [5d 3h]
+P3 raises to 5
+P2 calls 5
+*** FLOP *** (10) [As Ah 9h]
+P2 bets 7
+P3 raises to 18
+P2 raises to 28
+P3 calls 28
+*** TURN *** (66) [As Ah 9h] [8c]
+*** RIVER *** (66) [As Ah 9h 8c] [7h]
+P2 shows [8d 5s]
+P3 shows [5d 3h]
+P2 wins the pot (66)
+

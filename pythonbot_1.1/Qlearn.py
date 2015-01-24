@@ -5,7 +5,7 @@ import time
 import math
 
 class QLearn:
-    def __init__(self, actions, epsilon=0.3, alpha=0.2, gamma=1.0):
+    def __init__(self, actions, epsilon=0.3, alpha=0.1, gamma=1.0):
         self.q = {}
 
         self.epsilon = epsilon
@@ -20,10 +20,12 @@ class QLearn:
 
     def learnQ(self, state, action, reward, value):
         oldv = self.q.get((state, action), None)
+        print "learning... old qvalue is ", oldv
         if oldv is None:
             self.q[(state, action)] = reward
         else:
             self.q[(state, action)] = oldv + self.alpha * (value - oldv)
+        print "learning... new qvalue is ", self.q[(state, action)]
 
     def chooseAction(self, state, equity, potSize, bet_metric, return_q=False):
         print "(action, value) values for (state, a) is ", [(a, self.getQ(state, a)) for a in self.actions]
@@ -39,16 +41,24 @@ class QLearn:
             q = [q[i] + random.random() * 3 * mag for i in range(len(self.actions))] # add random values to all the actions, recalculate maxQ
             maxQ = max(q)
             '''
-            return self.pickRandomPokerAction(equity, potSize, bet_metric)
+            action = self.pickRandomPokerAction(equity, potSize, bet_metric)
+            self.toBeProcessed.append(QStateActionPair(state, action))
+            return action
 
         count = q.count(maxQ)
         if count > 1:
             best = [i for i in range(len(self.actions)) if q[i] == maxQ]
             i = random.choice(best)
+            if i == "FOLD":
+                rand = random.uniform(0,1)
+                if rand < 0.5:
+                    i = random.choice(best)
+                    
         else:
             i = q.index(maxQ)
 
         action = self.actions[i]
+        print "(action, value) chosen is (%s, %.2f)" %(action, maxQ)
         self.toBeProcessed.append(QStateActionPair(state, action))
 
         if return_q: # if they want it, give it!
@@ -60,11 +70,18 @@ class QLearn:
         print "learning... maxqnew is ", maxqnew
         self.learnQ(state1, action1, reward, reward + self.gamma*maxqnew)
 
+    def learnTerminalCase(self, reward, state, action):
+        self.learnQ(state, action, reward, reward + self.gamma*reward)
+
     def learnAll(self, reward):
+        if len(self.toBeProcessed) == 0:
+            return
+
         print "processing toBeProcessed with"
         for i in self.toBeProcessed:
-            print i
+            print i.qstate.__hash__(), i.qaction
 
+        self.learnTerminalCase(reward, self.toBeProcessed[-1].qstate, self.toBeProcessed[-1].qaction)
         for i in xrange(len(self.toBeProcessed)-2,-1,-1):
             state1 = self.toBeProcessed[i].qstate
             action1 = self.toBeProcessed[i].qaction
@@ -103,7 +120,7 @@ class QLearn:
             with open(filename, 'r') as f:
                 self.q = pickle.load(f)
             print "done reading qfile", time.asctime()
-        except (IOError, KeyError) as e:
+        except (IOError, KeyError, EOFError) as e:
             print e
             self.q = {}
 
@@ -114,28 +131,39 @@ class QLearn:
         print "done writing file", time.asctime()
 
     def pickRandomPokerAction(self, equity, potSize, bet_metric):
-        actions = ["FOLD", "CHECK", "CALL", "ODD4.0", "ODD3.0", "ODD2.0", "ODD1.5", "ODD1.0"]
+        print "Choosing random action with eq: %.2f, potSize: %i, bet_metric: %i" %(equity, potSize, bet_metric)
+
+        actions = ["FOLD", "CHECK", "CALL", "ODDS2.0", "ODDS1.0"]
         if abs(bet_metric) < 1 or potSize < 2:
             odds = 50
         else:
             odds = potSize/bet_metric
-        aggro = 0.7*math.sqrt(equity) + 0.3*math.log10(odds)
+        odds = max(1, odds)
+        equity = max(0, equity)
+        aggro = math.sqrt(0.7*math.sqrt(equity) + 0.3*math.log10(odds))
+        print "Aggro is %.2f" %aggro
+
         if aggro > 1:
             aggro = 1
-        aggro = aggro * 7
-        distances = [elt - aggro for elt in range(8)]
+        aggro = aggro * (len(actions)-1)
+        distances = [abs(elt - aggro) for elt in range(len(actions)-1)]
         upperbound = max(distances) * 1.2
         probabilities = [upperbound - elt for elt in distances]
-        probabilities[1] = probabilities[1] * 1.5
-        probabilities[2] = probabilities[2] * 1.5
+        probabilities[1] = probabilities[1] * 1.3
+        probabilities[2] = probabilities[2] * 1.3
         sum_prob = sum(probabilities)
         scaled_probs = [float(elt)/float(sum_prob) for elt in probabilities]
 
+        print "Scaled probs is ", scaled_probs
         rand = random.uniform(0,1)
+        print "Random number is ", rand
         counter = 0
         while rand > 0:
             rand = rand - scaled_probs[counter]
             counter += 1
+        print counter
+        counter = min(counter, len(scaled_probs) - 1)
+        print "Action chosen is %s" %actions[counter-1]
 
         return actions[counter - 1]
 

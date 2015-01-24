@@ -1,0 +1,104 @@
+6.176 MIT Pokerbots - FOLDERBOT vs P2 vs P3 (stack=200, bb=2)
+Hand #1, FOLDERBOT (200), P2 (200), P3 (200)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [7c 5d]
+Dealt to P2 [8h 7s]
+Dealt to P3 [3c 2s]
+FOLDERBOT calls 2
+P2 raises to 5
+P3 folds
+FOLDERBOT folds
+P2 wins the pot (9)
+
+Hand #2, P3 (198), FOLDERBOT (198), P2 (204)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [2c 6d]
+Dealt to FOLDERBOT [Qh 9s]
+Dealt to P2 [Ah 4c]
+P3 raises to 5
+FOLDERBOT folds
+P2 calls 5
+*** FLOP *** (11) [Ts Td 3h]
+P2 bets 4
+P3 calls 4
+*** TURN *** (19) [Ts Td 3h] [7d]
+P2 bets 5
+P3 calls 5
+*** RIVER *** (29) [Ts Td 3h 7d] [2d]
+P2 checks
+P3 bets 2
+P2 folds
+P3 wins the pot (31)
+
+Hand #3, P2 (190), P3 (213), FOLDERBOT (197)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Ad 3d]
+Dealt to P3 [2c 6s]
+Dealt to FOLDERBOT [Tc 7c]
+P2 calls 2
+P3 calls 2
+FOLDERBOT checks
+*** FLOP *** (6) [Jd 5c 4s]
+P3 bets 5
+FOLDERBOT calls 5
+P2 calls 5
+*** TURN *** (21) [Jd 5c 4s] [Qc]
+P3 checks
+FOLDERBOT checks
+P2 bets 7
+P3 calls 7
+FOLDERBOT calls 7
+*** RIVER *** (42) [Jd 5c 4s Qc] [Qd]
+P3 checks
+FOLDERBOT checks
+P2 bets 38
+P3 folds
+FOLDERBOT raises to 80
+P2 raises to 158
+FOLDERBOT folds
+P2 wins the pot (280)
+
+Hand #4, FOLDERBOT (103), P2 (298), P3 (199)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [4s 2h]
+Dealt to P2 [8d 6c]
+Dealt to P3 [Ah 5d]
+FOLDERBOT raises to 4
+P2 calls 4
+P3 folds
+*** FLOP *** (10) [Qh 5s 3c]
+P2 checks
+FOLDERBOT checks
+*** TURN *** (10) [Qh 5s 3c] [6h]
+P2 bets 4
+FOLDERBOT folds
+P2 wins the pot (14)
+
+Hand #5, P3 (197), FOLDERBOT (99), P2 (304)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Kd 7s]
+Dealt to FOLDERBOT [Ah Td]
+Dealt to P2 [6c Th]
+P3 raises to 6
+FOLDERBOT calls 6
+P2 calls 6
+*** FLOP *** (18) [6h Qd Ts]
+FOLDERBOT bets 18
+P2 raises to 55
+P3 raises to 157
+FOLDERBOT calls 93
+P2 raises to 191
+P3 calls 191
+*** TURN *** (196) [6h Qd Ts] [3h]
+*** RIVER *** (196) [6h Qd Ts 3h] [5c]
+P3 shows [Kd 7s]
+FOLDERBOT shows [Ah Td]
+P2 shows [6c Th]
+P2 wins the pot (297)
+P2 wins the pot (196)
+

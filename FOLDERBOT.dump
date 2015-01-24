@@ -1,0 +1,3158 @@
+Connecting to localhost:3000
+reading qfile Sat Jan 24 18:17:52 2015
+done reading qfile Sat Jan 24 18:17:52 2015
+NEWGAME FOLDERBOT P2 P3 200 2 1000 10.000000 Sat Jan 24 18:17:52 2015
+KEYVALUE P2 600.0 Sat Jan 24 18:17:53 2015
+NEWHAND 1 1 Kd 4c 200 200 200 FOLDERBOT P2 P3 3 true true true 10.000000 Sat Jan 24 18:17:53 2015
+GETACTION 3 0 200 199 198 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 10.0 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 3, bet metric: 0,  bet amt is: 1, valid action is: CHECK
+HANDOVER 200 195 205 3 3d Ad Jc 8 FOLD:FOLDERBOT CALL:2:P2 CHECK:P3 DEAL:FLOP BET:3:P2 RAISE:10:P3 FOLD:P2 WIN:17:P3 9.941018877 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1100010 ODDS2.0
+learning... old qvalue is  -1.41623481447
+learning... new qvalue is  -1.27461133303
+NEWHAND 2 2 Jd 4d 205 200 195 P3 FOLDERBOT P2 3 true true true 9.941019 Sat Jan 24 18:17:53 2015
+GETACTION 9 0 199 199 193 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 9.941018877 Sat Jan 24 18:17:53 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 74 0 159 194 173 3 true true true 3 CALL:6:FOLDERBOT RAISE:22:P2 RAISE:46:P3 3 FOLD CALL:46 RAISE:70:160 9.872420369 Sat Jan 24 18:17:53 2015
+last bets are  [22, 46, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 138 3 Jh Ks 9d 159 154 149 3 true true true 3 CALL:46:FOLDERBOT CALL:46:P2 DEAL:FLOP 2 CHECK BET:2:138 9.811504529 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 246 3 Jh Ks 9d 51 154 149 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 BET:108:P3 3 FOLD CALL:108 RAISE:154:154 9.766255503 Sat Jan 24 18:17:53 2015
+last bets are  [0, 108, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 108, 0]
+goal odds: 2.00, pot size: 246, bet metric: -108,  bet amt is: 15, valid action is: CHECK
+HANDOVER 297 154 149 3 Jh Ks 9d 3 FOLD:FOLDERBOT FOLD:P2 WIN:246:P3 9.714400034 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1100010 CALL
+1110010 CALL
+100010 FOLD
+100010 ODDS2.0
+learning... old qvalue is  None
+learning... new qvalue is  -3.58304787102
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  -3.58304787102
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  -3.58304787102
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0130777137864
+learning... new qvalue is  -0.370074729509
+Q value: 0.0
+NEWHAND 3 3 Js 5s 149 297 154 P2 P3 FOLDERBOT 3 true true true 9.714400 Sat Jan 24 18:17:53 2015
+GETACTION 4 0 149 295 152 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 CALL:2:P3 2 CHECK RAISE:4:6 9.714400034 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.32, potSize: 4, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07324797731456113, 0.22014658727109246, 0.3450708040332554, 0.36153463138109104]
+Random number is  0.144178105106
+2
+Action chosen is CHECK
+GETACTION 6 3 4c 6c 3d 149 293 152 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:10 9.659351580000001 Sat Jan 24 18:17:53 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 10 4 4c 6c 3d 2c 149 291 150 3 true true true 3 CALL:2:FOLDERBOT DEAL:TURN BET:2:P3 3 FOLD CALL:2 RAISE:4:14 9.612120559000001 Sat Jan 24 18:17:53 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 149 301 150 4 4c 6c 3d 2c 2 FOLD:FOLDERBOT WIN:10:P3 9.567826596000002 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1001110 CHECK
+1100000 CALL
+1100010 CHECK
+learning... old qvalue is  -0.589426045131
+learning... new qvalue is  -0.813326153093
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0502446402643
+learning... new qvalue is  -0.186641532475
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.243089630124
+learning... new qvalue is  0.0773593108741
+Q value: 0.0
+NEWHAND 4 1 8s 9d 150 149 301 FOLDERBOT P2 P3 3 true true true 9.567827 Sat Jan 24 18:17:53 2015
+GETACTION 3 0 150 148 299 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 9.567826596000002 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 7 0 148 148 297 3 true true true 3 CALL:2:FOLDERBOT FOLD:P2 RAISE:4:P3 3 FOLD CALL:4 RAISE:6:13 9.512268440000001 Sat Jan 24 18:17:53 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 148 148 304 0 2 FOLD:FOLDERBOT WIN:7:P3 9.450661805000001 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1100010 CALL
+1101010 CHECK
+learning... old qvalue is  -3.93091440009
+learning... new qvalue is  -3.93782296008
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.370074729509
+learning... new qvalue is  -0.533067256558
+Q value: 0.0
+NEWHAND 5 2 Kh Qc 304 148 148 P3 FOLDERBOT P2 3 true true true 9.450662 Sat Jan 24 18:17:53 2015
+GETACTION 5 0 302 147 146 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 9.450661805000001 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 292 147 161 5 Ts 3d 7s 6d Qd 14 FOLD:FOLDERBOT CHECK:P2 DEAL:FLOP CHECK:P2 CHECK:P3 DEAL:TURN CHECK:P2 CHECK:P3 DEAL:RIVER BET:4:P2 RAISE:10:P3 RAISE:17:P2 FOLD:P3 WIN:32:P2 9.394552083 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1000010 CHECK
+learning... old qvalue is  -1.43354848683
+learning... new qvalue is  -1.49019363815
+NEWHAND 6 3 2d Th 161 292 147 P2 P3 FOLDERBOT 3 true true true 9.394552 Sat Jan 24 18:17:53 2015
+HANDOVER 161 291 148 0 5 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 FOLD:P3 WIN:3:FOLDERBOT 9.394552083 Sat Jan 24 18:17:53 2015
+NEWHAND 7 1 2h Th 148 161 291 FOLDERBOT P2 P3 3 true true true 9.394552 Sat Jan 24 18:17:53 2015
+GETACTION 3 0 148 160 289 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 9.394552083 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.29, potSize: 3, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.07269270437501725, 0.2199059689972901, 0.3453114223070577, 0.36208990432063487]
+Random number is  0.64855283541
+4
+Action chosen is CALL
+GETACTION 10 0 146 157 287 3 true true true 3 CALL:2:FOLDERBOT RAISE:4:P2 CALL:4:P3 3 FOLD CALL:4 RAISE:6:16 9.341276172 Sat Jan 24 18:17:53 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 146 157 297 3 9d 6d 5s 6 FOLD:FOLDERBOT DEAL:FLOP CHECK:P2 BET:3:P3 FOLD:P2 WIN:13:P3 9.282611205 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1100000 CALL
+1000000 CHECK
+learning... old qvalue is  -1.33045401862
+learning... new qvalue is  -1.44939282674
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.11957135714
+learning... new qvalue is  -1.13360632642
+Q value: 0.0
+NEWHAND 8 2 8d Th 297 146 157 P3 FOLDERBOT P2 3 true true true 9.282611 Sat Jan 24 18:17:53 2015
+GETACTION 9 0 291 145 155 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 9.282611205 Sat Jan 24 18:17:53 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 344 145 111 4 7c 5s Jc 5d 12 FOLD:FOLDERBOT RAISE:15:P2 CALL:15:P3 DEAL:FLOP CHECK:P2 BET:17:P3 CALL:17:P2 DEAL:TURN BET:14:P2 RAISE:75:P3 FOLD:P2 WIN:154:P3 9.224842232 Sat Jan 24 18:17:53 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -2.30642566317
+learning... new qvalue is  -2.27578309686
+NEWHAND 9 3 7h Jc 111 344 145 P2 P3 FOLDERBOT 3 true true true 9.224842 Sat Jan 24 18:17:53 2015
+GETACTION 6 0 109 342 143 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 CALL:2:P3 2 CHECK RAISE:4:8 9.224842232 Sat Jan 24 18:17:53 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.32, potSize: 6, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07317908771707801, 0.22011673511218308, 0.34510065619216473, 0.3616035209785741]
+Random number is  0.115870039709
+2
+Action chosen is CHECK
+GETACTION 8 3 9c 8s 2s 109 340 143 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:12 9.169343573 Sat Jan 24 18:17:53 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.27, potSize: 8, bet_metric: 2
+Aggro is 0.74
+Scaled probs is  [0.062000473978094245, 0.21752395383349024, 0.3544472914954579, 0.3660282806929576]
+Random number is  0.731836970559
+4
+Action chosen is CALL
+GETACTION 14 3 9c 8s 2s 105 340 141 3 true true true 3 CALL:2:FOLDERBOT RAISE:4:P2 FOLD:P3 3 FOLD CALL:4 RAISE:6:20 9.117351398 Sat Jan 24 18:17:54 2015
+last bets are  [4, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 16 4 9c 8s 2s 6s 105 340 139 3 true true true 2 CALL:4:FOLDERBOT DEAL:TURN 2 CHECK BET:2:16 9.06645718 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.17, potSize: 16, bet_metric: 0
+Aggro is 0.89
+Scaled probs is  [0.07012141145873019, 0.218791742066899, 0.3464256492374488, 0.364661197236922]
+Random number is  0.311934665618
+3
+Action chosen is CALL
+GETACTION 16 5 9c 8s 2s 6s 4d 105 340 139 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:RIVER 2 CHECK BET:2:16 9.016906146 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.00, potSize: 16, bet_metric: 0
+Aggro is 0.75
+Scaled probs is  [0.0620828372165251, 0.21589407685965298, 0.35108046533782333, 0.37094262058599864]
+Random number is  0.0785713006016
+2
+Action chosen is CHECK
+HANDOVER 121 340 139 5 9c 8s 2s 6s 4d 5 CHECK:FOLDERBOT CHECK:P2 SHOW:Js:8c:P2 SHOW:7h:Jc:FOLDERBOT WIN:16:P2 8.972375427 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+110 CHECK
+1100000 CALL
+1101000 CALL
+1100000 CALL
+100000 CHECK
+learning... old qvalue is  0.00969535410864
+learning... new qvalue is  -0.277467997523
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.101679469693
+learning... new qvalue is  -0.234608430834
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.66236497939
+learning... new qvalue is  -1.63922538956
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.186641532475
+learning... new qvalue is  -0.311074287338
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.207778280464
+learning... new qvalue is  -0.330097360528
+Q value: 0.0
+NEWHAND 10 1 5c 5d 139 121 340 FOLDERBOT P2 P3 3 true true true 8.972375 Sat Jan 24 18:17:54 2015
+GETACTION 3 0 139 120 338 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 8.972375427 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 139 94 367 0 7 FOLD:FOLDERBOT RAISE:4:P2 RAISE:10:P3 RAISE:27:P2 RAISE:46:P3 FOLD:P2 WIN:73:P3 8.918497878 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -2.27578309686
+learning... new qvalue is  -2.04820478717
+NEWHAND 11 2 5d Qh 367 139 94 P3 FOLDERBOT P2 3 true true true 8.918498 Sat Jan 24 18:17:54 2015
+GETACTION 9 0 361 138 92 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 8.918497878 Sat Jan 24 18:17:54 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 374 138 88 4 4s 8h Ah Qs 10 FOLD:FOLDERBOT CALL:6:P2 DEAL:FLOP CHECK:P2 CHECK:P3 DEAL:TURN CHECK:P2 BET:9:P3 FOLD:P2 WIN:22:P3 8.860964905 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1100010 FOLD
+learning... old qvalue is  -2.04123574322
+learning... new qvalue is  -2.0371121689
+NEWHAND 12 3 Qc As 88 374 138 P2 P3 FOLDERBOT 3 true true true 8.860965 Sat Jan 24 18:17:54 2015
+GETACTION 14 0 82 368 136 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:6:P2 CALL:6:P3 3 FOLD CALL:6 RAISE:10:24 8.860964905 Sat Jan 24 18:17:54 2015
+last bets are  [6, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 18 3 6d Jh Ts 82 368 132 3 true true true 3 CALL:6:FOLDERBOT DEAL:FLOP CHECK:P3 2 CHECK BET:2:18 8.805702355 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 18 4 6d Jh Ts Kd 82 368 132 3 true true true 4 CHECK:FOLDERBOT CHECK:P2 DEAL:TURN CHECK:P3 2 CHECK BET:2:18 8.758721576 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 18, bet metric: 0,  bet amt is: 18, valid action is: BET:18
+HANDOVER 82 368 150 4 6d Jh Ts Kd 4 BET:18:FOLDERBOT FOLD:P2 FOLD:P3 WIN:36:FOLDERBOT 8.713878575999999 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1000120 CALL
+1000010 FOLD
+20 ODDS1.0
+learning... old qvalue is  None
+learning... new qvalue is  1.8612097182
+learning... maxqnew is  0.0
+learning... old qvalue is  0.204696250186
+learning... new qvalue is  0.370347596988
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.21026291094
+learning... new qvalue is  -0.903115648027
+Q value: 0.0
+NEWHAND 13 1 Kh Td 150 82 368 FOLDERBOT P2 P3 3 true true true 8.713879 Sat Jan 24 18:17:54 2015
+GETACTION 3 0 150 81 366 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 8.713878575999999 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 3, bet metric: 0,  bet amt is: 3, valid action is: RAISE:4
+HANDOVER 153 81 366 0 4 RAISE:4:FOLDERBOT FOLD:P2 FOLD:P3 WIN:7:FOLDERBOT 8.659399080999998 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1100010 ODDS1.0
+learning... old qvalue is  0.608391166808
+learning... new qvalue is  1.14755205013
+NEWHAND 14 2 Ts Ac 366 153 81 P3 FOLDERBOT P2 3 true true true 8.659399 Sat Jan 24 18:17:54 2015
+GETACTION 8 0 361 152 79 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 8.659399080999998 Sat Jan 24 18:17:54 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 5, 0]
+goal odds: 1.00, pot size: 8, bet metric: -5,  bet amt is: 3, valid action is: CHECK
+HANDOVER 358 152 90 4 Ad Tc 7c Js 10 FOLD:FOLDERBOT RAISE:8:P2 CALL:8:P3 DEAL:FLOP CHECK:P2 CHECK:P3 DEAL:TURN BET:5:P2 FOLD:P3 WIN:22:P2 8.602182204999998 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1100010 ODDS1.0
+learning... old qvalue is  1.14755205013
+learning... new qvalue is  0.832796845114
+NEWHAND 15 3 7d 2c 90 358 152 P2 P3 FOLDERBOT 3 true true true 8.602182 Sat Jan 24 18:17:54 2015
+GETACTION 5 0 88 357 150 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 FOLD:P3 2 CHECK RAISE:4:7 8.602182204999998 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+GETACTION 16 0 80 357 147 3 true true true 2 RAISE:5:FOLDERBOT RAISE:10:P2 3 FOLD CALL:10 RAISE:15:31 8.547919072999997 Sat Jan 24 18:17:54 2015
+last bets are  [10, 0, 5]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [10, 0, 5]
+goal odds: 2.00, pot size: 16, bet metric: -5,  bet amt is: 3, valid action is: CHECK
+HANDOVER 96 357 147 0 2 FOLD:FOLDERBOT WIN:16:P2 8.489604132999997 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+101100 ODDS1.0
+1101100 ODDS2.0
+learning... old qvalue is  None
+learning... new qvalue is  -5.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.678693284251
+learning... new qvalue is  0.110823955826
+Q value: 0.0
+NEWHAND 16 1 Kc Tc 147 96 357 FOLDERBOT P2 P3 3 true true true 8.489604 Sat Jan 24 18:17:54 2015
+GETACTION 3 0 147 95 355 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 8.489604132999997 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.45, potSize: 3, bet_metric: 0
+Aggro is 0.99
+Scaled probs is  [0.07510729125517832, 0.22095228997869326, 0.34426510132565463, 0.3596753174404739]
+Random number is  0.159415976171
+2
+Action chosen is CHECK
+HANDOVER 147 94 359 0 5 FOLD:FOLDERBOT CALL:2:P2 RAISE:4:P3 FOLD:P2 WIN:6:P3 8.433488870999996 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1100020 CHECK
+learning... old qvalue is  -0.913327072056
+learning... new qvalue is  -0.82199436485
+NEWHAND 17 2 3h 3s 359 147 94 P3 FOLDERBOT P2 3 true true true 8.433489 Sat Jan 24 18:17:54 2015
+GETACTION 5 0 357 146 92 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 8.433488870999996 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.34, potSize: 5, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.073456416065827, 0.2202369107299743, 0.3449804805743735, 0.3613261926298252]
+Random number is  0.253744397167
+2
+Action chosen is CHECK
+HANDOVER 355 146 99 3 4h 8h 8c 7 FOLD:FOLDERBOT RAISE:4:P2 CALL:4:P3 DEAL:FLOP BET:8:P2 FOLD:P3 WIN:17:P2 8.375831643999996 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1000010 CHECK
+learning... old qvalue is  -1.49019363815
+learning... new qvalue is  -1.54117427434
+NEWHAND 18 3 5h 2s 99 355 146 P2 P3 FOLDERBOT 3 true true true 8.375832 Sat Jan 24 18:17:54 2015
+GETACTION 8 0 97 351 144 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:4:P3 3 FOLD CALL:4 RAISE:6:14 8.375831643999996 Sat Jan 24 18:17:54 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 10 3 9s Qs 2h 97 351 142 3 true true true 4 CALL:4:FOLDERBOT FOLD:P2 DEAL:FLOP CHECK:P3 2 CHECK BET:2:10 8.320685618999995 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+HANDOVER 97 351 152 3 9s Qs 2h 3 BET:5:FOLDERBOT FOLD:P3 WIN:15:FOLDERBOT 8.270412638999995 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+100100 CALL
+1001000 ODDS2.0
+learning... old qvalue is  0.750577715138
+learning... new qvalue is  1.03894406219
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.664787505496
+learning... new qvalue is  -0.416596695663
+Q value: 0.0
+NEWHAND 19 1 Qh Jd 152 97 351 FOLDERBOT P2 P3 3 true true true 8.270413 Sat Jan 24 18:17:54 2015
+GETACTION 3 0 152 96 349 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 8.270412638999995 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 3, bet metric: 0,  bet amt is: 1, valid action is: CHECK
+HANDOVER 152 99 349 3 9c Qd Kd 7 FOLD:FOLDERBOT CALL:2:P2 CHECK:P3 DEAL:FLOP BET:2:P2 FOLD:P3 WIN:6:P2 8.199264623999994 Sat Jan 24 18:17:54 2015
+processing toBeProcessed with
+1100010 ODDS2.0
+learning... old qvalue is  -1.27461133303
+learning... new qvalue is  -1.14715019972
+NEWHAND 20 2 Jd 2c 349 152 99 P3 FOLDERBOT P2 3 true true true 8.199265 Sat Jan 24 18:17:54 2015
+GETACTION 3 0 349 151 97 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 8.199264623999994 Sat Jan 24 18:17:54 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 349 151 100 0 2 FOLD:FOLDERBOT WIN:3:P2 8.132724532999994 Sat Jan 24 18:17:55 2015
+processing toBeProcessed with
+1101000 FOLD
+learning... old qvalue is  -2.55935419677
+learning... new qvalue is  -2.5034187771
+NEWHAND 21 3 Jd 4h 100 349 151 P2 P3 FOLDERBOT 3 true true true 8.132725 Sat Jan 24 18:17:55 2015
+GETACTION 5 0 98 348 149 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 FOLD:P3 2 CHECK RAISE:4:7 8.132724532999994 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.28, potSize: 5, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.07250129257983803, 0.21982302388604574, 0.3453943674183021, 0.3622813161158141]
+Random number is  0.252957414406
+2
+Action chosen is CHECK
+GETACTION 5 3 3h 8h 7s 98 348 149 3 true true true 2 CHECK:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:5 8.070736164999994 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.16, potSize: 5, bet_metric: 0
+Aggro is 0.89
+Scaled probs is  [0.06980963651233184, 0.2186566395901264, 0.34656075171422146, 0.3649729721833203]
+Random number is  0.757134343557
+4
+Action chosen is CALL
+GETACTION 8 3 3h 8h 7s 95 348 149 3 true true true 2 CHECK:FOLDERBOT BET:3:P2 3 FOLD CALL:3 RAISE:6:14 8.018987591999995 Sat Jan 24 18:17:55 2015
+last bets are  [3, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.16, potSize: 8, bet_metric: 0
+Aggro is 0.89
+Scaled probs is  [0.06980963651233184, 0.2186566395901264, 0.34656075171422146, 0.3649729721833203]
+Random number is  0.989522067254
+4
+Action chosen is CALL
+GETACTION 11 4 3h 8h 7s 8d 95 348 146 3 true true true 2 CALL:3:FOLDERBOT DEAL:TURN 2 CHECK BET:2:11 7.967732046999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.11, potSize: 11, bet_metric: 0
+Aggro is 0.86
+Scaled probs is  [0.06826835397248582, 0.21798875048952646, 0.34722864081482135, 0.36651425472316634]
+Random number is  0.387499839757
+3
+Action chosen is CALL
+GETACTION 15 4 3h 8h 7s 8d 91 348 146 3 true true true 2 CHECK:FOLDERBOT BET:4:P2 3 FOLD CALL:4 RAISE:8:23 7.923299637999995 Sat Jan 24 18:17:55 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.11, potSize: 15, bet_metric: 0
+Aggro is 0.86
+Scaled probs is  [0.06826835397248582, 0.21798875048952646, 0.34722864081482135, 0.36651425472316634]
+Random number is  0.282453541796
+2
+Action chosen is CHECK
+HANDOVER 106 348 146 4 3h 8h 7s 8d 2 FOLD:FOLDERBOT WIN:15:P2 7.875094359999995 Sat Jan 24 18:17:55 2015
+processing toBeProcessed with
+101100 CHECK
+1100000 CALL
+1100000 CALL
+1100000 CALL
+1100000 CHECK
+learning... old qvalue is  -2.69624421056
+learning... new qvalue is  -2.72568954574
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.234608430834
+learning... new qvalue is  -0.360682465873
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.311074287338
+learning... new qvalue is  -0.429501736727
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.429501736727
+learning... new qvalue is  -0.536086441176
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.515627127372
+learning... new qvalue is  -0.613599292757
+Q value: 0.0
+NEWHAND 22 1 7s 3s 146 106 348 FOLDERBOT P2 P3 3 true true true 7.875094 Sat Jan 24 18:17:55 2015
+GETACTION 3 0 146 105 346 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 7.875094359999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.26, potSize: 3, bet_metric: 0
+Aggro is 0.93
+Scaled probs is  [0.07216859574127373, 0.21967885525600125, 0.3455385360483466, 0.36261401295437845]
+Random number is  0.209535977861
+2
+Action chosen is CHECK
+HANDOVER 146 105 349 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:3:P3 7.816000292999995 Sat Jan 24 18:17:55 2015
+processing toBeProcessed with
+1100000 CHECK
+learning... old qvalue is  -2.88912486052
+learning... new qvalue is  -2.60021237447
+NEWHAND 23 2 Ts 9s 349 146 105 P3 FOLDERBOT P2 3 true true true 7.816000 Sat Jan 24 18:17:55 2015
+GETACTION 9 0 343 145 103 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 7.816000292999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.39, potSize: 9, bet_metric: -6
+Aggro is 0.66
+Scaled probs is  [0.06132585517910488, 0.2308739102890468, 0.38202420884525723, 0.32577602568659114]
+Random number is  0.229000773544
+2
+Action chosen is CHECK
+HANDOVER 358 145 97 3 5c As 8c 7 FOLD:FOLDERBOT CALL:6:P2 DEAL:FLOP BET:2:P2 RAISE:11:P3 FOLD:P2 WIN:26:P3 7.758469530999995 Sat Jan 24 18:17:55 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -2.04820478717
+learning... new qvalue is  -2.04338430845
+NEWHAND 24 3 Qd 7h 97 358 145 P2 P3 FOLDERBOT 3 true true true 7.758470 Sat Jan 24 18:17:55 2015
+GETACTION 14 0 91 352 143 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:6:P2 CALL:6:P3 3 FOLD CALL:6 RAISE:10:24 7.758469530999995 Sat Jan 24 18:17:55 2015
+last bets are  [6, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 124 333 143 5 Ts Qc 4c Qh 5h 14 FOLD:FOLDERBOT DEAL:FLOP CHECK:P3 BET:3:P2 CALL:3:P3 DEAL:TURN CHECK:P3 CHECK:P2 DEAL:RIVER BET:16:P3 CALL:16:P2 SHOW:Qs:7c:P2 SHOW:Ad:Js:P3 WIN:52:P2 7.698766838999995 Sat Jan 24 18:17:55 2015
+processing toBeProcessed with
+1000110 FOLD
+learning... old qvalue is  -2.09717700941
+learning... new qvalue is  -2.11719897947
+NEWHAND 25 1 5c 4d 143 124 333 FOLDERBOT P2 P3 3 true true true 7.698767 Sat Jan 24 18:17:55 2015
+GETACTION 3 0 143 123 331 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 7.698766838999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.26, potSize: 3, bet_metric: 0
+Aggro is 0.93
+Scaled probs is  [0.0721843892213077, 0.2196856990973493, 0.3455316922069986, 0.3625982194743445]
+Random number is  0.95964121762
+4
+Action chosen is CALL
+GETACTION 6 3 9s Qs 6c 141 122 331 3 true true true 6 CALL:2:FOLDERBOT CALL:2:P2 CHECK:P3 DEAL:FLOP CHECK:P2 CHECK:P3 2 CHECK BET:2:6 7.642353099999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 6, bet metric: 0,  bet amt is: 6, valid action is: BET:6
+GETACTION 32 3 9s Qs 6c 135 102 331 3 true true true 3 BET:6:FOLDERBOT RAISE:20:P2 FOLD:P3 3 FOLD CALL:20 RAISE:34:66 7.579153535999995 Sat Jan 24 18:17:55 2015
+last bets are  [20, 0, 6]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [20, 0, 6]
+goal odds: 1.00, pot size: 32, bet metric: -14,  bet amt is: 18, valid action is: RAISE:34
+GETACTION 112 4 9s Qs 6c 7d 107 50 331 3 true true true 4 RAISE:34:FOLDERBOT CALL:34:P2 DEAL:TURN BET:38:P2 3 FOLD CALL:38 RAISE:76:88 7.518091312999995 Sat Jan 24 18:17:55 2015
+last bets are  [38, 0, 34]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [38, 0, 34]
+goal odds: 1.00, pot size: 112, bet metric: -4,  bet amt is: 108, valid action is: RAISE:88
+HANDOVER 219 50 331 4 9s Qs 6c 7d 3 RAISE:88:FOLDERBOT FOLD:P2 WIN:200:FOLDERBOT 7.463152356999995 Sat Jan 24 18:17:55 2015
+processing toBeProcessed with
+1100000 CALL
+100 ODDS1.0
+1100 ODDS1.0
+1100100 ODDS1.0
+learning... old qvalue is  None
+learning... new qvalue is  2.95259172374
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  2.95259172374
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.88536681592
+learning... new qvalue is  -1.40157096196
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.13360632642
+learning... new qvalue is  -0.724986521403
+Q value: 0.0
+NEWHAND 26 2 Ts Jc 331 219 50 P3 FOLDERBOT P2 3 true true true 7.463152 Sat Jan 24 18:17:55 2015
+GETACTION 3 0 331 218 48 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 7.463152356999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 7 0 331 217 45 3 true true true 2 CALL:2:FOLDERBOT RAISE:5:P2 3 FOLD CALL:5 RAISE:8:15 7.399879760999995 Sat Jan 24 18:17:55 2015
+last bets are  [5, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.38, potSize: 7, bet_metric: 5
+Aggro is 0.69
+Scaled probs is  [0.0616024956050357, 0.225399503638127, 0.37071576298970754, 0.34228223776712985]
+Random number is  0.503871433927
+3
+Action chosen is CALL
+GETACTION 10 3 Qc 2c Qh 331 214 45 3 true true true 2 CALL:5:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:10 7.342528224999995 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.31, potSize: 10, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.0729427412363184, 0.2200143183038539, 0.34520307300049385, 0.3618398674593337]
+Random number is  0.190087140958
+2
+Action chosen is CHECK
+GETACTION 10 4 Qc 2c Qh 8h 331 214 45 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:TURN 2 CHECK BET:2:10 7.2913304349999954 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 10 5 Qc 2c Qh 8h 8s 331 214 45 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:RIVER 2 CHECK BET:2:10 7.242505060999996 Sat Jan 24 18:17:55 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 16 5 Qc 2c Qh 8h 8s 331 214 39 3 true true true 2 CHECK:FOLDERBOT BET:6:P2 3 FOLD CALL:6 RAISE:12:28 7.192017034999996 Sat Jan 24 18:17:55 2015
+last bets are  [6, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 331 214 55 5 Qc 2c Qh 8h 8s 2 FOLD:FOLDERBOT WIN:16:P2 7.142065877999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+1101010 CALL
+1101010 CALL
+1100000 CHECK
+100000 FOLD
+100000 CHECK
+1100000 FOLD
+learning... old qvalue is  -2.06798938423
+learning... new qvalue is  -2.1371363781
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.277467997523
+learning... new qvalue is  -0.387694163917
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.608756312171
+learning... new qvalue is  -0.6858536471
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.889412185448
+learning... new qvalue is  -0.938443933049
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.36823914231
+learning... new qvalue is  -1.36938819422
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.36938819422
+learning... new qvalue is  -1.37042234095
+Q value: 0.0
+NEWHAND 27 3 9d Ks 55 331 214 P2 P3 FOLDERBOT 3 true true true 7.142066 Sat Jan 24 18:17:56 2015
+GETACTION 11 0 53 324 212 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:7:P3 3 FOLD CALL:7 RAISE:12:23 7.142065877999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 7, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 7, 0]
+HANDOVER 53 324 223 0 4 RAISE:18:FOLDERBOT FOLD:P2 FOLD:P3 WIN:27:FOLDERBOT 7.079665192999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+100110 ODDS1.0
+learning... old qvalue is  -8.62664448655
+learning... new qvalue is  -5.96398003789
+NEWHAND 28 1 Tc Jc 223 53 324 FOLDERBOT P2 P3 3 true true true 7.079665 Sat Jan 24 18:17:56 2015
+GETACTION 3 0 223 52 322 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 7.079665192999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.43, potSize: 3, bet_metric: 0
+Aggro is 0.99
+Scaled probs is  [0.07488100344846929, 0.22085423192911932, 0.34436315937522854, 0.3599016052471829]
+Random number is  0.230954196769
+2
+Action chosen is CHECK
+HANDOVER 223 51 326 0 5 FOLD:FOLDERBOT CALL:2:P2 RAISE:4:P3 FOLD:P2 WIN:6:P3 7.023054519999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -2.04338430845
+learning... new qvalue is  -1.83904587761
+NEWHAND 29 2 7h 8d 326 223 51 P3 FOLDERBOT P2 3 true true true 7.023055 Sat Jan 24 18:17:56 2015
+GETACTION 5 0 324 222 49 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 7.023054519999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.31, potSize: 5, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.0730487403843141, 0.22006025126798537, 0.34515714003636244, 0.3617338683113381]
+Random number is  0.126919200727
+2
+Action chosen is CHECK
+HANDOVER 320 222 58 5 Ah Jc Js 3d 6d 14 FOLD:FOLDERBOT CHECK:P2 DEAL:FLOP CHECK:P2 CHECK:P3 DEAL:TURN CHECK:P2 CHECK:P3 DEAL:RIVER CHECK:P2 BET:4:P3 RAISE:11:P2 FOLD:P3 WIN:20:P2 6.964593196999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+1000010 CHECK
+learning... old qvalue is  -1.54117427434
+learning... new qvalue is  -1.5870568469
+NEWHAND 30 3 Qc 5d 58 320 222 P2 P3 FOLDERBOT 3 true true true 6.964593 Sat Jan 24 18:17:56 2015
+GETACTION 7 0 58 315 220 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:15 6.964593196999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 14 3 Ah 6c 3c 58 311 217 3 true true true 3 CALL:5:FOLDERBOT DEAL:FLOP BET:4:P3 3 FOLD CALL:4 RAISE:8:22 6.906404800999995 Sat Jan 24 18:17:56 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 4, 0]
+GETACTION 63 3 Ah 6c 3c 58 273 206 3 true true true 2 RAISE:11:FOLDERBOT RAISE:42:P3 3 FOLD CALL:42 RAISE:73:136 6.856204098999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 42, 11]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.22, potSize: 63, bet_metric: 31
+Aggro is 0.65
+Scaled probs is  [0.061210767041613025, 0.23315137665430224, 0.3867287561545076, 0.3189091001495772]
+Random number is  0.595890900491
+3
+Action chosen is CALL
+GETACTION 94 4 Ah 6c 3c 7d 58 273 175 3 true true true 3 CALL:42:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:94 6.802168420999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 94 5 Ah 6c 3c 7d Qh 58 273 175 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:94 6.742497088999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 94, bet metric: 0,  bet amt is: 94, valid action is: BET:94
+HANDOVER 58 461 81 5 Ah 6c 3c 7d Qh 5 BET:94:FOLDERBOT CALL:94:P3 SHOW:Ac:As:P3 SHOW:Qc:5d:FOLDERBOT WIN:282:P3 6.694987030999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+1101110 CALL
+1100000 ODDS2.0
+1100000 CALL
+1000000 FOLD
+1000010 ODDS1.0
+learning... old qvalue is  2.11930679579
+learning... new qvalue is  1.36926270222
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.726558460659
+learning... new qvalue is  -0.92295932159
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0215407886218
+learning... new qvalue is  -0.288443416756
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.619774576321
+learning... new qvalue is  0.288740411693
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.772107499997
+learning... new qvalue is  -0.963953456993
+Q value: 0.0
+NEWHAND 31 1 8s 7d 81 58 461 FOLDERBOT P2 P3 3 true true true 6.694987 Sat Jan 24 18:17:56 2015
+GETACTION 3 0 81 57 459 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 6.694987030999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 5 3 6s 9c 6d 79 57 459 3 true true true 5 CALL:2:FOLDERBOT FOLD:P2 CHECK:P3 DEAL:FLOP CHECK:P3 2 CHECK BET:2:5 6.6220399649999955 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.36, potSize: 5, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.0738036883070129, 0.22038739536782154, 0.34482999593652625, 0.3609789203886392]
+Random number is  0.829295921989
+4
+Action chosen is CALL
+GETACTION 7 4 6s 9c 6d 2s 79 57 457 3 true true true 3 CHECK:FOLDERBOT DEAL:TURN BET:2:P3 3 FOLD CALL:2 RAISE:4:11 6.571100324999995 Sat Jan 24 18:17:56 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 79 57 464 4 6s 9c 6d 2s 2 FOLD:FOLDERBOT WIN:7:P3 6.523456920999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+1100000 CALL
+1001100 CALL
+1100100 FOLD
+learning... old qvalue is  -2.6966486187
+learning... new qvalue is  -2.66482517983
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0637811700084
+learning... new qvalue is  -0.176323764508
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.724986521403
+learning... new qvalue is  -0.771408580763
+Q value: 0.0
+NEWHAND 32 2 Ts 5d 464 79 57 P3 FOLDERBOT P2 3 true true true 6.523457 Sat Jan 24 18:17:56 2015
+GETACTION 5 0 462 78 55 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 6.523456920999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+GETACTION 25 0 454 74 47 3 true true true 3 RAISE:5:FOLDERBOT RAISE:10:P2 CALL:10:P3 3 FOLD CALL:10 RAISE:15:40 6.454305421999996 Sat Jan 24 18:17:56 2015
+last bets are  [10, 0, 5]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.28, potSize: 25, bet_metric: 10
+Aggro is 0.70
+Scaled probs is  [0.06169219041698203, 0.22362454297061074, 0.3670492383991448, 0.34763402821326245]
+Random number is  0.138396942586
+2
+Action chosen is CHECK
+HANDOVER 440 74 86 5 9s 2c 3s 8s 3h 13 FOLD:FOLDERBOT DEAL:FLOP CHECK:P2 CHECK:P3 DEAL:TURN CHECK:P2 CHECK:P3 DEAL:RIVER BET:14:P2 CALL:14:P3 SHOW:4d:6d:P3 SHOW:3d:4c:P2 WIN:53:P2 6.392416904999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+1000000 ODDS1.0
+1000000 CHECK
+learning... old qvalue is  None
+learning... new qvalue is  -1.37972966146
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.13911726647
+learning... new qvalue is  -1.16317850596
+Q value: 0.0
+NEWHAND 33 3 9c 7d 86 440 74 P2 P3 FOLDERBOT 3 true true true 6.392417 Sat Jan 24 18:17:56 2015
+GETACTION 9 0 84 435 72 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 6.392416904999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.31, potSize: 9, bet_metric: 5
+Aggro is 0.68
+Scaled probs is  [0.0615357776783861, 0.22671977727549272, 0.3734430435690836, 0.3383014014770376]
+Random number is  0.26878330837
+2
+Action chosen is CHECK
+HANDOVER 66 462 72 4 3c Ks 3d 2d 11 FOLD:FOLDERBOT CALL:5:P2 DEAL:FLOP CHECK:P3 BET:5:P2 RAISE:15:P3 CALL:15:P2 DEAL:TURN BET:7:P3 FOLD:P2 WIN:49:P3 6.334888099999996 Sat Jan 24 18:17:56 2015
+processing toBeProcessed with
+100110 CHECK
+learning... old qvalue is  -3.34065170968
+learning... new qvalue is  -3.24442796171
+NEWHAND 34 1 5c Qc 72 66 462 FOLDERBOT P2 P3 3 true true true 6.334888 Sat Jan 24 18:17:56 2015
+GETACTION 3 0 72 65 460 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 6.334888099999996 Sat Jan 24 18:17:56 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.35, potSize: 3, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.07374543878623294, 0.22036215390881692, 0.3448552373955309, 0.3610371699094192]
+Random number is  0.48126471361
+3
+Action chosen is CALL
+GETACTION 9 0 70 64 457 3 true true true 3 CALL:2:FOLDERBOT CALL:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 6.275037320999997 Sat Jan 24 18:17:56 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.35, potSize: 9, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.07374543878623294, 0.22036215390881692, 0.3448552373955309, 0.3610371699094192]
+Random number is  0.663647611066
+4
+Action chosen is CALL
+GETACTION 37 0 67 50 446 3 true true true 3 CALL:5:FOLDERBOT RAISE:16:P2 CALL:16:P3 3 FOLD CALL:16 RAISE:27:64 6.218726647999997 Sat Jan 24 18:17:56 2015
+last bets are  [16, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [16, 5, 0]
+goal odds: 1.00, pot size: 37, bet metric: -16,  bet amt is: 21, valid action is: RAISE:27
+GETACTION 95 0 45 50 410 3 true true true 3 RAISE:27:FOLDERBOT FOLD:P2 RAISE:52:P3 3 FOLD CALL:52 RAISE:72:72 6.163219145999997 Sat Jan 24 18:17:57 2015
+last bets are  [16, 52, 27]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [16, 52, 27]
+goal odds: 1.00, pot size: 95, bet metric: 11,  bet amt is: 106, valid action is: RAISE:72
+HANDOVER 140 50 410 0 3 RAISE:72:FOLDERBOT FOLD:P3 WIN:140:FOLDERBOT 6.107515313999997 Sat Jan 24 18:17:57 2015
+processing toBeProcessed with
+1100010 CALL
+100010 CALL
+1110010 ODDS1.0
+1111010 ODDS1.0
+learning... old qvalue is  None
+learning... new qvalue is  68.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -57.0
+learning... new qvalue is  -44.5
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.334049820814
+learning... new qvalue is  6.49935516127
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.533067256558
+learning... new qvalue is  6.3202394691
+Q value: 0.0
+NEWHAND 35 2 2h 3d 410 140 50 P3 FOLDERBOT P2 3 true true true 6.107515 Sat Jan 24 18:17:57 2015
+GETACTION 3 0 410 139 48 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 6.107515313999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.20, potSize: 3, bet_metric: 0
+Aggro is 0.91
+Scaled probs is  [0.0708136254762974, 0.21909170147451149, 0.3461256898298364, 0.3639689832193548]
+Random number is  0.822022609557
+4
+Action chosen is CALL
+GETACTION 4 3 5h 8s Js 410 138 48 3 true true true 3 CALL:2:FOLDERBOT CHECK:P2 DEAL:FLOP 2 CHECK BET:2:4 6.049596871999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.08, potSize: 4, bet_metric: 0
+Aggro is 0.84
+Scaled probs is  [0.06718551845092596, 0.2175195217635172, 0.34769786954083065, 0.36759709024472625]
+Random number is  0.765278739563
+4
+Action chosen is CALL
+GETACTION 4 4 5h 8s Js Jd 410 138 48 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:TURN 2 CHECK BET:2:4 5.994888587999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 6 4 5h 8s Js Jd 410 138 46 3 true true true 2 CHECK:FOLDERBOT BET:2:P2 3 FOLD CALL:2 RAISE:4:10 5.948318739999997 Sat Jan 24 18:17:57 2015
+last bets are  [2, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.04, potSize: 6, bet_metric: 2
+Aggro is 0.53
+Scaled probs is  [0.0598194285658769, 0.26068441915748014, 0.44360358117932036, 0.23589257109732267]
+Random number is  0.191543872265
+2
+Action chosen is CHECK
+HANDOVER 410 138 52 4 5h 8s Js Jd 2 FOLD:FOLDERBOT WIN:6:P2 5.900173463999997 Sat Jan 24 18:17:57 2015
+processing toBeProcessed with
+1101000 CALL
+100000 CALL
+100000 CHECK
+1100000 CHECK
+learning... old qvalue is  -2.72568954574
+learning... new qvalue is  -2.69096201417
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.105805918824
+learning... new qvalue is  -0.214146038442
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.264208908475
+learning... new qvalue is  -0.356708729127
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.23172424362
+learning... new qvalue is  -1.22747253076
+Q value: 0.0
+NEWHAND 36 3 2s Ac 52 410 138 P2 P3 FOLDERBOT 3 true true true 5.900173 Sat Jan 24 18:17:57 2015
+GETACTION 10 0 48 406 136 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:4:P2 CALL:4:P3 3 FOLD CALL:4 RAISE:6:16 5.900173463999997 Sat Jan 24 18:17:57 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 27 437 136 4 6h Qs 8c 3s 9 FOLD:FOLDERBOT DEAL:FLOP BET:5:P3 RAISE:21:P2 CALL:21:P3 DEAL:TURN BET:8:P3 FOLD:P2 WIN:60:P3 5.842366917999997 Sat Jan 24 18:17:57 2015
+processing toBeProcessed with
+1000110 FOLD
+learning... old qvalue is  -2.11719897947
+learning... new qvalue is  -2.14332050452
+NEWHAND 37 1 Tc Jc 136 27 437 FOLDERBOT P2 P3 3 true true true 5.842367 Sat Jan 24 18:17:57 2015
+GETACTION 3 0 136 26 435 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 5.842366917999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 136 26 438 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:3:P3 5.787394814999997 Sat Jan 24 18:17:57 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -1.83904587761
+learning... new qvalue is  -1.65514128985
+NEWHAND 38 2 9h 4h 438 136 26 P3 FOLDERBOT P2 3 true true true 5.787395 Sat Jan 24 18:17:57 2015
+GETACTION 3 0 438 135 24 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 5.787394814999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 4 3 Ks 6c 6d 438 134 24 3 true true true 3 CALL:2:FOLDERBOT CHECK:P2 DEAL:FLOP 2 CHECK BET:2:4 5.730417997999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.13, potSize: 4, bet_metric: 0
+Aggro is 0.87
+Scaled probs is  [0.06905254891746285, 0.21832856829901653, 0.3468888230053313, 0.36573005977818934]
+Random number is  0.885812360633
+4
+Action chosen is CALL
+GETACTION 4 4 Ks 6c 6d 8s 438 134 24 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:TURN 2 CHECK BET:2:4 5.680422156999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 6 4 Ks 6c 6d 8s 438 134 22 3 true true true 2 CHECK:FOLDERBOT BET:2:P2 3 FOLD CALL:2 RAISE:4:10 5.634374721999997 Sat Jan 24 18:17:57 2015
+last bets are  [2, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 8 5 Ks 6c 6d 8s Js 438 132 22 3 true true true 2 CALL:2:FOLDERBOT DEAL:RIVER 2 CHECK BET:2:8 5.588185285999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 10 5 Ks 6c 6d 8s Js 438 132 20 3 true true true 2 CHECK:FOLDERBOT BET:2:P2 3 FOLD CALL:2 RAISE:4:14 5.5419457299999975 Sat Jan 24 18:17:57 2015
+last bets are  [2, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.02, potSize: 10, bet_metric: 2
+Aggro is 0.56
+Scaled probs is  [0.0602529606991616, 0.2521052999421467, 0.4258817509753834, 0.2617599883833083]
+Random number is  0.438487255266
+3
+Action chosen is CALL
+HANDOVER 438 130 32 5 Ks 6c 6d 8s Js 4 CALL:2:FOLDERBOT SHOW:9h:4h:FOLDERBOT SHOW:4c:Ts:P2 WIN:12:P2 5.498690707999997 Sat Jan 24 18:17:57 2015
+processing toBeProcessed with
+1101000 CALL
+100000 CALL
+100000 CHECK
+1100000 CALL
+1100000 CHECK
+1100000 CALL
+learning... old qvalue is  -0.536669254581
+learning... new qvalue is  -0.769196145344
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.95533874635
+learning... new qvalue is  -1.00290177983
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.757085234152
+learning... new qvalue is  -0.824473618847
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.214146038442
+learning... new qvalue is  -0.335828342708
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.356708729127
+learning... new qvalue is  -0.464134764325
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.22747253076
+learning... new qvalue is  -1.2478221858
+Q value: 0.0
+NEWHAND 39 3 3c 7h 32 438 130 P2 P3 FOLDERBOT 3 true true true 5.498691 Sat Jan 24 18:17:57 2015
+GETACTION 6 0 30 436 128 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 CALL:2:P3 2 CHECK RAISE:4:8 5.498690707999997 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.22, potSize: 6, bet_metric: 0
+Aggro is 0.92
+Scaled probs is  [0.07140784110434194, 0.21934919491333077, 0.34586819639101707, 0.3633747675913102]
+Random number is  0.298166674081
+3
+Action chosen is CALL
+GETACTION 6 3 Ah 2h Ac 30 436 128 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP CHECK:P3 2 CHECK BET:2:6 5.4396217339999975 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+GETACTION 22 4 Ah 2h Ac 3d 27 426 125 3 true true true 5 BET:3:FOLDERBOT CALL:3:P2 CALL:3:P3 DEAL:TURN BET:7:P3 3 FOLD CALL:7 RAISE:14:36 5.391254378999998 Sat Jan 24 18:17:57 2015
+last bets are  [0, 7, 3]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 67 408 125 5 Ah 2h Ac 3d Jd 8 FOLD:FOLDERBOT RAISE:22:P2 CALL:22:P3 DEAL:RIVER BET:3:P3 RAISE:5:P2 FOLD:P3 WIN:67:P2 5.342783800999998 Sat Jan 24 18:17:57 2015
+processing toBeProcessed with
+100 CALL
+1000000 ODDS2.0
+100010 CHECK
+learning... old qvalue is  None
+learning... new qvalue is  -1.37972966146
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.345719721733
+learning... new qvalue is  -0.449120715706
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.478494248462
+learning... new qvalue is  -0.568617789762
+Q value: 0.0
+NEWHAND 40 1 8s Ts 125 67 408 FOLDERBOT P2 P3 3 true true true 5.342784 Sat Jan 24 18:17:57 2015
+GETACTION 3 0 125 66 406 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 5.342783800999998 Sat Jan 24 18:17:57 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.36, potSize: 3, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.07382564572387856, 0.2203969102484633, 0.34482048105588453, 0.3609569629717736]
+Random number is  0.676640500529
+4
+Action chosen is CALL
+GETACTION 10 0 123 65 402 3 true true true 3 CALL:2:FOLDERBOT CALL:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 5.284229696999998 Sat Jan 24 18:17:57 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 6, 0]
+goal odds: 1.00, pot size: 10, bet metric: 0,  bet amt is: 10, valid action is: RAISE:10
+GETACTION 29 0 115 65 391 3 true true true 3 RAISE:10:FOLDERBOT FOLD:P2 RAISE:17:P3 3 FOLD CALL:17 RAISE:24:53 5.226713657999998 Sat Jan 24 18:17:57 2015
+last bets are  [0, 17, 10]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 17, 10]
+goal odds: 2.00, pot size: 29, bet metric: 10,  bet amt is: 24, valid action is: RAISE:24
+GETACTION 72 0 101 65 362 3 true true true 2 RAISE:24:FOLDERBOT RAISE:46:P3 3 FOLD CALL:46 RAISE:68:125 5.170943421999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 46, 24]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.37, potSize: 72, bet_metric: 24
+Aggro is 0.76
+Scaled probs is  [0.06243967624845395, 0.21546299014244596, 0.3497544011619018, 0.3723429324471982]
+Random number is  0.285499677356
+3
+Action chosen is CALL
+GETACTION 132 3 3d 4c Kh 79 65 324 3 true true true 3 CALL:46:FOLDERBOT DEAL:FLOP BET:38:P3 3 FOLD CALL:38 RAISE:76:79 5.115785270999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 38, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.15, potSize: 132, bet_metric: 0
+Aggro is 0.88
+Scaled probs is  [0.0696180465337839, 0.21857361726608898, 0.34664377403825886, 0.36516456216186827]
+Random number is  0.701817042606
+4
+Action chosen is CALL
+GETACTION 170 4 3d 4c Kh Qh 41 65 324 3 true true true 3 CALL:38:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:41 5.066106965999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 170 5 3d 4c Kh Qh 4d 41 65 324 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:41 5.020422027999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.06, potSize: 170, bet_metric: 0
+Aggro is 0.83
+Scaled probs is  [0.06658299156124171, 0.21725842677798737, 0.3479589645263605, 0.36819961713441046]
+Random number is  0.530832362242
+3
+Action chosen is CALL
+HANDOVER 211 65 324 5 3d 4c Kh Qh 4d 4 CHECK:FOLDERBOT SHOW:8s:Ts:FOLDERBOT SHOW:9c:7d:P3 WIN:170:FOLDERBOT 4.980112668999999 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1100010 CALL
+100010 ODDS1.0
+111010 ODDS2.0
+111010 CALL
+1100100 CALL
+1000100 FOLD
+1000100 CALL
+learning... old qvalue is  -1.42123115484
+learning... new qvalue is  -0.791658475761
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.149801187921
+learning... new qvalue is  0.10890371267
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.74784566058
+learning... new qvalue is  -1.32933631272
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  2.43724781799
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  2.43724781799
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.774092327012
+learning... new qvalue is  0.94040787611
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  6.3202394691
+learning... new qvalue is  5.93194030399
+Q value: 0.0
+NEWHAND 41 2 Qh Ad 324 211 65 P3 FOLDERBOT P2 3 true true true 4.980113 Sat Jan 24 18:17:58 2015
+GETACTION 5 0 322 210 63 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 4.980112668999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 332 210 58 4 8d Kh 5d 9c 11 FOLD:FOLDERBOT RAISE:4:P2 CALL:4:P3 DEAL:FLOP BET:3:P2 CALL:3:P3 DEAL:TURN CHECK:P2 BET:8:P3 FOLD:P2 WIN:23:P3 4.918690278999999 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1000020 CHECK
+learning... old qvalue is  -1.89807651784
+learning... new qvalue is  -1.90826886605
+NEWHAND 42 3 Qd 5h 58 332 210 P2 P3 FOLDERBOT 3 true true true 4.918690 Sat Jan 24 18:17:58 2015
+GETACTION 4 0 58 330 208 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 CALL:2:P3 2 CHECK RAISE:4:6 4.918690278999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 6 3 Qc 4h 2c 58 328 208 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:10 4.865547656999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.63, potSize: 6, bet_metric: 2
+Aggro is 0.83
+Scaled probs is  [0.0669671002614354, 0.21742487388140466, 0.34779251742294326, 0.3678155084342168]
+Random number is  0.327595998266
+3
+Action chosen is CALL
+GETACTION 8 4 Qc 4h 2c 7s 58 328 206 3 true true true 3 CALL:2:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:8 4.816475413999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 10 5 Qc 4h 2c 7s Js 58 326 206 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER BET:2:P3 3 FOLD CALL:2 RAISE:4:14 4.772107543999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 2, 0]
+HANDOVER 58 316 226 5 Qc 4h 2c 7s Js 5 RAISE:12:FOLDERBOT CALL:12:P3 SHOW:Jc:As:P3 SHOW:Qd:5h:FOLDERBOT WIN:32:FOLDERBOT 4.726826226999998 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1001110 CALL
+1100010 CALL
+1000010 CHECK
+1100010 ODDS1.0
+learning... old qvalue is  2.22454860068
+learning... new qvalue is  2.35031396593
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0252297602309
+learning... new qvalue is  0.151403328451
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.171178123387
+learning... new qvalue is  0.328170423708
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.481734513004
+learning... new qvalue is  0.607671174363
+Q value: 0.0
+NEWHAND 43 1 2c 5h 226 58 316 FOLDERBOT P2 P3 3 true true true 4.726826 Sat Jan 24 18:17:58 2015
+GETACTION 3 0 226 57 314 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 4.726826226999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.21, potSize: 3, bet_metric: 0
+Aggro is 0.91
+Scaled probs is  [0.07111611485917876, 0.21922278020709338, 0.34599461109725443, 0.36366649383647337]
+Random number is  0.916834965214
+4
+Action chosen is CALL
+GETACTION 9 3 5d 9h Td 224 57 310 3 true true true 5 CALL:2:FOLDERBOT FOLD:P2 CHECK:P3 DEAL:FLOP BET:4:P3 3 FOLD CALL:4 RAISE:8:17 4.668690386999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 4, 0]
+HANDOVER 233 57 310 3 5d 9h Td 3 RAISE:9:FOLDERBOT FOLD:P3 WIN:18:FOLDERBOT 4.606414664999998 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1100000 CALL
+1101100 ODDS1.0
+learning... old qvalue is  -1.13062982402
+learning... new qvalue is  -0.634980605067
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.771408580763
+learning... new qvalue is  -0.502974604409
+Q value: 0.0
+NEWHAND 44 2 Jh Qs 310 233 57 P3 FOLDERBOT P2 3 true true true 4.606415 Sat Jan 24 18:17:58 2015
+GETACTION 5 0 308 232 55 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 4.606414664999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.42, potSize: 5, bet_metric: 0
+Aggro is 0.98
+Scaled probs is  [0.0747188154819744, 0.22078395047697152, 0.3444334408273763, 0.36006379321367776]
+Random number is  0.0293270044351
+1
+Action chosen is FOLD
+HANDOVER 253 232 115 5 Ah Th Js 9d Ks 15 FOLD:FOLDERBOT RAISE:4:P2 RAISE:10:P3 RAISE:29:P2 CALL:29:P3 DEAL:FLOP CHECK:P2 BET:17:P3 RAISE:28:P2 CALL:28:P3 DEAL:TURN DEAL:RIVER SHOW:8h:6s:P3 SHOW:Kd:Tc:P2 WIN:115:P2 4.542977454999998 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1000010 FOLD
+learning... old qvalue is  -1.36105384368
+learning... new qvalue is  -1.42494845931
+NEWHAND 45 3 Jc 8s 115 253 232 P2 P3 FOLDERBOT 3 true true true 4.542977 Sat Jan 24 18:17:58 2015
+GETACTION 12 0 111 247 230 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:4:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:8:22 4.542977454999998 Sat Jan 24 18:17:58 2015
+last bets are  [4, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 226 144 230 5 6h Qs 3c 9c Qh 16 FOLD:FOLDERBOT RAISE:19:P2 CALL:19:P3 DEAL:FLOP BET:38:P3 CALL:38:P2 DEAL:TURN CHECK:P3 CHECK:P2 DEAL:RIVER CHECK:P3 BET:52:P2 CALL:52:P3 SHOW:5s:Qc:P2 SHOW:4c:Kh:P3 WIN:220:P2 4.4827948499999986 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1100110 FOLD
+learning... old qvalue is  -2.029739671
+learning... new qvalue is  -2.0565053749
+NEWHAND 46 1 4h 3s 230 226 144 FOLDERBOT P2 P3 3 true true true 4.482795 Sat Jan 24 18:17:58 2015
+GETACTION 3 0 230 225 142 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 4.4827948499999986 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 3, bet metric: 0,  bet amt is: 3, valid action is: RAISE:4
+GETACTION 11 3 9h Jd Th 226 225 138 3 true true true 5 RAISE:4:FOLDERBOT FOLD:P2 CALL:4:P3 DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:15 4.421304306999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 2, 4]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 17 4 9h Jd Th 2c 224 225 134 3 true true true 3 CALL:2:FOLDERBOT DEAL:TURN BET:4:P3 3 FOLD CALL:4 RAISE:8:25 4.3694791839999985 Sat Jan 24 18:17:58 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.03, potSize: 17, bet_metric: 0
+Aggro is 0.80
+Scaled probs is  [0.06483012015701124, 0.2164988491694875, 0.3487185421348603, 0.36995248853864093]
+Random number is  0.636450221861
+4
+Action chosen is CALL
+GETACTION 40 5 9h Jd Th 2c Qs 220 225 115 3 true true true 3 CALL:4:FOLDERBOT DEAL:RIVER BET:19:P3 3 FOLD CALL:19 RAISE:38:78 4.322363008999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 19, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.00, potSize: 40, bet_metric: 0
+Aggro is 0.71
+Scaled probs is  [0.06182077309005535, 0.22108003474012686, 0.3617930644631818, 0.35530612770663583]
+Random number is  0.508583580361
+3
+Action chosen is CALL
+HANDOVER 201 225 174 5 9h Jd Th 2c Qs 4 CALL:19:FOLDERBOT SHOW:4h:3s:FOLDERBOT SHOW:5s:2s:P3 WIN:59:P3 4.277772712999998 Sat Jan 24 18:17:58 2015
+processing toBeProcessed with
+1100000 ODDS1.0
+1101100 CALL
+1100100 CALL
+1100100 CALL
+learning... old qvalue is  -1.10435993376
+learning... new qvalue is  -1.38612575188
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.930134557022
+learning... new qvalue is  -1.03322200707
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.191880280552
+learning... new qvalue is  -0.368793158242
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.663239155376
+learning... new qvalue is  -0.793016145584
+Q value: 0.0
+NEWHAND 47 2 9h Th 174 201 225 P3 FOLDERBOT P2 3 true true true 4.277773 Sat Jan 24 18:17:58 2015
+GETACTION 5 0 172 200 223 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 4.277772712999998 Sat Jan 24 18:17:58 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+GETACTION 26 0 158 196 220 3 true true true 3 RAISE:5:FOLDERBOT CALL:5:P2 RAISE:16:P3 3 FOLD CALL:16 RAISE:27:53 4.218911302999999 Sat Jan 24 18:17:58 2015
+last bets are  [0, 16, 5]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 86 0 158 185 171 3 true true true 3 CALL:16:FOLDERBOT RAISE:54:P2 FOLD:P3 3 FOLD CALL:54 RAISE:92:178 4.1564202749999986 Sat Jan 24 18:17:59 2015
+last bets are  [54, 16, 5]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 124 3 Jd 5s 4s 158 147 171 3 true true true 2 CALL:54:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:124 4.097857434999999 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.17, potSize: 124, bet_metric: 0
+Aggro is 0.90
+Scaled probs is  [0.07026053563607, 0.21885202921041294, 0.3463653620939348, 0.3645220730595821]
+Random number is  0.541541200817
+3
+Action chosen is CALL
+GETACTION 228 3 Jd 5s 4s 158 147 67 3 true true true 2 CHECK:FOLDERBOT BET:104:P2 3 FOLD CALL:104 RAISE:147:147 4.046938717999999 Sat Jan 24 18:17:59 2015
+last bets are  [104, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.17, potSize: 228, bet_metric: 104
+Aggro is 0.63
+Scaled probs is  [0.06100681536896026, 0.23718735364313054, 0.39506584730661276, 0.3067399836812964]
+Random number is  0.0186463596597
+1
+Action chosen is FOLD
+HANDOVER 158 147 295 3 Jd 5s 4s 2 FOLD:FOLDERBOT WIN:228:P2 3.995475341999999 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1000010 ODDS1.0
+100010 CALL
+1111010 CALL
+1100000 CALL
+1100000 FOLD
+learning... old qvalue is  None
+learning... new qvalue is  -3.77976314968
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.536086441176
+learning... new qvalue is  -0.860454112027
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  -3.77976314968
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -2.15443469003
+learning... new qvalue is  -2.316967536
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.0772273603245
+learning... new qvalue is  -0.308471690676
+Q value: 0.0
+NEWHAND 48 3 3s 4h 295 158 147 P2 P3 FOLDERBOT 3 true true true 3.995475 Sat Jan 24 18:17:59 2015
+GETACTION 7 0 291 157 145 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:4:P2 FOLD:P3 3 FOLD CALL:4 RAISE:6:13 3.995475341999999 Sat Jan 24 18:17:59 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.23, potSize: 7, bet_metric: 0
+Aggro is 0.92
+Scaled probs is  [0.07149196025821054, 0.21938564654667386, 0.345831744757674, 0.36329064843744163]
+Random number is  0.739603897123
+4
+Action chosen is CALL
+GETACTION 9 3 7s Jd 6s 291 157 143 3 true true true 2 CALL:4:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:9 3.935204317999999 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 9 4 7s Jd 6s 9s 291 157 143 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:TURN 2 CHECK BET:2:9 3.885090399999999 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 9, bet metric: 0,  bet amt is: 9, valid action is: BET:9
+HANDOVER 291 157 152 4 7s Jd 6s 9s 3 BET:9:FOLDERBOT FOLD:P2 WIN:18:FOLDERBOT 3.840479821999999 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1101100 CALL
+1100000 CHECK
+100000 ODDS1.0
+learning... old qvalue is  1.18578286297
+learning... new qvalue is  1.36627433292
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.938443933049
+learning... new qvalue is  -0.695064661622
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.399647508418
+learning... new qvalue is  -0.210147879454
+Q value: 0.0
+NEWHAND 49 1 6s Ad 152 291 157 FOLDERBOT P2 P3 3 true true true 3.840480 Sat Jan 24 18:17:59 2015
+GETACTION 3 0 152 290 155 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 3.840479821999999 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.38, potSize: 3, bet_metric: 0
+Aggro is 0.97
+Scaled probs is  [0.07410919411113347, 0.22051978121627377, 0.3446976100880741, 0.36067341458451874]
+Random number is  0.472785010925
+3
+Action chosen is CALL
+GETACTION 10 3 6c Qs Qc 150 289 151 3 true true true 6 CALL:2:FOLDERBOT CALL:2:P2 CHECK:P3 DEAL:FLOP CHECK:P2 BET:4:P3 3 FOLD CALL:4 RAISE:8:18 3.783618938999999 Sat Jan 24 18:17:59 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.53, potSize: 10, bet_metric: 0
+Aggro is 1.01
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.491883853402
+3
+Action chosen is CALL
+GETACTION 44 3 6c Qs Qc 146 272 138 3 true true true 3 CALL:4:FOLDERBOT RAISE:17:P2 CALL:17:P3 3 FOLD CALL:17 RAISE:30:74 3.734301233999999 Sat Jan 24 18:17:59 2015
+last bets are  [17, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 146 355 99 5 6c Qs Qc Qh 5s 10 FOLD:FOLDERBOT DEAL:TURN BET:14:P2 CALL:14:P3 DEAL:RIVER CHECK:P2 BET:25:P3 RAISE:64:P2 FOLD:P3 WIN:161:P2 3.6854139329999986 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1100010 CALL
+100110 CALL
+110 CHECK
+learning... old qvalue is  None
+learning... new qvalue is  -1.43096908111
+learning... maxqnew is  0.0
+learning... old qvalue is  0.911116263549
+learning... new qvalue is  0.676907729084
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  5.93194030399
+learning... new qvalue is  5.19564936548
+Q value: 0.0
+NEWHAND 50 2 6c Ac 99 146 355 P3 FOLDERBOT P2 3 true true true 3.685414 Sat Jan 24 18:17:59 2015
+GETACTION 8 0 94 145 353 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 3.6854139329999986 Sat Jan 24 18:17:59 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.41, potSize: 8, bet_metric: -5
+Aggro is 0.67
+Scaled probs is  [0.06143963716287441, 0.22862229125467426, 0.3773730541976118, 0.3325650173848396]
+Random number is  0.284756095105
+2
+Action chosen is CHECK
+HANDOVER 100 145 355 5 5h Kc As Kd Kh 16 FOLD:FOLDERBOT CALL:5:P2 DEAL:FLOP CHECK:P2 BET:8:P3 CALL:8:P2 DEAL:TURN CHECK:P2 CHECK:P3 DEAL:RIVER CHECK:P2 CHECK:P3 SHOW:2s:Ad:P3 SHOW:4s:Ah:P2 TIE:14:P3 TIE:13:P2 3.6254556889999985 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -1.65514128985
+learning... new qvalue is  -1.68962716086
+NEWHAND 51 3 2s 5h 355 100 145 P2 P3 FOLDERBOT 3 true true true 3.625456 Sat Jan 24 18:17:59 2015
+HANDOVER 355 99 146 0 5 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 FOLD:P3 WIN:3:FOLDERBOT 3.6254556889999985 Sat Jan 24 18:17:59 2015
+NEWHAND 52 1 Ts 6d 146 355 99 FOLDERBOT P2 P3 3 true true true 3.625456 Sat Jan 24 18:17:59 2015
+GETACTION 3 0 146 354 97 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 3.6254556889999985 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.30, potSize: 3, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07288688939353585, 0.21999011583864814, 0.3452272754656997, 0.3618957193021163]
+Random number is  0.516053984629
+3
+Action chosen is CALL
+GETACTION 10 0 144 351 95 3 true true true 3 CALL:2:FOLDERBOT RAISE:4:P2 CALL:4:P3 3 FOLD CALL:4 RAISE:6:16 3.5601567739999984 Sat Jan 24 18:17:59 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 144 344 112 5 7d Qh 4s 8s Td 13 FOLD:FOLDERBOT DEAL:FLOP CHECK:P2 BET:7:P3 CALL:7:P2 DEAL:TURN CHECK:P2 CHECK:P3 DEAL:RIVER CHECK:P2 BET:13:P3 FOLD:P2 WIN:37:P3 3.4936027439999986 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1100010 CALL
+1000010 CHECK
+learning... old qvalue is  -1.5870568469
+learning... new qvalue is  -1.65809083321
+learning... maxqnew is  0.0
+learning... old qvalue is  5.19564936548
+learning... new qvalue is  4.56121459343
+Q value: 0.0
+NEWHAND 53 2 5c 9h 112 144 344 P3 FOLDERBOT P2 3 true true true 3.493603 Sat Jan 24 18:17:59 2015
+GETACTION 8 0 107 143 342 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 3.4936027439999986 Sat Jan 24 18:17:59 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.26, potSize: 8, bet_metric: -5
+Aggro is 0.60
+Scaled probs is  [0.060664629162934, 0.24395883845349506, 0.4090536589951759, 0.286322873388395]
+Random number is  0.384281190027
+3
+Action chosen is CALL
+GETACTION 69 0 64 139 328 3 true true true 3 CALL:5:FOLDERBOT RAISE:16:P2 RAISE:48:P3 3 FOLD CALL:48 RAISE:80:144 3.4309305739999987 Sat Jan 24 18:17:59 2015
+last bets are  [16, 48, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 1 139 460 4 Qs 3h Ad 7h 9 FOLD:FOLDERBOT CALL:48:P2 DEAL:FLOP BET:63:P2 CALL:63:P3 DEAL:TURN BET:1:P2 FOLD:P3 WIN:228:P2 3.3681746399999986 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1100000 CALL
+1110000 CHECK
+learning... old qvalue is  None
+learning... new qvalue is  -1.49534878122
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.502974604409
+learning... new qvalue is  -0.60221202209
+Q value: 0.0
+NEWHAND 54 3 Kd Qh 460 1 139 P2 P3 FOLDERBOT 3 true true true 3.368175 Sat Jan 24 18:17:59 2015
+GETACTION 9 0 454 0 137 3 true true true 3 POST:1:P3 POST:2:FOLDERBOT RAISE:6:P2 3 FOLD CALL:6 RAISE:10:19 3.3681746399999986 Sat Jan 24 18:17:59 2015
+last bets are  [6, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 459 4 137 5 3s Qc 5d 6c 5s 8 FOLD:FOLDERBOT REFUND:5:P2 DEAL:FLOP DEAL:TURN DEAL:RIVER SHOW:Js:4h:P2 SHOW:5h:4d:P3 WIN:4:P3 3.2989831219999988 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1100110 CHECK
+learning... old qvalue is  -2.2185053749
+learning... new qvalue is  -2.22639450841
+NEWHAND 55 1 3d Jd 137 459 4 FOLDERBOT P2 P3 3 true true true 3.298983 Sat Jan 24 18:17:59 2015
+GETACTION 3 0 137 458 2 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 3.2989831219999988 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 3, bet metric: 0,  bet amt is: 1, valid action is: CHECK
+HANDOVER 137 458 5 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:3:P3 3.2339888149999987 Sat Jan 24 18:17:59 2015
+processing toBeProcessed with
+1100010 ODDS2.0
+learning... old qvalue is  -1.14715019972
+learning... new qvalue is  -1.03243517975
+NEWHAND 56 2 7c 8d 5 137 458 P3 FOLDERBOT P2 3 true true true 3.233989 Sat Jan 24 18:17:59 2015
+GETACTION 3 0 5 136 456 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 3.2339888149999987 Sat Jan 24 18:17:59 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 3, bet metric: 0,  bet amt is: 3, valid action is: RAISE:4
+GETACTION 8 3 9h 9d Ah 5 133 454 3 true true true 3 RAISE:4:FOLDERBOT CALL:4:P2 DEAL:FLOP 2 CHECK BET:2:8 3.174100412999999 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 4]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 4]
+goal odds: 1.00, pot size: 8, bet metric: 0,  bet amt is: 8, valid action is: BET:8
+GETACTION 24 4 9h 9d Ah Qc 5 125 446 3 true true true 3 BET:8:FOLDERBOT CALL:8:P2 DEAL:TURN 2 CHECK BET:2:24 3.123364577999999 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 8]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 34 4 9h 9d Ah Qc 5 125 436 3 true true true 2 CHECK:FOLDERBOT BET:10:P2 3 FOLD CALL:10 RAISE:20:54 3.075534096999999 Sat Jan 24 18:18:00 2015
+last bets are  [10, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.09, potSize: 34, bet_metric: 10
+Aggro is 0.61
+Scaled probs is  [0.060772707459685764, 0.24182008904777383, 0.4046356583979562, 0.2927715450945842]
+Random number is  0.566407483691
+3
+Action chosen is CALL
+GETACTION 44 5 9h 9d Ah Qc 3c 5 115 436 3 true true true 2 CALL:10:FOLDERBOT DEAL:RIVER 2 CHECK BET:2:44 3.025654905999999 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+HANDOVER 5 181 414 5 9h 9d Ah Qc 3c 5 BET:22:FOLDERBOT CALL:22:P2 SHOW:7c:8d:FOLDERBOT SHOW:2c:5c:P2 WIN:88:FOLDERBOT 2.9769361109999988 Sat Jan 24 18:18:00 2015
+processing toBeProcessed with
+1101010 ODDS1.0
+100000 ODDS1.0
+100000 FOLD
+1100000 CALL
+1100000 ODDS2.0
+learning... old qvalue is  0.301798248025
+learning... new qvalue is  0.697923525877
+learning... maxqnew is  0.0
+learning... old qvalue is  0.299547007974
+learning... new qvalue is  0.482744858504
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.518984913931
+learning... new qvalue is  -0.253933871211
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.631470118769
+learning... new qvalue is  0.78147565822
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.777219963773
+learning... new qvalue is  0.912650518723
+Q value: 0.0
+NEWHAND 57 3 5h Qd 414 5 181 P2 P3 FOLDERBOT 3 true true true 2.976936 Sat Jan 24 18:18:00 2015
+GETACTION 8 0 412 1 179 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:4:P3 3 FOLD CALL:4 RAISE:6:14 2.9769361109999988 Sat Jan 24 18:18:00 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 4, 0]
+GETACTION 51 0 379 1 169 3 true true true 3 RAISE:12:FOLDERBOT RAISE:35:P2 FOLD:P3 3 FOLD CALL:35 RAISE:58:109 2.9159646309999987 Sat Jan 24 18:18:00 2015
+last bets are  [35, 4, 12]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.31, potSize: 51, bet_metric: -8
+Aggro is 0.62
+Scaled probs is  [0.06095828943071783, 0.2381476280432391, 0.39704947982654504, 0.30384460269949803]
+Random number is  0.931300919345
+4
+Action chosen is CALL
+HANDOVER 379 1 220 5 8d Qc 3d 3c Js 7 CALL:35:FOLDERBOT DEAL:FLOP DEAL:TURN DEAL:RIVER SHOW:8c:7h:P2 SHOW:5h:Qd:FOLDERBOT WIN:74:FOLDERBOT 2.8579369749999985 Sat Jan 24 18:18:00 2015
+processing toBeProcessed with
+100110 ODDS1.0
+1111110 CALL
+learning... old qvalue is  2.51188643151
+learning... new qvalue is  2.67684109821
+learning... maxqnew is  0.0
+learning... old qvalue is  -5.96398003789
+learning... new qvalue is  -5.15951037918
+Q value: 0.0
+NEWHAND 58 1 Qh Jc 220 379 1 FOLDERBOT P2 P3 3 true true true 2.857937 Sat Jan 24 18:18:00 2015
+GETACTION 2 0 220 378 0 3 true true true 2 POST:1:P2 POST:1:P3 3 CALL:2 FOLD RAISE:4:7 2.8579369749999985 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 2, bet metric: 0,  bet amt is: 2, valid action is: RAISE:4
+GETACTION 9 3 2d Kd Kc 216 375 0 3 true true true 4 RAISE:4:FOLDERBOT CALL:4:P2 DEAL:FLOP CHECK:P2 2 CHECK BET:2:9 2.8028073339999984 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 4]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 4]
+goal odds: 1.00, pot size: 9, bet metric: 4,  bet amt is: 13, valid action is: BET:9
+GETACTION 48 4 2d Kd Kc 7s 207 345 0 3 true true true 4 BET:9:FOLDERBOT CALL:9:P2 DEAL:TURN BET:21:P2 3 FOLD CALL:21 RAISE:42:90 2.7496456699999983 Sat Jan 24 18:18:00 2015
+last bets are  [21, 0, 9]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.25, potSize: 48, bet_metric: -12
+Aggro is 0.59
+Scaled probs is  [0.06059073692011987, 0.24542108383629485, 0.4120742096764339, 0.2819139695671515]
+Random number is  0.159454749447
+2
+Action chosen is CHECK
+HANDOVER 207 390 3 5 2d Kd Kc 7s 9h 6 FOLD:FOLDERBOT DEAL:RIVER SHOW:Jh:2h:P2 SHOW:Ks:5h:P3 WIN:3:P3 WIN:45:P2 2.7002181569999983 Sat Jan 24 18:18:00 2015
+processing toBeProcessed with
+1100010 ODDS1.0
+100100 ODDS1.0
+1100100 CHECK
+learning... old qvalue is  -1.8612097182
+learning... new qvalue is  -2.00914427685
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0304889680835
+learning... new qvalue is  -0.194467836509
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.832796845114
+learning... new qvalue is  0.582489395369
+Q value: 0.0
+NEWHAND 59 2 3s 4h 3 207 390 P3 FOLDERBOT P2 3 true true true 2.700218 Sat Jan 24 18:18:00 2015
+GETACTION 5 0 1 206 388 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 2.7002181569999983 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.23, potSize: 5, bet_metric: 0
+Aggro is 0.92
+Scaled probs is  [0.07155483664798519, 0.21941289298224287, 0.345804498322105, 0.363227772047667]
+Random number is  0.94488394857
+4
+Action chosen is CALL
+GETACTION 6 3 7s Qc 2d 1 205 388 3 true true true 3 CALL:2:FOLDERBOT CHECK:P2 DEAL:FLOP 2 CHECK BET:2:6 2.6220511909999984 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 10 3 7s Qc 2d 0 205 385 3 true true true 3 CHECK:FOLDERBOT BET:3:P2 CALL:1:P3 3 FOLD CALL:3 RAISE:6:16 2.5730341149999982 Sat Jan 24 18:18:00 2015
+last bets are  [3, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [3, 0, 0]
+HANDOVER 18 197 385 5 7s Qc 2d Th Ah 7 RAISE:8:FOLDERBOT FOLD:P2 DEAL:TURN DEAL:RIVER SHOW:Ac:9d:P3 SHOW:3s:4h:FOLDERBOT WIN:18:P3 2.520085610999998 Sat Jan 24 18:18:00 2015
+processing toBeProcessed with
+1000000 CALL
+100000 FOLD
+1000000 ODDS2.0
+learning... old qvalue is  2.30254805745
+learning... new qvalue is  1.75531461321
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.641528739059
+learning... new qvalue is  -0.735865184399
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.20403821782
+learning... new qvalue is  -1.24212371528
+Q value: 0.0
+NEWHAND 60 3 Ad 5s 385 18 197 P2 P3 FOLDERBOT 3 true true true 2.520086 Sat Jan 24 18:18:00 2015
+GETACTION 4 0 385 16 195 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 CALL:2:P3 2 CHECK RAISE:4:6 2.520085610999998 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 4, bet metric: 0,  bet amt is: 2, valid action is: CHECK
+GETACTION 4 3 9d 8c 7d 385 16 195 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP CHECK:P3 2 CHECK BET:2:4 2.463568351999998 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.27, potSize: 4, bet_metric: 0
+Aggro is 0.93
+Scaled probs is  [0.07223188244370023, 0.21970627949371935, 0.34551111181062844, 0.36255072625195195]
+Random number is  0.56303190922
+3
+Action chosen is CALL
+GETACTION 6 4 9d 8c 7d 6d 385 14 195 3 true true true 3 CHECK:FOLDERBOT DEAL:TURN BET:2:P3 3 FOLD CALL:2 RAISE:4:10 2.416688401999998 Sat Jan 24 18:18:00 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.58, potSize: 6, bet_metric: 2
+Aggro is 0.82
+Scaled probs is  [0.06625264953762698, 0.21711527856775434, 0.3481021127365936, 0.3685299591580252]
+Random number is  0.145090015376
+2
+Action chosen is CHECK
+HANDOVER 385 20 195 4 9d 8c 7d 6d 2 FOLD:FOLDERBOT WIN:6:P3 2.3635884119999977 Sat Jan 24 18:18:00 2015
+processing toBeProcessed with
+1001110 ODDS2.0
+1000000 CALL
+1100010 CHECK
+learning... old qvalue is  -0.813326153093
+learning... new qvalue is  -0.969834960784
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.849912842481
+learning... new qvalue is  -0.883842269733
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.197350743111
+learning... new qvalue is  -0.2965363803
+Q value: 0.0
+NEWHAND 61 1 7c 8s 195 385 20 FOLDERBOT P2 P3 3 true true true 2.363588 Sat Jan 24 18:18:00 2015
+GETACTION 3 0 195 384 18 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 2.3635884119999977 Sat Jan 24 18:18:00 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.30, potSize: 3, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07293188911438403, 0.22000961571768235, 0.3452077755866655, 0.36185071958126813]
+Random number is  0.464436349142
+3
+Action chosen is CALL
+GETACTION 7 0 193 384 16 3 true true true 3 CALL:2:FOLDERBOT FOLD:P2 RAISE:4:P3 3 FOLD CALL:4 RAISE:6:13 2.2982775869999976 Sat Jan 24 18:18:00 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 11 3 8d 9h Ad 191 384 14 3 true true true 3 CALL:4:FOLDERBOT DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:15 2.2415720559999976 Sat Jan 24 18:18:00 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.40, potSize: 11, bet_metric: 0
+Aggro is 0.98
+Scaled probs is  [0.07448222412436714, 0.22068142755534173, 0.34453596374900614, 0.36030038457128505]
+Random number is  0.928046655908
+4
+Action chosen is CALL
+GETACTION 13 4 8d 9h Ad 9s 189 384 14 3 true true true 3 CALL:2:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:13 2.1882159749999976 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 13 5 8d 9h Ad 9s 6h 189 384 14 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:13 2.140009627999998 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.48, potSize: 13, bet_metric: 0
+Aggro is 1.00
+Scaled probs is  [0.07552392942788626, 0.22113283318686666, 0.34408455811748123, 0.35925867926776595]
+Random number is  0.259135728087
+2
+Action chosen is CHECK
+HANDOVER 189 384 27 5 8d 9h Ad 9s 6h 4 CHECK:FOLDERBOT SHOW:7c:8s:FOLDERBOT SHOW:Js:9d:P3 WIN:13:P3 2.094378259999998 Sat Jan 24 18:18:01 2015
+processing toBeProcessed with
+1100010 CALL
+1101010 CALL
+1100110 CALL
+1000110 CALL
+1000110 CHECK
+learning... old qvalue is  1.00666757729
+learning... new qvalue is  0.61980700334
+learning... maxqnew is  0.0
+learning... old qvalue is  0.240855663841
+learning... new qvalue is  0.0736731893467
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.0752430387022
+learning... new qvalue is  -0.210815642942
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.219125634925
+learning... new qvalue is  -0.340309979543
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  4.56121459343
+learning... new qvalue is  3.96199622598
+Q value: 0.0
+NEWHAND 62 2 2h Kh 27 189 384 P3 FOLDERBOT P2 3 true true true 2.094378 Sat Jan 24 18:18:01 2015
+GETACTION 3 0 27 188 382 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 2.094378259999998 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 3, bet metric: 0,  bet amt is: 1, valid action is: CHECK
+HANDOVER 27 188 385 0 2 FOLD:FOLDERBOT WIN:3:P2 2.036751401999998 Sat Jan 24 18:18:01 2015
+processing toBeProcessed with
+1101010 ODDS2.0
+learning... old qvalue is  -3.40174116326
+learning... new qvalue is  -3.26156704693
+NEWHAND 63 3 Jh Qd 385 27 188 P2 P3 FOLDERBOT 3 true true true 2.036751 Sat Jan 24 18:18:01 2015
+GETACTION 4 0 385 25 186 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 CALL:2:P3 2 CHECK RAISE:4:6 2.036751401999998 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.41, potSize: 4, bet_metric: 0
+Aggro is 0.98
+Scaled probs is  [0.07452793942189478, 0.22070123751760368, 0.34451615378674416, 0.3602546692737574]
+Random number is  0.0482819636523
+1
+Action chosen is FOLD
+GETACTION 6 3 2h 6h 7c 385 23 186 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:10 1.979125757999998 Sat Jan 24 18:18:01 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 8 4 2h 6h 7c Ts 385 23 184 3 true true true 3 CALL:2:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:8 1.928559064999998 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.12, potSize: 8, bet_metric: 0
+Aggro is 0.87
+Scaled probs is  [0.06888242049040941, 0.2182548459806267, 0.3469625453237211, 0.3659001882052427]
+Random number is  0.182367466104
+2
+Action chosen is CHECK
+GETACTION 8 5 2h 6h 7c Ts 8c 385 23 184 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:8 1.883539424999998 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+GETACTION 29 5 2h 6h 7c Ts 8c 385 6 180 3 true true true 2 BET:4:FOLDERBOT RAISE:17:P3 3 FOLD CALL:17 RAISE:23:23 1.8356834709999978 Sat Jan 24 18:18:01 2015
+last bets are  [0, 17, 4]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.01, potSize: 29, bet_metric: 13
+Aggro is 0.42
+Scaled probs is  [0.06730224053697086, 0.34674974769027495, 0.4439083696942579, 0.14203964207849626]
+Random number is  0.981256550769
+4
+Action chosen is CALL
+HANDOVER 385 48 167 5 2h 6h 7c Ts 8c 4 CALL:17:FOLDERBOT SHOW:Ah:8d:P3 SHOW:Jh:Qd:FOLDERBOT WIN:42:P3 1.7920357559999978 Sat Jan 24 18:18:01 2015
+processing toBeProcessed with
+1001110 FOLD
+1100000 CALL
+1000000 CHECK
+1000000 ODDS2.0
+1100000 CALL
+learning... old qvalue is  -2.04276625468
+learning... new qvalue is  -2.20617288666
+learning... maxqnew is  0.0
+learning... old qvalue is  1.06246718802
+learning... new qvalue is  0.772378840491
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.12487360729
+learning... new qvalue is  -1.19622787528
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.860454112027
+learning... new qvalue is  -0.958250329549
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.53895297705
+learning... new qvalue is  -0.66889930807
+Q value: 0.0
+NEWHAND 64 1 Ad 4s 167 385 48 FOLDERBOT P2 P3 3 true true true 1.792036 Sat Jan 24 18:18:01 2015
+GETACTION 3 0 167 384 46 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 1.7920357559999978 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.37, potSize: 3, bet_metric: 0
+Aggro is 0.97
+Scaled probs is  [0.07405139506931556, 0.22049473496481936, 0.34472265633952853, 0.36073121362633664]
+Random number is  0.813101977294
+4
+Action chosen is CALL
+GETACTION 8 0 165 384 43 3 true true true 3 CALL:2:FOLDERBOT FOLD:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:16 1.7394592109999978 Sat Jan 24 18:18:01 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 21 3 3h 5d Jd 162 384 33 3 true true true 3 CALL:5:FOLDERBOT DEAL:FLOP BET:10:P3 3 FOLD CALL:10 RAISE:20:41 1.6830399639999978 Sat Jan 24 18:18:01 2015
+last bets are  [0, 10, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.38, potSize: 21, bet_metric: 0
+Aggro is 0.97
+Scaled probs is  [0.07413818443623985, 0.22053234369048655, 0.34468504761386126, 0.3606444242594123]
+Random number is  0.969704616038
+4
+Action chosen is CALL
+GETACTION 31 4 3h 5d Jd 2c 152 384 33 3 true true true 3 CALL:10:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:31 1.6334265839999977 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.90, potSize: 31, bet_metric: 0
+Aggro is 1.08
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.0051537904707
+1
+Action chosen is FOLD
+GETACTION 31 5 3h 5d Jd 2c 3c 152 384 33 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:31 1.5852749369999977 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 183 384 33 5 3h 5d Jd 2c 3c 4 CHECK:FOLDERBOT SHOW:Ad:4s:FOLDERBOT SHOW:Kd:Td:P3 WIN:31:FOLDERBOT 1.5433948719999977 Sat Jan 24 18:18:01 2015
+processing toBeProcessed with
+1100010 CALL
+1101010 CALL
+1100110 CALL
+1000120 FOLD
+1000120 FOLD
+learning... old qvalue is  1.92413023253
+learning... new qvalue is  2.07993743459
+learning... maxqnew is  0.0
+learning... old qvalue is  1.06959484255
+learning... new qvalue is  1.13674547096
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.653849289974
+learning... new qvalue is  0.762574473636
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.340309979543
+learning... new qvalue is  -0.13216886893
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  3.96199622598
+learning... new qvalue is  3.73990671604
+Q value: 0.0
+NEWHAND 65 2 9h 5h 33 183 384 P3 FOLDERBOT P2 3 true true true 1.543395 Sat Jan 24 18:18:01 2015
+GETACTION 8 0 28 182 382 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 1.5433948719999977 Sat Jan 24 18:18:01 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 5, 0]
+goal odds: 1.00, pot size: 8, bet metric: -5,  bet amt is: 3, valid action is: CHECK
+HANDOVER 28 182 390 5 5c 2h 9d 2d 8d 12 FOLD:FOLDERBOT CALL:5:P2 DEAL:FLOP CHECK:P2 CHECK:P3 DEAL:TURN CHECK:P2 CHECK:P3 DEAL:RIVER BET:7:P2 FOLD:P3 WIN:18:P2 1.4849497929999977 Sat Jan 24 18:18:01 2015
+processing toBeProcessed with
+1100010 ODDS1.0
+learning... old qvalue is  0.582489395369
+learning... new qvalue is  0.324240455832
+NEWHAND 66 3 6h Qc 390 28 182 P2 P3 FOLDERBOT 3 true true true 1.484950 Sat Jan 24 18:18:01 2015
+GETACTION 4 0 390 26 180 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 CALL:2:P3 2 CHECK RAISE:4:6 1.4849497929999977 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 4 3 Ah Kh 6s 390 26 180 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP CHECK:P3 2 CHECK BET:2:4 1.4301275439999976 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 4, bet metric: 0,  bet amt is: 2, valid action is: BET:2
+GETACTION 12 4 Ah Kh 6s 9h 390 20 178 3 true true true 4 BET:2:FOLDERBOT CALL:2:P3 DEAL:TURN BET:4:P3 3 FOLD CALL:4 RAISE:8:20 1.3777198759999976 Sat Jan 24 18:18:01 2015
+last bets are  [0, 4, 2]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.39, potSize: 12, bet_metric: 2
+Aggro is 0.82
+Scaled probs is  [0.0660857713303627, 0.21704296467793976, 0.3481744266264081, 0.36869683736528946]
+Random number is  0.513172421615
+3
+Action chosen is CALL
+GETACTION 16 5 Ah Kh 6s 9h 5s 390 20 174 3 true true true 3 CALL:4:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:16 1.3323334939999976 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.29, potSize: 16, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.07267676451724878, 0.21989906172559043, 0.3453183295787574, 0.36210584417840336]
+Random number is  0.569032121031
+3
+Action chosen is CALL
+HANDOVER 390 20 190 5 Ah Kh 6s 9h 5s 4 CHECK:FOLDERBOT SHOW:5d:7s:P3 SHOW:6h:Qc:FOLDERBOT WIN:16:FOLDERBOT 1.2881585499999975 Sat Jan 24 18:18:01 2015
+processing toBeProcessed with
+1001110 CHECK
+1000010 ODDS2.0
+1100010 CALL
+1000000 CALL
+learning... old qvalue is  -1.31459800812
+learning... new qvalue is  -0.879994894009
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  1.51571656651
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  2.30219365402
+learning... new qvalue is  2.22354594527
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.0773593108741
+learning... new qvalue is  0.221195036438
+Q value: 0.0
+NEWHAND 67 1 4c Jd 190 390 20 FOLDERBOT P2 P3 3 true true true 1.288159 Sat Jan 24 18:18:01 2015
+GETACTION 3 0 190 389 18 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 1.2881585499999975 Sat Jan 24 18:18:01 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.28, potSize: 3, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.07257921800510334, 0.21985679157032736, 0.34536059973402045, 0.3622033906905488]
+Random number is  0.0918730798866
+2
+Action chosen is CHECK
+HANDOVER 190 386 24 3 3s 3c 3d 9 FOLD:FOLDERBOT CALL:2:P2 RAISE:4:P3 CALL:4:P2 DEAL:FLOP CHECK:P2 BET:3:P3 FOLD:P2 WIN:11:P3 1.2305469489999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1100000 CHECK
+learning... old qvalue is  -2.60021237447
+learning... new qvalue is  -2.34019113702
+NEWHAND 68 2 Qc 5h 24 190 386 P3 FOLDERBOT P2 3 true true true 1.230547 Sat Jan 24 18:18:02 2015
+GETACTION 3 0 24 189 384 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 1.2305469489999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 24 189 387 0 2 FOLD:FOLDERBOT WIN:3:P2 1.1763422079999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1101010 CHECK
+learning... old qvalue is  -2.6696804475
+learning... new qvalue is  -2.60271240275
+NEWHAND 69 3 7s 7c 387 24 189 P2 P3 FOLDERBOT 3 true true true 1.176342 Sat Jan 24 18:18:02 2015
+GETACTION 8 0 385 20 187 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:4:P3 3 FOLD CALL:4 RAISE:6:14 1.1763422079999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 4, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 393 20 187 4 2h 9d Qs 2c 10 FOLD:FOLDERBOT CALL:4:P2 DEAL:FLOP CHECK:P3 CHECK:P2 DEAL:TURN CHECK:P3 BET:3:P2 FOLD:P3 WIN:13:P2 1.1197163239999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+100120 CHECK
+learning... old qvalue is  -1.85653972607
+learning... new qvalue is  -1.90872717647
+NEWHAND 70 1 Ks Jh 187 393 20 FOLDERBOT P2 P3 3 true true true 1.119716 Sat Jan 24 18:18:02 2015
+GETACTION 3 0 187 392 18 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 1.1197163239999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.43, potSize: 3, bet_metric: 0
+Aggro is 0.99
+Scaled probs is  [0.07489174891653061, 0.22085888829861253, 0.3443585030057353, 0.35989085977912155]
+Random number is  0.338945006544
+3
+Action chosen is CALL
+GETACTION 8 0 185 392 15 3 true true true 3 CALL:2:FOLDERBOT FOLD:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:16 1.0620987339999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 5, 0]
+goal odds: 2.00, pot size: 8, bet metric: 0,  bet amt is: 4, valid action is: RAISE:8
+GETACTION 26 0 179 392 3 3 true true true 2 RAISE:8:FOLDERBOT RAISE:17:P3 3 FOLD CALL:17 RAISE:20:20 1.0070383219999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 17, 8]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.43, potSize: 26, bet_metric: 8
+Aggro is 0.78
+Scaled probs is  [0.06410732976966786, 0.21618564000163867, 0.34903175130270914, 0.3706752789259843]
+Random number is  0.686030167588
+4
+Action chosen is CALL
+GETACTION 37 3 5s 4d 4h 170 392 1 3 true true true 3 CALL:17:FOLDERBOT DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:3:3 0.9502699649999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 170 392 38 3 5s 4d 4h 2 FOLD:FOLDERBOT WIN:37:P3 0.8922772109999973 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1100010 CALL
+1101010 ODDS2.0
+1111010 CALL
+1100100 CHECK
+learning... old qvalue is  -3.26383599788
+learning... new qvalue is  -3.45170871622
+learning... maxqnew is  0.0
+learning... old qvalue is  2.22880738403
+learning... new qvalue is  1.74879848656
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.108521373581
+learning... new qvalue is  -0.354797395289
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  3.73990671604
+learning... new qvalue is  3.10878788537
+Q value: 0.0
+NEWHAND 71 2 3s Tc 38 170 392 P3 FOLDERBOT P2 3 true true true 0.892277 Sat Jan 24 18:18:02 2015
+GETACTION 5 0 36 169 390 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 0.8922772109999973 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.25, potSize: 5, bet_metric: 0
+Aggro is 0.93
+Scaled probs is  [0.07199389758099167, 0.21960315271987899, 0.3456142385844689, 0.36278871111466054]
+Random number is  0.0956071150535
+2
+Action chosen is CHECK
+HANDOVER 45 169 386 0 5 FOLD:FOLDERBOT RAISE:6:P2 RAISE:12:P3 FOLD:P2 WIN:19:P3 0.8344136899999973 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1000000 CHECK
+learning... old qvalue is  -1.44939282674
+learning... new qvalue is  -1.50445354407
+NEWHAND 72 3 Qc 4h 386 45 169 P2 P3 FOLDERBOT 3 true true true 0.834414 Sat Jan 24 18:18:02 2015
+HANDOVER 386 44 170 0 5 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 FOLD:P3 WIN:3:FOLDERBOT 0.8344136899999973 Sat Jan 24 18:18:02 2015
+NEWHAND 73 1 9d Kd 170 386 44 FOLDERBOT P2 P3 3 true true true 0.834414 Sat Jan 24 18:18:02 2015
+GETACTION 3 0 170 385 42 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 0.8344136899999973 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 11 0 168 384 37 3 true true true 3 CALL:2:FOLDERBOT CALL:2:P2 RAISE:7:P3 3 FOLD CALL:7 RAISE:12:23 0.7759661509999973 Sat Jan 24 18:18:02 2015
+last bets are  [0, 7, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.42, potSize: 11, bet_metric: 0
+Aggro is 0.98
+Scaled probs is  [0.07475824011862556, 0.22080103448618701, 0.3444163568181608, 0.3600243685770266]
+Random number is  0.465972140561
+3
+Action chosen is CALL
+GETACTION 35 0 163 372 30 3 true true true 3 CALL:7:FOLDERBOT RAISE:14:P2 CALL:14:P3 3 FOLD CALL:14 RAISE:21:56 0.7185030019999973 Sat Jan 24 18:18:02 2015
+last bets are  [14, 7, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.42, potSize: 35, bet_metric: -14
+Aggro is 0.68
+Scaled probs is  [0.06147864625821583, 0.22785034460130668, 0.3757784490669328, 0.33489256007354473]
+Random number is  0.535144453052
+3
+Action chosen is CALL
+GETACTION 64 3 8s 2d 5d 156 361 19 3 true true true 4 CALL:14:FOLDERBOT DEAL:FLOP BET:11:P2 CALL:11:P3 3 FOLD CALL:11 RAISE:22:86 0.6609035979999973 Sat Jan 24 18:18:02 2015
+last bets are  [11, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.51, potSize: 64, bet_metric: -11
+Aggro is 0.71
+Scaled probs is  [0.06177668208429838, 0.221952546754051, 0.36359540679851404, 0.3526753643631367]
+Random number is  0.0225767779289
+1
+Action chosen is FOLD
+HANDOVER 156 342 102 5 8s 2d 5d Tc 2c 12 FOLD:FOLDERBOT DEAL:TURN CHECK:P2 BET:2:P3 CALL:2:P2 DEAL:RIVER BET:9:P2 RAISE:17:P3 CALL:17:P2 SHOW:Ts:7c:P2 SHOW:Jc:Td:P3 WIN:102:P3 0.6111277519999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1100010 CALL
+100010 CALL
+1110010 CALL
+1000110 FOLD
+learning... old qvalue is  -1.49534878122
+learning... new qvalue is  -1.68485754371
+learning... maxqnew is  0.0
+learning... old qvalue is  2.42655962953
+learning... new qvalue is  2.01438184627
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  6.49935516127
+learning... new qvalue is  5.67989782483
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  3.10878788537
+learning... new qvalue is  2.62838727652
+Q value: 0.0
+NEWHAND 74 2 7h 8c 102 156 342 P3 FOLDERBOT P2 3 true true true 0.611128 Sat Jan 24 18:18:02 2015
+GETACTION 3 0 102 155 340 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 0.6111277519999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.30, potSize: 3, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.0728207753940144, 0.21996146643885553, 0.34525592486549234, 0.3619618333016378]
+Random number is  0.848709408363
+4
+Action chosen is CALL
+GETACTION 6 0 102 154 338 3 true true true 2 CALL:2:FOLDERBOT RAISE:4:P2 3 FOLD CALL:4 RAISE:6:12 0.5504351549999974 Sat Jan 24 18:18:02 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [4, 0, 0]
+HANDOVER 102 160 338 0 3 RAISE:10:FOLDERBOT FOLD:P2 WIN:14:FOLDERBOT 0.4898656879999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1101000 CALL
+1101000 ODDS1.0
+learning... old qvalue is  2.47723377711
+learning... new qvalue is  3.0295103994
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.2478221858
+learning... new qvalue is  -0.723039967216
+Q value: 0.0
+NEWHAND 75 3 3s 7s 338 102 160 P2 P3 FOLDERBOT 3 true true true 0.489866 Sat Jan 24 18:18:02 2015
+GETACTION 19 0 334 89 158 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:4:P2 RAISE:13:P3 3 FOLD CALL:13 RAISE:22:43 0.4898656879999974 Sat Jan 24 18:18:02 2015
+last bets are  [4, 13, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 334 108 158 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:19:P3 0.4348126109999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1100100 FOLD
+learning... old qvalue is  -2.8810355896
+learning... new qvalue is  -2.99293203064
+NEWHAND 76 1 8d 6s 158 334 108 FOLDERBOT P2 P3 3 true true true 0.434813 Sat Jan 24 18:18:02 2015
+GETACTION 3 0 158 333 106 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 0.4348126109999974 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.29, potSize: 3, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.0726022307834247, 0.21986676377426664, 0.34535062753008117, 0.36218037791222746]
+Random number is  0.60045659766
+3
+Action chosen is CALL
+GETACTION 24 0 156 327 93 3 true true true 3 CALL:2:FOLDERBOT RAISE:7:P2 RAISE:15:P3 3 FOLD CALL:15 RAISE:23:52 0.3768411509999974 Sat Jan 24 18:18:02 2015
+last bets are  [7, 15, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 156 327 117 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:24:P3 0.31938100399999736 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1100000 CALL
+1100000 FOLD
+learning... old qvalue is  -7.28386038836
+learning... new qvalue is  -6.95547434952
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.60221202209
+learning... new qvalue is  -0.741990819881
+Q value: 0.0
+NEWHAND 77 2 2s 5d 117 156 327 P3 FOLDERBOT P2 3 true true true 0.319381 Sat Jan 24 18:18:02 2015
+GETACTION 3 0 117 155 325 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 0.31938100399999736 Sat Jan 24 18:18:02 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 117 155 328 0 2 FOLD:FOLDERBOT WIN:3:P2 0.2652995229999974 Sat Jan 24 18:18:02 2015
+processing toBeProcessed with
+1101000 FOLD
+learning... old qvalue is  -2.5034187771
+learning... new qvalue is  -2.45307689939
+NEWHAND 78 3 6d Ac 328 117 155 P2 P3 FOLDERBOT 3 true true true 0.265300 Sat Jan 24 18:18:02 2015
+GETACTION 9 0 322 116 153 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:6:P2 FOLD:P3 3 FOLD CALL:6 RAISE:10:19 0.2652995229999974 Sat Jan 24 18:18:02 2015
+last bets are  [6, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.38, potSize: 9, bet_metric: 0
+Aggro is 0.97
+Scaled probs is  [0.07418732825514922, 0.22055363934534725, 0.34466375195900056, 0.36059528044050293]
+Random number is  0.196482228624
+2
+Action chosen is CHECK
+HANDOVER 331 116 153 0 2 FOLD:FOLDERBOT WIN:9:P2 0.2080827729999974 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1101110 CHECK
+learning... old qvalue is  -3.89338641989
+learning... new qvalue is  -3.9040477779
+NEWHAND 79 1 6d Ks 153 331 116 FOLDERBOT P2 P3 3 true true true 0.208083 Sat Jan 24 18:18:03 2015
+GETACTION 3 0 153 330 114 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 0.2080827729999974 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 3, bet metric: 0,  bet amt is: 1, valid action is: CHECK
+HANDOVER 153 320 127 3 9s 5h 3c 9 FOLD:FOLDERBOT CALL:2:P2 RAISE:4:P3 CALL:4:P2 DEAL:FLOP BET:7:P2 RAISE:16:P3 FOLD:P2 WIN:31:P3 0.1478698929999974 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1100010 ODDS2.0
+learning... old qvalue is  -1.03243517975
+learning... new qvalue is  -0.929191661776
+NEWHAND 80 2 Ts 5d 127 153 320 P3 FOLDERBOT P2 3 true true true 0.147870 Sat Jan 24 18:18:03 2015
+GETACTION 8 0 122 152 318 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 0.1478698929999974 Sat Jan 24 18:18:03 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 5, 0]
+goal odds: 1.00, pot size: 8, bet metric: -5,  bet amt is: 3, valid action is: CHECK
+HANDOVER 130 152 318 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:8:P3 0.0905850889999974 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1100000 ODDS1.0
+learning... old qvalue is  -0.793016145584
+learning... new qvalue is  -0.913714531026
+NEWHAND 81 3 6c Ts 318 130 152 P2 P3 FOLDERBOT 3 true true true 0.090585 Sat Jan 24 18:18:03 2015
+GETACTION 5 0 316 129 150 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 FOLD:P3 2 CHECK RAISE:4:7 0.0905850889999974 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 5 3 2s 3d 6s 316 129 150 3 true true true 2 CHECK:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:5 0.036147094999997395 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 9 3 2s 3d 6s 312 129 150 3 true true true 2 CHECK:FOLDERBOT BET:4:P2 3 FOLD CALL:4 RAISE:8:17 -0.013919191000002606 Sat Jan 24 18:18:03 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.50, potSize: 9, bet_metric: 0
+Aggro is 1.00
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.426855790487
+3
+Action chosen is CALL
+GETACTION 13 4 2s 3d 6s Tc 312 129 146 3 true true true 2 CALL:4:FOLDERBOT DEAL:TURN 2 CHECK BET:2:13 -0.0669429630000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 13 5 2s 3d 6s Tc 9h 312 129 146 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:RIVER 2 CHECK BET:2:13 -0.1198387610000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.90, potSize: 13, bet_metric: 0
+Aggro is 1.08
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.95929399583
+4
+Action chosen is CALL
+GETACTION 23 5 2s 3d 6s Tc 9h 302 129 146 3 true true true 2 CHECK:FOLDERBOT BET:10:P2 3 FOLD CALL:10 RAISE:20:43 -0.1651234520000026 Sat Jan 24 18:18:03 2015
+last bets are  [10, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.90, potSize: 23, bet_metric: 0
+Aggro is 1.08
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.153948452369
+2
+Action chosen is CHECK
+HANDOVER 325 129 146 5 2s 3d 6s Tc 9h 2 FOLD:FOLDERBOT WIN:23:P2 -0.20814944000000263 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+101100 CHECK
+1100010 FOLD
+1100010 CALL
+1100020 CALL
+100020 CALL
+1100020 CHECK
+learning... old qvalue is  -1.51571656651
+learning... new qvalue is  -1.65033872608
+learning... maxqnew is  0.0
+learning... old qvalue is  1.38510017943
+learning... new qvalue is  1.10349325337
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.0237202824219
+learning... new qvalue is  -0.121748653931
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.328170423708
+learning... new qvalue is  0.152256473227
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.534651007316
+learning... new qvalue is  -0.624282814695
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.613599292757
+learning... new qvalue is  -0.695336271591
+Q value: 0.0
+NEWHAND 82 1 7h 5d 146 325 129 FOLDERBOT P2 P3 3 true true true -0.208149 Sat Jan 24 18:18:03 2015
+GETACTION 3 0 146 324 127 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -0.20814944000000263 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 146 327 127 0 4 FOLD:FOLDERBOT RAISE:5:P2 FOLD:P3 WIN:7:P2 -0.2683332080000026 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1100000 CHECK
+learning... old qvalue is  -2.34019113702
+learning... new qvalue is  -2.10617202332
+NEWHAND 83 2 Kh Kc 127 146 327 P3 FOLDERBOT P2 3 true true true -0.268333 Sat Jan 24 18:18:03 2015
+GETACTION 8 0 122 145 325 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 -0.2683332080000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.69, potSize: 8, bet_metric: -5
+Aggro is 0.76
+Scaled probs is  [0.06276981094812775, 0.21560604851230467, 0.3496113427920432, 0.37201279774752444]
+Random number is  0.36196857862
+3
+Action chosen is CALL
+GETACTION 31 0 110 141 318 3 true true true 3 CALL:5:FOLDERBOT RAISE:9:P2 RAISE:17:P3 3 FOLD CALL:17 RAISE:25:60 -0.3258308690000026 Sat Jan 24 18:18:03 2015
+last bets are  [9, 17, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 110 141 349 0 4 FOLD:FOLDERBOT RAISE:45:P2 FOLD:P3 WIN:67:P2 -0.3786708740000026 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1100020 CALL
+1110020 CHECK
+learning... old qvalue is  None
+learning... new qvalue is  -5.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.48214740802
+learning... new qvalue is  -1.83393266721
+Q value: 0.0
+NEWHAND 84 3 Tc Js 349 110 141 P2 P3 FOLDERBOT 3 true true true -0.378671 Sat Jan 24 18:18:03 2015
+GETACTION 10 0 347 104 139 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 -0.3786708740000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 6, 0]
+HANDOVER 347 104 149 0 4 RAISE:11:FOLDERBOT FOLD:P2 FOLD:P3 WIN:19:FOLDERBOT -0.4361522810000026 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+100110 ODDS2.0
+learning... old qvalue is  0.720543324669
+learning... new qvalue is  2.2484889922
+NEWHAND 85 1 As 4s 149 347 104 FOLDERBOT P2 P3 3 true true true -0.436152 Sat Jan 24 18:18:03 2015
+GETACTION 3 0 149 346 102 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -0.4361522810000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 3, bet metric: 0,  bet amt is: 3, valid action is: RAISE:4
+GETACTION 35 3 7s Jh Kc 145 338 82 3 true true true 6 RAISE:4:FOLDERBOT CALL:4:P2 CALL:4:P3 DEAL:FLOP BET:5:P2 RAISE:18:P3 3 FOLD CALL:18 RAISE:31:71 -0.4954642340000026 Sat Jan 24 18:18:03 2015
+last bets are  [5, 18, 4]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [5, 18, 4]
+GETACTION 98 4 7s Jh Kc 3s 111 309 82 3 true true true 5 RAISE:34:FOLDERBOT CALL:34:P2 FOLD:P3 DEAL:TURN CHECK:P2 2 CHECK BET:2:98 -0.5463622780000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 34]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.35, potSize: 98, bet_metric: 34
+Aggro is 0.74
+Scaled probs is  [0.062059726546536124, 0.21635141134021257, 0.3520251781699281, 0.3695636839433232]
+Random number is  0.729927510322
+4
+Action chosen is CALL
+GETACTION 138 5 7s Jh Kc 3s 9c 111 269 82 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER BET:40:P2 3 FOLD CALL:40 RAISE:80:111 -0.5956966780000026 Sat Jan 24 18:18:03 2015
+last bets are  [40, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 111 407 82 5 7s Jh Kc 3s 9c 2 FOLD:FOLDERBOT WIN:138:P2 -0.6399330920000026 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1100010 ODDS1.0
+1100100 ODDS1.0
+101100 CALL
+1100100 CHECK
+learning... old qvalue is  -3.5277662217
+learning... new qvalue is  -3.58897661034
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  -2.06993505408
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  -2.06993505408
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.324240455832
+learning... new qvalue is  0.084822904841
+Q value: 0.0
+NEWHAND 86 2 3h 5c 82 111 407 P3 FOLDERBOT P2 3 true true true -0.639933 Sat Jan 24 18:18:03 2015
+GETACTION 3 0 82 110 405 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 -0.6399330920000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 82 110 408 0 2 FOLD:FOLDERBOT WIN:3:P2 -0.6949546440000026 Sat Jan 24 18:18:03 2015
+processing toBeProcessed with
+1101000 CHECK
+learning... old qvalue is  -2.59027645457
+learning... new qvalue is  -2.53124880911
+NEWHAND 87 3 Kd 3c 408 82 110 P2 P3 FOLDERBOT 3 true true true -0.694955 Sat Jan 24 18:18:03 2015
+HANDOVER 408 81 111 0 5 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 FOLD:P3 WIN:3:FOLDERBOT -0.6949546440000026 Sat Jan 24 18:18:03 2015
+NEWHAND 88 1 5d 3c 111 408 81 FOLDERBOT P2 P3 3 true true true -0.694955 Sat Jan 24 18:18:03 2015
+GETACTION 3 0 111 407 79 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -0.6949546440000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 7 3 Qd 9d 2h 109 407 77 3 true true true 5 CALL:2:FOLDERBOT FOLD:P2 CHECK:P3 DEAL:FLOP BET:2:P3 3 FOLD CALL:2 RAISE:4:11 -0.7508398520000026 Sat Jan 24 18:18:03 2015
+last bets are  [0, 2, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.13, potSize: 7, bet_metric: 0
+Aggro is 0.87
+Scaled probs is  [0.06891631639229556, 0.21826953420477735, 0.34694785709957043, 0.3658662923033566]
+Random number is  0.947072640202
+4
+Action chosen is CALL
+GETACTION 9 4 Qd 9d 2h 3d 107 407 77 3 true true true 3 CALL:2:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:9 -0.8004681590000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.37, potSize: 9, bet_metric: 0
+Aggro is 0.97
+Scaled probs is  [0.0739791835254354, 0.22046344329580464, 0.3447539480085432, 0.36080342517021674]
+Random number is  0.446843952824
+3
+Action chosen is CALL
+GETACTION 15 5 Qd 9d 2h 3d Jh 107 407 71 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER BET:6:P3 3 FOLD CALL:6 RAISE:12:27 -0.8431308330000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 6, 0]
+goal odds: 2.00, pot size: 15, bet metric: 0,  bet amt is: 7, valid action is: RAISE:12
+HANDOVER 122 407 71 5 Qd 9d 2h 3d Jh 3 RAISE:12:FOLDERBOT FOLD:P3 WIN:27:FOLDERBOT -0.8902716540000026 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1100000 CALL
+1101100 CALL
+1000100 CALL
+1100100 ODDS2.0
+learning... old qvalue is  -1.4686632451
+learning... new qvalue is  -0.99871806735
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.490634941947
+learning... new qvalue is  -0.280032021132
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.368793158242
+learning... new qvalue is  -0.170374415798
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.741990819881
+learning... new qvalue is  -0.506252311273
+Q value: 0.0
+NEWHAND 89 2 2d Ah 71 122 407 P3 FOLDERBOT P2 3 true true true -0.890272 Sat Jan 24 18:18:04 2015
+GETACTION 8 0 66 121 405 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:5:P3 3 FOLD CALL:5 RAISE:8:17 -0.8902716540000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.35, potSize: 8, bet_metric: -5
+Aggro is 0.64
+Scaled probs is  [0.0611480115827141, 0.23439323745762441, 0.38929405985772053, 0.315164691101941]
+Random number is  0.336355763463
+3
+Action chosen is CALL
+GETACTION 21 0 66 117 396 3 true true true 3 CALL:5:FOLDERBOT RAISE:11:P2 FOLD:P3 3 FOLD CALL:11 RAISE:17:38 -0.9493124190000026 Sat Jan 24 18:18:04 2015
+last bets are  [11, 5, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 66 117 417 0 2 FOLD:FOLDERBOT WIN:21:P2 -1.0039392720000027 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1100010 CALL
+1101010 FOLD
+learning... old qvalue is  -8.544704
+learning... new qvalue is  -8.6902336
+learning... maxqnew is  0.0
+learning... old qvalue is  2.62838727652
+learning... new qvalue is  1.86554854887
+Q value: 0.0
+NEWHAND 90 3 Jc 6s 417 66 117 P2 P3 FOLDERBOT 3 true true true -1.003939 Sat Jan 24 18:18:04 2015
+GETACTION 5 0 415 65 115 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 FOLD:P3 2 CHECK RAISE:4:7 -1.0039392720000027 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.30, potSize: 5, bet_metric: 0
+Aggro is 0.94
+Scaled probs is  [0.07284567124892305, 0.21997225464264925, 0.34524513666169854, 0.36193693744672906]
+Random number is  0.0132686871457
+1
+Action chosen is FOLD
+GETACTION 5 3 3c 3d 4c 415 65 115 3 true true true 2 CHECK:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:5 -1.0612422760000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 5, bet metric: 0,  bet amt is: 2, valid action is: BET:2
+GETACTION 17 3 3c 3d 4c 405 65 113 3 true true true 2 BET:2:FOLDERBOT RAISE:10:P2 3 FOLD CALL:10 RAISE:18:35 -1.1094514100000026 Sat Jan 24 18:18:04 2015
+last bets are  [10, 0, 2]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.21, potSize: 17, bet_metric: -2
+Aggro is 0.56
+Scaled probs is  [0.06026959700840725, 0.2517760858669628, 0.4252016956229962, 0.2627526215016337]
+Random number is  0.911545568361
+4
+Action chosen is CALL
+GETACTION 25 4 3c 3d 4c As 405 65 105 3 true true true 2 CALL:10:FOLDERBOT DEAL:TURN 2 CHECK BET:2:25 -1.1617574600000027 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+HANDOVER 405 65 130 4 3c 3d 4c As 3 BET:12:FOLDERBOT FOLD:P2 WIN:37:FOLDERBOT -1.2114572610000027 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+101100 FOLD
+1100000 ODDS2.0
+1100000 CALL
+1100000 ODDS2.0
+learning... old qvalue is  0.743465026584
+learning... new qvalue is  1.04888430835
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.10364133188
+learning... new qvalue is  -0.803394306485
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.288740411693
+learning... new qvalue is  0.449749262735
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.232895174807
+learning... new qvalue is  0.399488549538
+Q value: 0.0
+NEWHAND 91 1 2d 9s 130 405 65 FOLDERBOT P2 P3 3 true true true -1.211457 Sat Jan 24 18:18:04 2015
+GETACTION 3 0 130 404 63 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -1.2114572610000027 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 130 403 67 3 Jd Kc 9h 8 FOLD:FOLDERBOT CALL:2:P2 CHECK:P3 DEAL:FLOP CHECK:P2 BET:2:P3 FOLD:P2 WIN:6:P3 -1.2724697960000027 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1100000 CHECK
+learning... old qvalue is  -2.10617202332
+learning... new qvalue is  -1.89555482099
+NEWHAND 92 2 7d 6c 67 130 403 P3 FOLDERBOT P2 3 true true true -1.272470 Sat Jan 24 18:18:04 2015
+GETACTION 3 0 67 129 401 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 -1.2724697960000027 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 67 129 404 0 2 FOLD:FOLDERBOT WIN:3:P2 -1.3289215970000026 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1101000 CHECK
+learning... old qvalue is  -2.53124880911
+learning... new qvalue is  -2.4781239282
+NEWHAND 93 3 7h 7d 404 67 129 P2 P3 FOLDERBOT 3 true true true -1.328922 Sat Jan 24 18:18:04 2015
+HANDOVER 404 66 130 0 5 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 FOLD:P3 WIN:3:FOLDERBOT -1.3289215970000026 Sat Jan 24 18:18:04 2015
+NEWHAND 94 1 6s 4d 130 404 66 FOLDERBOT P2 P3 3 true true true -1.328922 Sat Jan 24 18:18:04 2015
+GETACTION 3 0 130 403 64 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -1.3289215970000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 9 0 128 403 60 3 true true true 3 CALL:2:FOLDERBOT FOLD:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:19 -1.3833213350000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 6, 0]
+goal odds: 2.00, pot size: 9, bet metric: 0,  bet amt is: 4, valid action is: CHECK
+HANDOVER 128 403 69 0 2 FOLD:FOLDERBOT WIN:9:P3 -1.4393933470000027 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1100000 CALL
+1101000 ODDS2.0
+learning... old qvalue is  -0.814098773178
+learning... new qvalue is  -1.13268889586
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.506252311273
+learning... new qvalue is  -0.655627080146
+Q value: 0.0
+NEWHAND 95 2 9d 5c 69 128 403 P3 FOLDERBOT P2 3 true true true -1.439393 Sat Jan 24 18:18:04 2015
+GETACTION 9 0 63 127 401 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 -1.4393933470000027 Sat Jan 24 18:18:04 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 72 127 401 0 3 FOLD:FOLDERBOT FOLD:P2 WIN:9:P3 -1.4993085860000026 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1100000 FOLD
+learning... old qvalue is  -2.60595535549
+learning... new qvalue is  -2.54535981994
+NEWHAND 96 3 8h 5s 401 72 127 P2 P3 FOLDERBOT 3 true true true -1.499309 Sat Jan 24 18:18:04 2015
+GETACTION 10 0 399 66 125 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT CALL:2:P2 RAISE:6:P3 3 FOLD CALL:6 RAISE:10:20 -1.4993085860000026 Sat Jan 24 18:18:04 2015
+last bets are  [0, 6, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 6, 0]
+GETACTION 52 0 390 42 116 3 true true true 3 RAISE:11:FOLDERBOT CALL:11:P2 RAISE:30:P3 3 FOLD CALL:30 RAISE:49:101 -1.5532355600000025 Sat Jan 24 18:18:04 2015
+last bets are  [0, 30, 11]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 329 155 116 5 4d 9d Jh 4c 7d 10 FOLD:FOLDERBOT RAISE:61:P2 RAISE:72:P3 CALL:72:P2 DEAL:FLOP DEAL:TURN DEAL:RIVER SHOW:5d:2h:P2 SHOW:3c:Ts:P3 WIN:155:P3 -1.6090102230000025 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+100100 ODDS2.0
+110100 CHECK
+learning... old qvalue is  -9.0
+learning... new qvalue is  -8.42307885324
+learning... maxqnew is  0.0
+learning... old qvalue is  0.574970802203
+learning... new qvalue is  0.355934295363
+Q value: 0.0
+NEWHAND 97 1 Jc Td 116 329 155 FOLDERBOT P2 P3 3 true true true -1.609010 Sat Jan 24 18:18:04 2015
+GETACTION 3 0 116 328 153 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -1.6090102230000025 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 116 331 153 0 4 FOLD:FOLDERBOT RAISE:4:P2 FOLD:P3 WIN:6:P2 -1.6645505960000024 Sat Jan 24 18:18:04 2015
+processing toBeProcessed with
+1100010 CHECK
+learning... old qvalue is  -1.68962716086
+learning... new qvalue is  -1.52066444478
+NEWHAND 98 2 4s Ts 153 116 331 P3 FOLDERBOT P2 3 true true true -1.664551 Sat Jan 24 18:18:04 2015
+GETACTION 3 0 153 115 329 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 -1.6645505960000024 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.30, potSize: 3, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07289665697092935, 0.21999434845551868, 0.34522304284882915, 0.3618859517247228]
+Random number is  0.595917456792
+3
+Action chosen is CALL
+GETACTION 4 3 5s 7c 8d 153 114 329 3 true true true 3 CALL:2:FOLDERBOT CHECK:P2 DEAL:FLOP 2 CHECK BET:2:4 -1.7179809520000024 Sat Jan 24 18:18:04 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.22, potSize: 4, bet_metric: 0
+Aggro is 0.92
+Scaled probs is  [0.07137969689262535, 0.2193369990882536, 0.34588039221609423, 0.3634029118030268]
+Random number is  0.0181238407825
+1
+Action chosen is FOLD
+GETACTION 4 4 5s 7c 8d 3h 153 114 329 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:TURN 2 CHECK BET:2:4 -1.7675436420000024 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+GETACTION 7 4 5s 7c 8d 3h 153 114 326 3 true true true 2 CHECK:FOLDERBOT BET:3:P2 3 FOLD CALL:3 RAISE:6:13 -1.8143147750000024 Sat Jan 24 18:18:05 2015
+last bets are  [3, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 153 114 333 4 5s 7c 8d 3h 2 FOLD:FOLDERBOT WIN:7:P2 -1.8602115510000024 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1101010 CALL
+100000 FOLD
+100000 FOLD
+1100000 CHECK
+learning... old qvalue is  -2.69096201417
+learning... new qvalue is  -2.65970723575
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.6858536471
+learning... new qvalue is  -0.73618899389
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.735865184399
+learning... new qvalue is  -0.78119937746
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.37042234095
+learning... new qvalue is  -1.35230081835
+Q value: 0.0
+NEWHAND 99 3 Jd 2s 333 153 114 P2 P3 FOLDERBOT 3 true true true -1.860212 Sat Jan 24 18:18:05 2015
+GETACTION 4 0 333 151 112 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT FOLD:P2 CALL:2:P3 2 CHECK RAISE:4:6 -1.8602115510000024 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 4, bet metric: 0,  bet amt is: 2, valid action is: CHECK
+GETACTION 4 3 As 3d 6s 333 151 112 3 true true true 3 CHECK:FOLDERBOT DEAL:FLOP CHECK:P3 2 CHECK BET:2:4 -1.9201118970000024 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 4 4 As 3d 6s Jh 333 151 112 3 true true true 3 CHECK:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:4 -1.9704060810000024 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 4 5 As 3d 6s Jh Jc 333 151 112 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P3 2 CHECK BET:2:4 -2.0219784800000022 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.90, potSize: 4, bet_metric: 0
+Aggro is 1.08
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.435999135006
+3
+Action chosen is CALL
+HANDOVER 333 155 112 5 As 3d 6s Jh Jc 4 CHECK:FOLDERBOT SHOW:Js:8d:P3 SHOW:Jd:2s:FOLDERBOT WIN:4:P3 -2.071978427000002 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1001100 ODDS2.0
+1000000 CHECK
+1000010 CALL
+1000020 CALL
+learning... old qvalue is  0.903137519488
+learning... new qvalue is  0.58308409654
+learning... maxqnew is  0.0
+learning... old qvalue is  0.108091692351
+learning... new qvalue is  -0.0175873123835
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.182816190038
+learning... new qvalue is  -0.279404406534
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.23780014689
+learning... new qvalue is  -0.3288899677
+Q value: 0.0
+NEWHAND 100 1 Kc 5d 112 333 155 FOLDERBOT P2 P3 3 true true true -2.071978 Sat Jan 24 18:18:05 2015
+GETACTION 3 0 112 332 153 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -2.071978427000002 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.35, potSize: 3, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.07363861473731045, 0.22031586348761714, 0.34490152781673067, 0.36114399395834174]
+Random number is  0.454717095034
+3
+Action chosen is CALL
+GETACTION 8 3 5c Ad 5h 110 329 153 3 true true true 6 CALL:2:FOLDERBOT CALL:2:P2 CHECK:P3 DEAL:FLOP BET:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:12 -2.1312392110000022 Sat Jan 24 18:18:05 2015
+last bets are  [2, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [2, 0, 0]
+GETACTION 22 3 5c Ad 5h 104 321 153 3 true true true 2 RAISE:6:FOLDERBOT RAISE:10:P2 3 FOLD CALL:10 RAISE:14:36 -2.1818695280000022 Sat Jan 24 18:18:05 2015
+last bets are  [10, 0, 6]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.89, potSize: 22, bet_metric: -4
+Aggro is 0.81
+Scaled probs is  [0.06578893635578256, 0.21691433618895506, 0.3483030551153928, 0.3689936723398696]
+Random number is  0.63027186548
+3
+Action chosen is CALL
+GETACTION 26 4 5c Ad 5h Ks 100 321 153 3 true true true 3 CALL:10:FOLDERBOT DEAL:TURN CHECK:P2 2 CHECK BET:2:26 -2.234469501000002 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 26 5 5c Ad 5h Ks Qs 100 321 153 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER CHECK:P2 2 CHECK BET:2:26 -2.284352212000002 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.98, potSize: 26, bet_metric: 0
+Aggro is 1.10
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.943668046297
+4
+Action chosen is CALL
+HANDOVER 126 321 153 5 5c Ad 5h Ks Qs 4 CHECK:FOLDERBOT SHOW:Kc:5d:FOLDERBOT SHOW:4d:Qc:P2 WIN:26:FOLDERBOT -2.327742833000002 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1100010 CALL
+1001120 ODDS1.0
+1001120 CALL
+100120 CHECK
+100120 CALL
+learning... old qvalue is  2.15169423457
+learning... new qvalue is  2.27556845172
+learning... maxqnew is  0.0
+learning... old qvalue is  0.94179205851
+learning... new qvalue is  1.01713467297
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  1.69521820307
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  1.69521820307
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  1.86554854887
+learning... new qvalue is  1.84851551429
+Q value: 0.0
+NEWHAND 101 2 9h 4s 153 126 321 P3 FOLDERBOT P2 3 true true true -2.327743 Sat Jan 24 18:18:05 2015
+GETACTION 3 0 153 125 319 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 FOLD:P3 3 FOLD CALL:2 RAISE:4:6 -2.327742833000002 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 2.00, pot size: 3, bet metric: 0,  bet amt is: 1, valid action is: CHECK
+HANDOVER 153 125 322 0 2 FOLD:FOLDERBOT WIN:3:P2 -2.385044366000002 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1101000 ODDS2.0
+learning... old qvalue is  -1.49074708718
+learning... new qvalue is  -1.54167237846
+NEWHAND 102 3 Ts 9h 322 153 125 P2 P3 FOLDERBOT 3 true true true -2.385044 Sat Jan 24 18:18:05 2015
+GETACTION 14 0 316 147 123 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:6:P2 CALL:6:P3 3 FOLD CALL:6 RAISE:10:24 -2.385044366000002 Sat Jan 24 18:18:05 2015
+last bets are  [6, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [6, 0, 0]
+GETACTION 55 3 7d 8s Ah 316 118 111 3 true true true 5 RAISE:14:FOLDERBOT FOLD:P2 CALL:14:P3 DEAL:FLOP BET:21:P3 3 FOLD CALL:21 RAISE:42:97 -2.440339719000002 Sat Jan 24 18:18:05 2015
+last bets are  [0, 21, 14]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.41, potSize: 55, bet_metric: 7
+Aggro is 0.85
+Scaled probs is  [0.06766383859719913, 0.21772679382690224, 0.34749059747744565, 0.36711877009845306]
+Random number is  0.885709206092
+4
+Action chosen is CALL
+GETACTION 76 4 7d 8s Ah Ac 316 118 90 3 true true true 3 CALL:21:FOLDERBOT DEAL:TURN CHECK:P3 2 CHECK BET:2:76 -2.493595543000002 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+HANDOVER 316 118 166 4 7d 8s Ah Ac 3 BET:38:FOLDERBOT FOLD:P3 WIN:114:FOLDERBOT -2.5441578500000017 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1000110 ODDS1.0
+1101010 CALL
+1000000 ODDS2.0
+learning... old qvalue is  -0.140988183904
+learning... new qvalue is  0.379198541374
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  2.53043953444
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.713500689563
+learning... new qvalue is  -0.389106667163
+Q value: 0.0
+NEWHAND 103 1 9c 9d 166 316 118 FOLDERBOT P2 P3 3 true true true -2.544158 Sat Jan 24 18:18:05 2015
+GETACTION 3 0 166 315 116 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -2.5441578500000017 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.53, potSize: 3, bet_metric: 0
+Aggro is 1.01
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.176952703809
+2
+Action chosen is CHECK
+HANDOVER 166 318 116 0 4 FOLD:FOLDERBOT RAISE:4:P2 FOLD:P3 WIN:6:P2 -2.6009527920000015 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1100020 CHECK
+learning... old qvalue is  -0.82199436485
+learning... new qvalue is  -0.739794928365
+NEWHAND 104 2 Kc Qh 116 166 318 P3 FOLDERBOT P2 3 true true true -2.600953 Sat Jan 24 18:18:05 2015
+GETACTION 5 0 114 165 316 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 -2.6009527920000015 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 21 165 414 4 5c 8c Qs 4c 15 FOLD:FOLDERBOT CHECK:P2 DEAL:FLOP BET:2:P2 RAISE:5:P3 RAISE:17:P2 RAISE:35:P3 RAISE:76:P2 CALL:76:P3 DEAL:TURN CHECK:P2 BET:17:P3 RAISE:34:P2 FOLD:P3 WIN:208:P2 -2.6574871830000015 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1000010 FOLD
+learning... old qvalue is  -1.42494845931
+learning... new qvalue is  -1.48245361338
+NEWHAND 105 3 3s Jh 414 21 165 P2 P3 FOLDERBOT 3 true true true -2.657487 Sat Jan 24 18:18:05 2015
+GETACTION 8 0 409 20 163 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:5:P2 FOLD:P3 3 FOLD CALL:5 RAISE:8:16 -2.6574871830000015 Sat Jan 24 18:18:05 2015
+last bets are  [5, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+HANDOVER 417 20 163 0 2 FOLD:FOLDERBOT WIN:8:P2 -2.7151904720000015 Sat Jan 24 18:18:05 2015
+processing toBeProcessed with
+1101100 CHECK
+learning... old qvalue is  -3.86837829616
+learning... new qvalue is  -3.88154046654
+NEWHAND 106 1 2h Kd 163 417 20 FOLDERBOT P2 P3 3 true true true -2.715190 Sat Jan 24 18:18:05 2015
+GETACTION 3 0 163 416 18 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -2.7151904720000015 Sat Jan 24 18:18:05 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.31, potSize: 3, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07310091925685507, 0.22008286211275313, 0.34513452919159465, 0.3616816894387971]
+Random number is  0.440293839322
+3
+Action chosen is CALL
+GETACTION 11 0 161 410 18 3 true true true 3 CALL:2:FOLDERBOT RAISE:7:P2 FOLD:P3 3 FOLD CALL:7 RAISE:12:23 -2.7779091280000014 Sat Jan 24 18:18:06 2015
+last bets are  [7, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [7, 0, 0]
+goal odds: 1.00, pot size: 11, bet metric: -7,  bet amt is: 4, valid action is: CHECK
+HANDOVER 161 421 18 0 2 FOLD:FOLDERBOT WIN:11:P2 -2.8360634630000012 Sat Jan 24 18:18:06 2015
+processing toBeProcessed with
+1100010 CALL
+1101010 ODDS1.0
+learning... old qvalue is  0.912650518723
+learning... new qvalue is  0.42138546685
+learning... maxqnew is  0.0
+learning... old qvalue is  1.84851551429
+learning... new qvalue is  1.46366396286
+Q value: 0.0
+NEWHAND 107 2 6h 2s 18 161 421 P3 FOLDERBOT P2 3 true true true -2.836063 Sat Jan 24 18:18:06 2015
+GETACTION 5 0 16 160 419 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 -2.8360634630000012 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+GETACTION 12 3 Qh 9d Qs 16 156 416 3 true true true 4 RAISE:5:FOLDERBOT CALL:5:P2 FOLD:P3 DEAL:FLOP 2 CHECK BET:2:12 -2.893422232000001 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 5]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.09, potSize: 12, bet_metric: 0
+Aggro is 0.85
+Scaled probs is  [0.06784876368072536, 0.2178069280297636, 0.34741046327458425, 0.3669338450149268]
+Random number is  0.832246612022
+4
+Action chosen is CALL
+GETACTION 22 3 Qh 9d Qs 16 156 406 3 true true true 2 CHECK:FOLDERBOT BET:10:P2 3 FOLD CALL:10 RAISE:20:42 -2.942512772000001 Sat Jan 24 18:18:06 2015
+last bets are  [10, 0, 5]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.09, potSize: 22, bet_metric: 10
+Aggro is 0.56
+Scaled probs is  [0.0602447091951782, 0.2522685880376399, 0.42621905412154815, 0.26126764864563384]
+Random number is  0.406170098524
+3
+Action chosen is CALL
+GETACTION 32 4 Qh 9d Qs 3d 16 146 406 3 true true true 2 CALL:10:FOLDERBOT DEAL:TURN 2 CHECK BET:2:32 -2.988688890000001 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 32 5 Qh 9d Qs 3d Jc 16 146 406 3 true true true 3 CHECK:FOLDERBOT CHECK:P2 DEAL:RIVER 2 CHECK BET:2:32 -3.033128132000001 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]
+HANDOVER 16 178 406 5 Qh 9d Qs 3d Jc 3 BET:16:FOLDERBOT FOLD:P2 WIN:48:FOLDERBOT -3.0773017370000013 Sat Jan 24 18:18:06 2015
+processing toBeProcessed with
+1000000 ODDS1.0
+101000 CALL
+1101000 CALL
+1100000 CALL
+100000 ODDS2.0
+learning... old qvalue is  0.597344718104
+learning... new qvalue is  0.89007831586
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.360682465873
+learning... new qvalue is  -0.148380184502
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.64725034654
+learning... new qvalue is  -1.3062912771
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.00168663405362
+learning... new qvalue is  0.174716064135
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.16317850596
+learning... new qvalue is  -0.870626620585
+Q value: 0.0
+NEWHAND 108 3 8h Jh 406 16 178 P2 P3 FOLDERBOT 3 true true true -3.077302 Sat Jan 24 18:18:06 2015
+GETACTION 17 0 402 5 176 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:4:P2 RAISE:11:P3 3 FOLD CALL:11 RAISE:18:37 -3.0773017370000013 Sat Jan 24 18:18:06 2015
+last bets are  [4, 11, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [4, 11, 0]
+GETACTION 54 3 3s Kd Qc 387 0 159 3 true true true 4 RAISE:19:FOLDERBOT CALL:19:P2 CALL:16:P3 DEAL:FLOP 2 CHECK BET:2:54 -3.1312763220000015 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 19]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 19]
+HANDOVER 387 48 165 5 3s Kd Qc 8d 3c 8 BET:8:FOLDERBOT FOLD:P2 DEAL:TURN DEAL:RIVER SHOW:9s:Qd:P3 SHOW:8h:Jh:FOLDERBOT WIN:48:P3 WIN:14:FOLDERBOT -3.1820476990000013 Sat Jan 24 18:18:06 2015
+processing toBeProcessed with
+1100110 ODDS2.0
+0 ODDS2.0
+learning... old qvalue is  None
+learning... new qvalue is  -1.67027765233
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.417975212
+learning... new qvalue is  -0.543205456033
+Q value: 0.0
+NEWHAND 109 1 3d 7d 165 387 48 FOLDERBOT P2 P3 3 true true true -3.182048 Sat Jan 24 18:18:06 2015
+GETACTION 3 0 165 386 46 3 true true true 2 POST:1:P2 POST:2:P3 3 CALL:2 FOLD RAISE:4:7 -3.1820476990000013 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.25, potSize: 3, bet_metric: 0
+Aggro is 0.93
+Scaled probs is  [0.0719685988555102, 0.21959218993883703, 0.34562520136551084, 0.362814009840142]
+Random number is  0.955586820275
+4
+Action chosen is CALL
+GETACTION 11 0 163 380 46 3 true true true 3 CALL:2:FOLDERBOT RAISE:7:P2 FOLD:P3 3 FOLD CALL:7 RAISE:12:23 -3.2434813260000013 Sat Jan 24 18:18:06 2015
+last bets are  [7, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 16 3 As 8c Ac 158 380 46 3 true true true 3 CALL:7:FOLDERBOT DEAL:FLOP CHECK:P2 2 CHECK BET:2:16 -3.2975343320000015 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 16, bet metric: 0,  bet amt is: 16, valid action is: BET:16
+GETACTION 48 4 As 8c Ac 4s 142 364 46 3 true true true 4 BET:16:FOLDERBOT CALL:16:P2 DEAL:TURN CHECK:P2 2 CHECK BET:2:48 -3.3483700770000016 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 16]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.05, potSize: 48, bet_metric: 16
+Aggro is 0.55
+Scaled probs is  [0.06012006429494021, 0.2547351721190165, 0.43131426065461065, 0.25383050293143267]
+Random number is  0.474288513943
+3
+Action chosen is CALL
+GETACTION 65 5 As 8c Ac 4s Ah 142 347 46 3 true true true 3 CHECK:FOLDERBOT DEAL:RIVER BET:17:P2 3 FOLD CALL:17 RAISE:34:99 -3.3934249290000014 Sat Jan 24 18:18:06 2015
+last bets are  [17, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [17, 0, 0]
+goal odds: 2.00, pot size: 65, bet metric: -17,  bet amt is: 15, valid action is: CHECK
+HANDOVER 142 412 46 5 As 8c Ac 4s Ah 2 FOLD:FOLDERBOT WIN:65:P2 -3.4383658960000014 Sat Jan 24 18:18:06 2015
+processing toBeProcessed with
+1100000 CALL
+1101000 CALL
+100100 ODDS1.0
+100100 CALL
+1100100 ODDS2.0
+learning... old qvalue is  -3.02568860289
+learning... new qvalue is  -3.09755398871
+learning... maxqnew is  0.0
+learning... old qvalue is  0.0981102405738
+learning... new qvalue is  -0.0989179065391
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  0.149042496573
+learning... new qvalue is  -0.0530788761396
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.723039967216
+learning... new qvalue is  -0.83795309355
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.655627080146
+learning... new qvalue is  -0.777281495187
+Q value: 0.0
+NEWHAND 110 2 Jh 9d 46 142 412 P3 FOLDERBOT P2 3 true true true -3.438366 Sat Jan 24 18:18:06 2015
+GETACTION 5 0 44 141 410 3 true true true 3 POST:1:FOLDERBOT POST:2:P2 CALL:2:P3 3 FOLD CALL:2 RAISE:4:8 -3.4383658960000014 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+HANDOVER 44 146 410 0 4 RAISE:5:FOLDERBOT FOLD:P2 FOLD:P3 WIN:9:FOLDERBOT -3.4974310820000016 Sat Jan 24 18:18:06 2015
+processing toBeProcessed with
+1000010 ODDS1.0
+learning... old qvalue is  -0.308471690676
+learning... new qvalue is  0.522375478391
+NEWHAND 111 3 Tc Qc 410 44 146 P2 P3 FOLDERBOT 3 true true true -3.497431 Sat Jan 24 18:18:06 2015
+GETACTION 10 0 406 40 144 3 true true true 4 POST:1:P3 POST:2:FOLDERBOT RAISE:4:P2 CALL:4:P3 3 FOLD CALL:4 RAISE:6:16 -3.4974310820000016 Sat Jan 24 18:18:06 2015
+last bets are  [4, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CALL, 0.00)
+GETACTION 21 3 2s 9h Ts 406 31 142 3 true true true 3 CALL:4:FOLDERBOT DEAL:FLOP BET:9:P3 3 FOLD CALL:9 RAISE:18:39 -3.5598397540000017 Sat Jan 24 18:18:06 2015
+last bets are  [0, 9, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 9, 0]
+GETACTION 86 3 2s 9h Ts 387 4 123 3 true true true 3 RAISE:19:FOLDERBOT CALL:19:P2 RAISE:36:P3 3 FOLD CALL:36 RAISE:53:139 -3.6094205840000018 Sat Jan 24 18:18:06 2015
+last bets are  [0, 36, 19]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 36, 19]
+GETACTION 172 4 2s 9h Ts 3c 346 0 82 3 true true true 4 RAISE:60:FOLDERBOT CALL:60:P2 CALL:40:P3 DEAL:TURN 2 CHECK BET:2:82 -3.657052444000002 Sat Jan 24 18:18:06 2015
+last bets are  [0, 0, 60]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.68, potSize: 172, bet_metric: -60
+Aggro is 0.76
+Scaled probs is  [0.0626976444514092, 0.2155747763637266, 0.34964261494062127, 0.372084964244243]
+Random number is  0.166717522089
+2
+Action chosen is CHECK
+GETACTION 240 4 2s 9h Ts 3c 278 0 82 3 true true true 2 CHECK:FOLDERBOT BET:68:P2 3 FOLD CALL:68 RAISE:82:82 -3.7052246080000018 Sat Jan 24 18:18:06 2015
+last bets are  [68, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [68, 0, 0]
+goal odds: 2.00, pot size: 240, bet metric: 0,  bet amt is: 120, valid action is: RAISE:82
+HANDOVER 278 0 322 5 2s 9h Ts 3c 2h 7 RAISE:82:FOLDERBOT FOLD:P2 DEAL:RIVER SHOW:3d:4s:P3 SHOW:Tc:Qc:FOLDERBOT WIN:132:FOLDERBOT WIN:190:FOLDERBOT -3.750074257000002 Sat Jan 24 18:18:07 2015
+processing toBeProcessed with
+1000110 CALL
+1100010 ODDS2.0
+100010 ODDS2.0
+10 CHECK
+1100010 ODDS2.0
+learning... old qvalue is  3.34189258257
+learning... new qvalue is  3.57021627967
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  2.81256477678
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  None
+learning... new qvalue is  2.81256477678
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -2.8779373593
+learning... new qvalue is  -2.3088871457
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.59223712756
+learning... new qvalue is  -1.15175693712
+Q value: 0.0
+NEWHAND 112 1 6s 6d 322 278 0 FOLDERBOT P2 P3 2 true true false -3.750074 Sat Jan 24 18:18:07 2015
+GETACTION 3 0 321 276 0 2 true true false 2 POST:1:FOLDERBOT POST:2:P2 3 CALL:2 FOLD RAISE:4:6 -3.750074257000002 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS1.0, 0.00)
+last bets are  [0, 0, 0]
+goal odds: 1.00, pot size: 3, bet metric: 0,  bet amt is: 3, valid action is: RAISE:4
+GETACTION 12 0 318 270 0 2 true true false 2 RAISE:4:FOLDERBOT RAISE:8:P2 3 FOLD CALL:8 RAISE:12:24 -3.806668940000002 Sat Jan 24 18:18:07 2015
+last bets are  [8, 0, 4]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 318 282 0 0 2 FOLD:FOLDERBOT WIN:12:P2 -3.866078239000002 Sat Jan 24 18:18:07 2015
+processing toBeProcessed with
+1100010 ODDS1.0
+1100010 FOLD
+learning... old qvalue is  -7.934876
+learning... new qvalue is  -7.9413884
+learning... maxqnew is  0.0
+learning... old qvalue is  0.084822904841
+learning... new qvalue is  -0.323659385643
+Q value: 0.0
+NEWHAND 113 2 Jd 8s 282 318 0 P2 FOLDERBOT P3 2 true true false -3.866078 Sat Jan 24 18:18:07 2015
+GETACTION 4 0 280 316 0 2 true true false 3 POST:1:P2 POST:2:FOLDERBOT CALL:2:P2 2 CHECK RAISE:4:6 -3.866078239000002 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.34, potSize: 4, bet_metric: 0
+Aggro is 0.96
+Scaled probs is  [0.07345695031130911, 0.22023714223634988, 0.34498024906799796, 0.36132565838434305]
+Random number is  0.205208087443
+2
+Action chosen is CHECK
+GETACTION 4 3 As 3h Qs 280 316 0 2 true true false 2 CHECK:FOLDERBOT DEAL:FLOP 2 CHECK BET:2:4 -3.924224723000002 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.22, potSize: 4, bet_metric: 0
+Aggro is 0.91
+Scaled probs is  [0.07129316191447253, 0.21929950059772074, 0.34591789070662715, 0.36348944678117967]
+Random number is  0.104349698845
+2
+Action chosen is CHECK
+GETACTION 6 3 As 3h Qs 278 316 0 2 true true false 2 CHECK:FOLDERBOT BET:2:P2 3 FOLD CALL:2 RAISE:4:10 -3.975586085000002 Sat Jan 24 18:18:07 2015
+last bets are  [2, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.22, potSize: 6, bet_metric: 2
+Aggro is 0.69
+Scaled probs is  [0.06157664330240574, 0.22591109198239326, 0.3717725476716591, 0.34073971704354195]
+Random number is  0.782995309286
+4
+Action chosen is CALL
+GETACTION 8 4 As 3h Qs Jc 278 314 0 2 true true false 2 CALL:2:FOLDERBOT DEAL:TURN 2 CHECK BET:2:8 -4.023151532000002 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (CHECK, 0.00)
+GETACTION 8 5 As 3h Qs Jc 3s 278 314 0 2 true true false 3 CHECK:FOLDERBOT CHECK:P2 DEAL:RIVER 2 CHECK BET:2:8 -4.0737760760000015 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.33, potSize: 8, bet_metric: 0
+Aggro is 0.95
+Scaled probs is  [0.07334232693378229, 0.22018747210608827, 0.3450299191982596, 0.3614402817618699]
+Random number is  0.0472061246575
+1
+Action chosen is FOLD
+HANDOVER 282 318 0 5 As 3h Qs Jc 3s 6 CHECK:FOLDERBOT CHECK:P2 SHOW:Jd:8s:FOLDERBOT SHOW:Th:Js:P2 TIE:4:FOLDERBOT TIE:4:P2 -4.119115043000002 Sat Jan 24 18:18:07 2015
+processing toBeProcessed with
+100000 CHECK
+1100000 CHECK
+1100000 CALL
+1100000 CHECK
+100000 FOLD
+learning... old qvalue is  -1.38453970164
+learning... new qvalue is  -1.24608573147
+learning... maxqnew is  0.0
+learning... old qvalue is  -1.3460889607
+learning... new qvalue is  -1.21148006463
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.958250329549
+learning... new qvalue is  -0.862425296594
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.695064661622
+learning... new qvalue is  -0.62555819546
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.222981145574
+learning... new qvalue is  -0.200683031016
+Q value: 0.0
+NEWHAND 114 1 Qd 7d 318 282 0 FOLDERBOT P2 P3 2 true true false -4.119115 Sat Jan 24 18:18:07 2015
+GETACTION 3 0 317 280 0 2 true true false 2 POST:1:FOLDERBOT POST:2:P2 3 CALL:2 FOLD RAISE:4:6 -4.119115043000002 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (FOLD, 0.00)
+HANDOVER 317 283 0 0 2 FOLD:FOLDERBOT WIN:3:P2 -4.175119740000001 Sat Jan 24 18:18:07 2015
+processing toBeProcessed with
+1100000 FOLD
+learning... old qvalue is  -2.54535981994
+learning... new qvalue is  -2.49082383795
+NEWHAND 115 2 9c 7d 283 317 0 P2 FOLDERBOT P3 2 true true false -4.175120 Sat Jan 24 18:18:07 2015
+HANDOVER 282 318 0 0 4 POST:1:P2 POST:2:FOLDERBOT FOLD:P2 WIN:3:FOLDERBOT -4.175119740000001 Sat Jan 24 18:18:07 2015
+NEWHAND 116 1 6h As 318 282 0 FOLDERBOT P2 P3 2 true true false -4.175120 Sat Jan 24 18:18:07 2015
+GETACTION 3 0 317 280 0 2 true true false 2 POST:1:FOLDERBOT POST:2:P2 3 CALL:2 FOLD RAISE:4:6 -4.175119740000001 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.40, potSize: 3, bet_metric: 0
+Aggro is 0.97
+Scaled probs is  [0.07436525661357728, 0.22063074163399943, 0.34458664967034836, 0.36041735208207487]
+Random number is  0.658846273007
+4
+Action chosen is CALL
+GETACTION 4 3 6s Ad Js 316 280 0 2 true true false 4 CALL:2:FOLDERBOT CHECK:P2 DEAL:FLOP CHECK:P2 2 CHECK BET:2:4 -4.231775930000001 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+Choosing random action with eq: 0.86, potSize: 4, bet_metric: 0
+Aggro is 1.08
+Scaled probs is  [0.07561436672967864, 0.22117202268431005, 0.3440453686200378, 0.3591682419659736]
+Random number is  0.60305625499
+3
+Action chosen is CALL
+GETACTION 6 4 6s Ad Js 7c 316 278 0 2 true true false 3 CHECK:FOLDERBOT DEAL:TURN BET:2:P2 3 FOLD CALL:2 RAISE:4:10 -4.283246598000002 Sat Jan 24 18:18:07 2015
+last bets are  [2, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [2, 0, 0]
+goal odds: 2.00, pot size: 6, bet metric: -2,  bet amt is: 1, valid action is: CHECK
+HANDOVER 316 284 0 4 6s Ad Js 7c 2 FOLD:FOLDERBOT WIN:6:P2 -4.328085661000002 Sat Jan 24 18:18:07 2015
+processing toBeProcessed with
+1100000 CALL
+100120 CALL
+1100120 ODDS2.0
+learning... old qvalue is  0.0177884365714
+learning... new qvalue is  -0.221831830086
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.252268358839
+learning... new qvalue is  -0.345962234455
+Q value: 0.0
+learning... maxqnew is  0.0
+learning... old qvalue is  -0.777281495187
+learning... new qvalue is  -0.818474057168
+Q value: 0.0
+NEWHAND 117 2 Ts 2h 284 316 0 P2 FOLDERBOT P3 2 true true false -4.328086 Sat Jan 24 18:18:07 2015
+GETACTION 4 0 282 314 0 2 true true false 3 POST:1:P2 POST:2:FOLDERBOT CALL:2:P2 2 CHECK RAISE:4:6 -4.328085661000002 Sat Jan 24 18:18:07 2015
+last bets are  [0, 0, 0]
+(action, value) values for (state, a) is  [('FOLD', 0.0), ('CHECK', 0.0), ('CALL', 0.0), ('ODDS1.0', 0.0), ('ODDS2.0', 0.0)]
+(action, value) chosen is (ODDS2.0, 0.00)
+last bets are  [0, 0, 0]

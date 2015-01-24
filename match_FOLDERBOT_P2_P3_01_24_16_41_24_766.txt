@@ -1,0 +1,110 @@
+6.176 MIT Pokerbots - FOLDERBOT vs P2 vs P3 (stack=200, bb=2)
+Hand #1, FOLDERBOT (200), P2 (200), P3 (200)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [4h 7c]
+Dealt to P2 [2h 6s]
+Dealt to P3 [6d Jc]
+FOLDERBOT calls 2
+P2 raises to 6
+P3 calls 6
+FOLDERBOT folds
+*** FLOP *** (14) [6h 2d Ac]
+P2 checks
+P3 bets 10
+P2 folds
+P3 wins the pot (24)
+
+Hand #2, P3 (208), FOLDERBOT (198), P2 (194)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Ts Ac]
+Dealt to FOLDERBOT [7c 6s]
+Dealt to P2 [7s 4s]
+P3 folds
+FOLDERBOT calls 2
+P2 checks
+*** FLOP *** (4) [As 4h Ad]
+FOLDERBOT checks
+P2 bets 2
+FOLDERBOT raises to 8
+P2 folds
+FOLDERBOT wins the pot (14)
+
+Hand #3, P2 (190), P3 (208), FOLDERBOT (202)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [Kc 2h]
+Dealt to P3 [6s Qh]
+Dealt to FOLDERBOT [3h Jc]
+P2 calls 2
+P3 raises to 4
+FOLDERBOT calls 4
+P2 folds
+*** FLOP *** (10) [Jh Ts Kd]
+P3 bets 2
+FOLDERBOT raises to 14
+P3 raises to 27
+FOLDERBOT raises to 40
+P3 calls 40
+*** TURN *** (90) [Jh Ts Kd] [7c]
+P3 checks
+FOLDERBOT checks
+*** RIVER *** (90) [Jh Ts Kd 7c] [4d]
+P3 bets 62
+FOLDERBOT raises to 158
+P3 folds
+FOLDERBOT wins the pot (310)
+
+Hand #4, FOLDERBOT (310), P2 (188), P3 (102)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [Qh 7c]
+Dealt to P2 [2s 6c]
+Dealt to P3 [Ks 8c]
+FOLDERBOT calls 2
+P2 folds
+P3 raises to 6
+FOLDERBOT folds
+P3 wins the pot (9)
+
+Hand #5, P3 (105), FOLDERBOT (308), P2 (187)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [Td 5s]
+Dealt to FOLDERBOT [6s 6d]
+Dealt to P2 [6h Qs]
+P3 folds
+FOLDERBOT folds
+P2 wins the pot (3)
+
+Hand #6, P2 (188), P3 (105), FOLDERBOT (307)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [9c 2d]
+Dealt to P3 [4c Jd]
+Dealt to FOLDERBOT [7s Ks]
+P2 calls 2
+P3 calls 2
+FOLDERBOT checks
+*** FLOP *** (6) [Kd Ad Ac]
+P3 checks
+FOLDERBOT checks
+P2 bets 5
+P3 raises to 15
+FOLDERBOT calls 15
+P2 raises to 45
+P3 raises to 102
+FOLDERBOT calls 102
+P2 calls 102
+*** TURN *** (312) [Kd Ad Ac] [5h]
+P3 bets 1
+FOLDERBOT raises to 84
+P2 calls 84
+*** RIVER *** (166) [Kd Ad Ac 5h] [5s]
+P2 shows [9c 2d]
+P3 shows [4c Jd]
+FOLDERBOT shows [7s Ks]
+FOLDERBOT wins the pot (315)
+FOLDERBOT wins the pot (166)
+

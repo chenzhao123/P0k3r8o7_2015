@@ -53,11 +53,13 @@ class Player:
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
         self.qfile = "QFile.txt"
-        self.ai = QLearn(["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS1.5", "ODDS2.0", "ODDS3.0"],
-                          epsilon=0.3, alpha=0.2, gamma=1.0)
+        self.ai = QLearn(["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS2.0"],
+                          epsilon=0.4, alpha=0.1, gamma=1.0)
         self.ai.loadQ(self.qfile)
         self.numHandsPlayed = 0
         self.numChipsGained = 0
+        self.f = open('/Users/davidke/P0k3r8o7_2015/pythonbot_1.1/summary.txt', 'a')
+        self.startingStreetPotSize = 3
 
     def run(self, input_socket):
         # Get a file-object for reading packets from the socket.
@@ -113,6 +115,7 @@ class Player:
             #print "end while", time.asctime()
         # Clean up the socket.
         s.close()
+        self.f.close()
 
     def newgame(self, parser_dict):
         self.name = parser_dict['yourName']
@@ -137,6 +140,7 @@ class Player:
         self.handId = parser_dict['handId']
         self.seat = parser_dict['seat']
         p_index = 0
+        self.startingStreetPotSize = 3
         self.activePlayers = parser_dict['activePlayers']
         for player_name in parser_dict['playerNames']:
             if player_name == self.opp1:
@@ -179,6 +183,8 @@ class Player:
         #Resetting lastActions
         if (lastStreet != len(self.boardCards)):
             self.lastActions = []
+            self.startingStreetPotSize = self.potSize
+
 
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         for action in parser_dict['legalActions']:
@@ -202,18 +208,26 @@ class Player:
         diffStack = self.stack - self.startingStack
         if numBoardCards == 0:
             reward = diffStack
-        elif numBoardCards == 3:
+        else:
+            if diffStack > 0:
+                reward = pow(diffStack, float(1)/numBoardCards)
+            else:
+                reward = -pow(abs(diffStack), float(1)/numBoardCards)
+            '''
             reward = diffStack/2
         elif numBoardCards == 4:
             reward = diffStack/4
         else:
             reward = diffStack/8
+            '''
         self.ai.learnAll(reward)
+
+        self.f.write(str(diffStack) + "\n")
 
         self.numHandsPlayed += 1
         self.numChipsGained += diffStack
         if not self.numHandsPlayed % 1000:
-            print "Average winning per hand:", self.numChipsGained / 1000.0
+            #self.f.write("Average winning per hand:" +  str(self.numChipsGained / 1000.0)) 
             self.numHandsPlayed = 0
 
         self.getstats()
@@ -296,7 +310,7 @@ class Player:
         numCheckCall2 = min(3, numCheckCall2)
         numBetRaise1 = min(3, numBetRaise1)
         numBetRaise2 = min(3, numBetRaise2)
-        prevAct = PrevAction(numCheckCall1, dAmt1, numBetRaise1, didFold1, numCheckCall2, dAmt2, numBetRaise2, didFold2)
+        prevAct = PrevAction(numCheckCall1, dAmt1, numBetRaise1, didFold1, numCheckCall2, dAmt2, numBetRaise2, didFold2, self.startingStreetPotSize)
         return QState(position, equity, street, prevAct)
 
     def createValidAction(self, action):
@@ -324,7 +338,7 @@ class Player:
 
         bet_metric = self.analyzePotOdds()
 
-        bet_amt = self.potSize/goal_odds + bet_metric
+        bet_amt = int(self.potSize/goal_odds + bet_metric)
 
 
         #TODO, convert odds to bet amt.
@@ -373,7 +387,7 @@ class Player:
                 else:
                     dict_dists[max_raise_diff] = ["RAISE:" + str(maxraise)]
 
-
+        '''
         if "CALL" in self.legalActions:
             call = int(self.legalActions["CALL"][0])
             if abs(call - bet_amt) < 1:
@@ -385,12 +399,17 @@ class Player:
                     dict_dists[call_diff].append("CALL:" + str(call))
                 else:
                     dict_dists[call_diff] = ["CALL:" + str(call)]
+        '''
+
+
 
         if len(dict_dists[min_dist]) == 1:
             validAction = dict_dists[min_dist][0]
         else:
             validAction = random.choice(dict_dists[min_dist])
 
+
+        print "goal odds: %.2f, pot size: %i, bet metric: %i,  bet amt is: %i, valid action is: %s" %(goal_odds, self.potSize, bet_metric, bet_amt, validAction)
         if validAction == "CHECK" and "CHECK" not in self.legalActions:
             return "FOLD"
         else:
@@ -402,13 +421,14 @@ class Player:
         opp2_last_bet = 0
         opp3_last_bet = 0
         for PerformedAction in self.lastActions:
-            if PerformedAction.actor == "1" and PerformedAction.name in ["BET", "RAISE"]:
-                opp1_last_bet = PerformedAction.fields[0]
-            if PerformedAction.actor == "2" and PerformedAction.name in ["BET", "RAISE"]:
-                opp2_last_bet = PerformedAction.fields[0]
-            if PerformedAction.actor == "3" and PerformedAction.name in ["BET", "RAISE"]:
-                opp3_last_bet = PerformedAction.fields[0]
+            if PerformedAction.actor == self.opp1 and PerformedAction.name in ["BET", "RAISE"]:
+                opp1_last_bet = int(PerformedAction.fields[0])
+            if PerformedAction.actor == self.opp2 and PerformedAction.name in ["BET", "RAISE"]:
+                opp2_last_bet = int(PerformedAction.fields[0])
+            if PerformedAction.actor == self.name and PerformedAction.name in ["BET", "RAISE"]:
+                opp3_last_bet = int(PerformedAction.fields[0])
         last_bets = [opp1_last_bet, opp2_last_bet, opp3_last_bet]
+        print "last bets are ", last_bets
         last_player_seat = (self.seat - 1) % 3
         next_player_seat = (self.seat + 1) % 3
         player_seat = self.seat
@@ -450,6 +470,7 @@ class Player:
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
         self.boardCards = []
+
 
 if __name__ == '__main__':
 

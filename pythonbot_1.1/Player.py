@@ -53,9 +53,11 @@ class Player:
         self.opp1Equity = 0.0
         self.opp2Equity = 0.0
         self.qfile = "QFile.txt"
+        self.countfile = "QCount.txt"
         self.ai = QLearn(["FOLD", "CHECK", "CALL", "ODDS1.0", "ODDS2.0"],
                           epsilon=0.4, alpha=0.1, gamma=1.0)
         self.ai.loadQ(self.qfile)
+        self.ai.loadCount(self.countfile)
         self.numHandsPlayed = 0
         self.numChipsGained = 0
         self.f = open('summary.txt', 'a')
@@ -107,7 +109,9 @@ class Player:
                 # Send FINISH to indicate you're done.
                 #s.send("FINISH\n")
                 print "dumping q values to", self.qfile
-                self.ai.dumpQ(self.qfile)
+                self.ai.dumpInfo(self.qfile, self.ai.q)
+                print "dumping count values to", self.countfile
+                self.ai.dumpInfo(self.countfile, self.ai.count)
                 self.requestkeyvalues(packet_parser.parser_dict)
                 for key in self.newkeyvalues:
                     s.send("PUT " + str(key) + " " + str(self.newkeyvalues[key]) + "\n")
@@ -175,16 +179,13 @@ class Player:
         self.opp1Stack = parser_dict['stackSizes'][self.opp1Index]
         self.opp2Stack = parser_dict['stackSizes'][self.opp2Index]
 
-        if self.flop:
+        if (self.flop or self.turn or self.river):
             self.boardCards = [Card(card) for card in parser_dict['boardCards']]
-        if self.turn or self.river:
-            self.boardCards.append(Card(parser_dict['boardCards'][-1]))
 
         #Resetting lastActions
         if (lastStreet != len(self.boardCards)):
             self.lastActions = []
             self.startingStreetPotSize = self.potSize
-
 
         self.lastActions.extend([PerformedAction(action) for action in parser_dict['lastActions']])
         for action in parser_dict['legalActions']:
@@ -227,7 +228,7 @@ class Player:
         self.numHandsPlayed += 1
         self.numChipsGained += diffStack
         if not self.numHandsPlayed % 1000:
-            #self.f.write("Average winning per hand:" +  str(self.numChipsGained / 1000.0)) 
+            #self.f.write("Average winning per hand:" +  str(self.numChipsGained / 1000.0))
             self.numHandsPlayed = 0
 
         self.getstats()
@@ -246,11 +247,16 @@ class Player:
         deadCards = ""
         opp1Cards = "xx"
         opp2Cards = "xx"
-        holeCardsInput = myCards + ":" + opp1Cards + ":" + opp2Cards
+        numPlayers = 1 + int(self.opp1Active) + int(self.opp2Active)
+        if numPlayers == 3:
+            holeCardsInput = myCards + ":" + opp1Cards + ":" + opp2Cards
+        if numPlayers == 2:
+            holeCardsInput = myCards + ":" + opp1Cards
         eqResults = pbots_calc.calc(holeCardsInput, boardCards, deadCards, 10000)
         self.equity = eqResults.ev[0]
         self.opp1Equity = eqResults.ev[1]
-        self.opp2Equity = eqResults.ev[2]
+        if numPlayers == 3:
+            self.opp2Equity = eqResults.ev[2]
 
         state = self.createQState()
         #print "choose action starts", time.asctime()

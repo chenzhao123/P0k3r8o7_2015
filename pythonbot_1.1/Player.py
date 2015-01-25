@@ -58,7 +58,7 @@ class Player:
         self.ai.loadQ(self.qfile)
         self.numHandsPlayed = 0
         self.numChipsGained = 0
-        self.f = open('/Users/davidke/P0k3r8o7_2015/pythonbot_1.1/summary.txt', 'a')
+        self.f = open('summary.txt', 'a')
         self.startingStreetPotSize = 3
 
     def run(self, input_socket):

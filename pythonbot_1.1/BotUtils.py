@@ -42,13 +42,15 @@ class Card(object):
 
     def same_rank(self, other):
         return self.rank == other.rank
-    
+
     def __eq__(self, other):
-        return self.same_suit(other) and self.same_rank(other)    
+        return self.same_suit(other) and self.same_rank(other)
 
     def __str__(self):
         return self.rank + self.suit
-    
+
+    def __repr__(self):
+        return self.__str__()
 
 class LegalAction(object):
     def __init__(self, string):
@@ -69,12 +71,12 @@ class PerformedAction(object):
         else:
             self.actor = None
             self.fields = tokens[1]
-         
+
 class Action(object):
     def __init__(self, name, field=None):
         self.name = name
         self.field = field
- 
+
 def isValid(action, validActions):
     if action.name in validActions:
         validFields = validActions[action.name]

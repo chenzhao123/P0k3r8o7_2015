@@ -7,6 +7,7 @@ import math
 class QLearn:
     def __init__(self, actions, epsilon=0.3, alpha=0.1, gamma=1.0):
         self.q = {}
+        self.count = {}
 
         self.epsilon = epsilon
         self.alpha = alpha
@@ -23,8 +24,17 @@ class QLearn:
         print "learning... old qvalue is ", oldv
         if oldv is None:
             self.q[(state, action)] = reward
+            self.count[(state, action)] = 1
         else:
-            self.q[(state, action)] = oldv + self.alpha * (value - oldv)
+            oldcount = self.count.get((state, action), 0)
+            if oldcount:
+                self.q[(state, action)] = float(oldv*oldcount + reward)/(oldcount + 1)
+                self.count[(state, action)] = oldcount + 1
+            else:
+                print "ERROR: Count is 0 but qfile has qvalue"
+                self.q[(state, action)] = reward
+                self.count[(state, action)] = 1
+            #self.q[(state, action)] = oldv + self.alpha * (value - oldv)
         print "learning... new qvalue is ", self.q[(state, action)]
 
     def chooseAction(self, state, equity, potSize, bet_metric, return_q=False):
@@ -53,7 +63,7 @@ class QLearn:
                 rand = random.uniform(0,1)
                 if rand < 0.5:
                     i = random.choice(best)
-                    
+
         else:
             i = q.index(maxQ)
 
@@ -124,11 +134,21 @@ class QLearn:
             print e
             self.q = {}
 
-    def dumpQ(self, filename):
-        print "writing file", time.asctime()
+    def loadCount(self, filename):
+        try:
+            print "reading count file", time.asctime()
+            with open(filename, 'r') as f:
+                self.count = pickle.load(f)
+            print "done reading count file", time.asctime()
+        except (IOError, KeyError, EOFError) as e:
+            print e
+            self.count = {}
+
+    def dumpInfo(self, filename, info):
+        print "writing file", filename, time.asctime()
         with open(filename, 'w') as f:
-            pickle.dump(self.q, f)
-        print "done writing file", time.asctime()
+            pickle.dump(info, f)
+        print "done writing file", filename, time.asctime()
 
     def pickRandomPokerAction(self, equity, potSize, bet_metric):
         print "Choosing random action with eq: %.2f, potSize: %i, bet_metric: %i" %(equity, potSize, bet_metric)

@@ -207,6 +207,10 @@ class Player:
         numBoardCards = parser_dict['numBoardCards']
 
         diffStack = self.stack - self.startingStack
+
+
+        reward = diffStack
+        '''
         if numBoardCards == 0:
             reward = diffStack
         else:
@@ -214,13 +218,14 @@ class Player:
                 reward = pow(diffStack, float(1)/numBoardCards)
             else:
                 reward = -pow(abs(diffStack), float(1)/numBoardCards)
-            '''
+        
             reward = diffStack/2
         elif numBoardCards == 4:
             reward = diffStack/4
         else:
             reward = diffStack/8
-            '''
+        '''
+
         self.ai.learnAll(reward)
 
         self.f.write(str(diffStack) + "\n")
@@ -264,6 +269,15 @@ class Player:
         #print "choose action ends", time.asctime()
         validAction = self.createValidAction(action)
         #print "create action ends", time.asctime()
+
+        '''
+        if validAction == "FOLD":
+            if "CHECK" in self.legalActions:
+                validAction = "CHECK"
+            else:
+                validAction = "CALL:" + self.legalActions["CALL"][0]
+        '''
+
         return validAction
 
         #TODO HERE

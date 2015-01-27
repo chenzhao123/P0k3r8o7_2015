@@ -1,0 +1,48 @@
+6.176 MIT Pokerbots - FOLDERBOT vs P2 vs P3 (stack=200, bb=2)
+Hand #1, FOLDERBOT (200), P2 (200), P3 (200)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [9c 7d]
+Dealt to P2 [Ts Qd]
+Dealt to P3 [Ac Jc]
+FOLDERBOT calls 2
+P2 calls 2
+P3 raises to 7
+FOLDERBOT raises to 12
+P2 raises to 39
+P3 calls 39
+FOLDERBOT calls 39
+*** FLOP *** (117) [3d Qc 2s]
+P2 checks
+P3 bets 79
+FOLDERBOT raises to 158
+P2 folds
+P3 raises to 161
+FOLDERBOT calls 161
+*** TURN *** (439) [3d Qc 2s] [4s]
+*** RIVER *** (439) [3d Qc 2s 4s] [Kd]
+FOLDERBOT shows [9c 7d]
+P3 shows [Ac Jc]
+P3 wins the pot (439)
+
+Hand #2, P2 (161), P3 (439), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [2c 2h]
+Dealt to FOLDERBOT [Kd 5h]
+Dealt to P2 [4c Qc]
+P2 raises to 4
+P3 calls 4
+*** FLOP *** (8) [2s 9d 8h]
+P3 bets 4
+P2 raises to 14
+P3 raises to 48
+P2 raises to 119
+P3 raises to 157
+P2 calls 157
+*** TURN *** (322) [2s 9d 8h] [7c]
+*** RIVER *** (322) [2s 9d 8h 7c] [Qd]
+P3 shows [2c 2h]
+P2 shows [4c Qc]
+P3 wins the pot (322)
+

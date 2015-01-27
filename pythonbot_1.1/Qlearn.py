@@ -20,6 +20,9 @@ class QLearn:
         # return self.q.get((state, action), 1.0)
 
     def learnQ(self, state, action, reward, value):
+
+        return 
+
         oldv = self.q.get((state, action), None)
         print "learning... old qvalue is ", oldv
         if oldv is None:
@@ -152,7 +155,7 @@ class QLearn:
 
     def pickRandomPokerAction(self, equity, potSize, bet_metric):
         print "Choosing random action with eq: %.2f, potSize: %i, bet_metric: %i" %(equity, potSize, bet_metric)
-
+        
         actions = ["FOLD", "CHECK", "CALL", "ODDS2.0", "ODDS1.0"]
         if abs(bet_metric) < 1 or potSize < 2:
             odds = 50

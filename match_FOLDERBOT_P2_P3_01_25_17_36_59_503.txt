@@ -1,0 +1,94 @@
+6.176 MIT Pokerbots - FOLDERBOT vs P2 vs P3 (stack=200, bb=2)
+Hand #1, FOLDERBOT (200), P2 (200), P3 (200)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [Ad 7c]
+Dealt to P2 [Kd 2c]
+Dealt to P3 [2h Qh]
+FOLDERBOT folds
+P2 calls 2
+P3 raises to 5
+P2 calls 5
+*** FLOP *** (10) [Ks 3c As]
+P2 checks
+P3 bets 5
+P2 raises to 12
+P3 raises to 32
+P2 raises to 82
+P3 calls 82
+*** TURN *** (174) [Ks 3c As] [4c]
+P2 bets 86
+P3 raises to 113
+P2 calls 113
+*** RIVER *** (400) [Ks 3c As 4c] [9s]
+P2 shows [Kd 2c]
+P3 shows [2h Qh]
+P2 wins the pot (400)
+
+Hand #2, P2 (400), FOLDERBOT (200), P3 (0)
+P2 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P3 [6c 8d]
+Dealt to FOLDERBOT [4h Jh]
+Dealt to P2 [6s Ks]
+P2 folds
+FOLDERBOT wins the pot (3)
+
+Hand #3, FOLDERBOT (201), P2 (399), P3 (0)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P2 [Td 6s]
+Dealt to P3 [4c 8s]
+Dealt to FOLDERBOT [4s 8d]
+FOLDERBOT calls 2
+P2 checks
+*** FLOP *** (4) [Qd Qc Qs]
+P2 bets 2
+FOLDERBOT folds
+P2 wins the pot (6)
+
+Hand #4, P2 (401), FOLDERBOT (199), P3 (0)
+P2 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to FOLDERBOT [5c Td]
+Dealt to P2 [8c Th]
+Dealt to P3 [3c 8s]
+P2 folds
+FOLDERBOT wins the pot (3)
+
+Hand #5, FOLDERBOT (200), P2 (400), P3 (0)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [3d 8d]
+Dealt to FOLDERBOT [5d 5s]
+Dealt to P2 [Ts Th]
+FOLDERBOT folds
+P2 wins the pot (3)
+
+Hand #6, P2 (401), FOLDERBOT (199), P3 (0)
+P2 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [7c As]
+Dealt to P3 [Qc Tc]
+Dealt to FOLDERBOT [8s Kd]
+P2 raises to 4
+FOLDERBOT raises to 7
+P2 calls 7
+*** FLOP *** (14) [9s Kh 7d]
+FOLDERBOT checks
+P2 checks
+*** TURN *** (14) [9s Kh 7d] [7h]
+FOLDERBOT checks
+P2 bets 5
+FOLDERBOT calls 5
+*** RIVER *** (24) [9s Kh 7d 7h] [4h]
+FOLDERBOT checks
+P2 bets 22
+FOLDERBOT raises to 68
+P2 raises to 182
+FOLDERBOT raises to 187
+P2 calls 187
+P2 shows [7c As]
+FOLDERBOT shows [8s Kd]
+P2 wins the pot (398)
+

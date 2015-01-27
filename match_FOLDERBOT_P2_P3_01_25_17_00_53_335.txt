@@ -1,0 +1,97 @@
+6.176 MIT Pokerbots - FOLDERBOT vs P2 vs P3 (stack=200, bb=2)
+Hand #1, FOLDERBOT (200), P2 (200), P3 (200)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [9c 2h]
+Dealt to P2 [3s Tc]
+Dealt to P3 [6s 2c]
+FOLDERBOT folds
+P2 raises to 4
+P3 calls 4
+*** FLOP *** (8) [8s 4h 9s]
+P2 bets 6
+P3 folds
+P2 wins the pot (14)
+
+Hand #2, P3 (196), FOLDERBOT (200), P2 (204)
+FOLDERBOT posts the blind of 1
+P2 posts the blind of 2
+Dealt to P3 [8s 6h]
+Dealt to FOLDERBOT [5h 8c]
+Dealt to P2 [2d Td]
+P3 calls 2
+FOLDERBOT calls 2
+P2 raises to 6
+P3 raises to 11
+FOLDERBOT calls 11
+P2 raises to 40
+P3 raises to 83
+FOLDERBOT calls 83
+P2 raises to 136
+P3 raises to 189
+FOLDERBOT calls 189
+P2 raises to 200
+P3 calls 196
+FOLDERBOT folds
+Uncalled bet of 4 returned to P2
+*** FLOP *** (581) [Tc 6d 8d]
+*** TURN *** (581) [Tc 6d 8d] [5s]
+*** RIVER *** (581) [Tc 6d 8d 5s] [Qh]
+P3 shows [8s 6h]
+P2 shows [2d Td]
+P3 wins the pot (581)
+
+Hand #3, P2 (8), P3 (581), FOLDERBOT (11)
+P3 posts the blind of 1
+FOLDERBOT posts the blind of 2
+Dealt to P2 [6h 9c]
+Dealt to P3 [2h 5c]
+Dealt to FOLDERBOT [Kh Qc]
+P2 raises to 5
+P3 raises to 10
+FOLDERBOT calls 10
+P2 folds
+*** FLOP *** (25) [2s Jc 3d]
+*** TURN *** (25) [2s Jc 3d] [5h]
+*** RIVER *** (25) [2s Jc 3d 5h] [Qh]
+P3 shows [2h 5c]
+FOLDERBOT shows [Kh Qc]
+P3 wins the pot (25)
+
+Hand #4, FOLDERBOT (1), P2 (3), P3 (596)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to FOLDERBOT [7c Qd]
+Dealt to P2 [Ac 3c]
+Dealt to P3 [3h Qc]
+FOLDERBOT calls 1
+P2 calls 2
+P3 checks
+*** FLOP *** (2) [3d 4d 2h]
+P2 bets 1
+P3 folds
+*** TURN *** (3) [3d 4d 2h] [Jh]
+*** RIVER *** (3) [3d 4d 2h Jh] [2d]
+FOLDERBOT shows [7c Qd]
+P2 shows [Ac 3c]
+P2 wins the pot (3)
+P2 wins the pot (3)
+
+Hand #5, P2 (6), P3 (594), FOLDERBOT (0)
+P2 posts the blind of 1
+P3 posts the blind of 2
+Dealt to P3 [9h Kc]
+Dealt to FOLDERBOT [Jc 8s]
+Dealt to P2 [2c 9c]
+P2 raises to 5
+P3 calls 5
+*** FLOP *** (10) [Th 3d Td]
+P3 checks
+P2 bets 1
+P3 calls 1
+*** TURN *** (12) [Th 3d Td] [5d]
+*** RIVER *** (12) [Th 3d Td 5d] [4h]
+P3 shows [9h Kc]
+P2 shows [2c 9c]
+P3 wins the pot (12)
+
